@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/kevin/project/ise/Signal_display_top/signal_display_top_isim_beh.exe" -prj "/home/kevin/project/ise/Signal_display_top/signal_display_top_beh.prj" "work.signal_display_top" "work.glbl" 

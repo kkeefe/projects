@@ -1,0 +1,78 @@
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.xst" -ofn "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo2.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 SPI_top.ngc SPI_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SPI_top_map.ncd SPI_top.ngd SPI_top.pcf 
+par -w -intstyle ise -ol high -mt off SPI_top_map.ncd SPI_top.ncd SPI_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SPI_top.twx SPI_top.ncd -o SPI_top.twr SPI_top.pcf -ucf mojo2.ucf 
+bitgen -intstyle ise -f SPI_top.ut SPI_top.ncd 

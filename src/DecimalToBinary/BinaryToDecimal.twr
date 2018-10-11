@@ -1,0 +1,188 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml BinaryToDecimal.twx BinaryToDecimal.ncd -o
+BinaryToDecimal.twr BinaryToDecimal.pcf
+
+Design file:              BinaryToDecimal.ncd
+Physical constraint file: BinaryToDecimal.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+bcdinput<0>    |bcdoutput<0>   |    6.248|
+bcdinput<1>    |bcdoutput<1>   |   10.287|
+bcdinput<1>    |bcdoutput<2>   |   10.237|
+bcdinput<1>    |bcdoutput<3>   |   10.531|
+bcdinput<1>    |bcdoutput<4>   |   10.638|
+bcdinput<2>    |bcdoutput<1>   |   10.989|
+bcdinput<2>    |bcdoutput<2>   |   10.935|
+bcdinput<2>    |bcdoutput<3>   |   11.074|
+bcdinput<2>    |bcdoutput<4>   |   11.382|
+bcdinput<2>    |bcdoutput<5>   |   11.914|
+bcdinput<2>    |bcdoutput<6>   |   12.453|
+bcdinput<2>    |bcdoutput<7>   |   12.049|
+bcdinput<2>    |bcdoutput<8>   |   11.409|
+bcdinput<3>    |bcdoutput<1>   |   12.109|
+bcdinput<3>    |bcdoutput<2>   |   12.124|
+bcdinput<3>    |bcdoutput<3>   |   12.087|
+bcdinput<3>    |bcdoutput<4>   |   12.533|
+bcdinput<3>    |bcdoutput<5>   |   13.104|
+bcdinput<3>    |bcdoutput<6>   |   13.509|
+bcdinput<3>    |bcdoutput<7>   |   13.077|
+bcdinput<3>    |bcdoutput<8>   |   13.354|
+bcdinput<3>    |bcdoutput<9>   |   12.921|
+bcdinput<3>    |bcdoutput<10>  |   13.145|
+bcdinput<3>    |bcdoutput<11>  |   13.161|
+bcdinput<3>    |bcdoutput<12>  |   13.344|
+bcdinput<4>    |bcdoutput<1>   |   13.544|
+bcdinput<4>    |bcdoutput<2>   |   13.559|
+bcdinput<4>    |bcdoutput<3>   |   13.522|
+bcdinput<4>    |bcdoutput<4>   |   13.968|
+bcdinput<4>    |bcdoutput<5>   |   13.843|
+bcdinput<4>    |bcdoutput<6>   |   14.382|
+bcdinput<4>    |bcdoutput<7>   |   13.978|
+bcdinput<4>    |bcdoutput<8>   |   14.053|
+bcdinput<4>    |bcdoutput<9>   |   13.655|
+bcdinput<4>    |bcdoutput<10>  |   13.838|
+bcdinput<4>    |bcdoutput<11>  |   13.895|
+bcdinput<4>    |bcdoutput<12>  |   13.951|
+bcdinput<4>    |bcdoutput<13>  |   13.304|
+bcdinput<5>    |bcdoutput<1>   |   13.743|
+bcdinput<5>    |bcdoutput<2>   |   13.758|
+bcdinput<5>    |bcdoutput<3>   |   13.721|
+bcdinput<5>    |bcdoutput<4>   |   14.167|
+bcdinput<5>    |bcdoutput<5>   |   14.275|
+bcdinput<5>    |bcdoutput<6>   |   14.680|
+bcdinput<5>    |bcdoutput<7>   |   14.512|
+bcdinput<5>    |bcdoutput<8>   |   14.792|
+bcdinput<5>    |bcdoutput<9>   |   14.160|
+bcdinput<5>    |bcdoutput<10>  |   14.343|
+bcdinput<5>    |bcdoutput<11>  |   14.400|
+bcdinput<5>    |bcdoutput<12>  |   14.516|
+bcdinput<5>    |bcdoutput<13>  |   13.809|
+bcdinput<5>    |bcdoutput<14>  |   10.394|
+bcdinput<6>    |bcdoutput<1>   |   14.597|
+bcdinput<6>    |bcdoutput<2>   |   14.612|
+bcdinput<6>    |bcdoutput<3>   |   14.575|
+bcdinput<6>    |bcdoutput<4>   |   15.021|
+bcdinput<6>    |bcdoutput<5>   |   16.412|
+bcdinput<6>    |bcdoutput<6>   |   16.633|
+bcdinput<6>    |bcdoutput<7>   |   16.664|
+bcdinput<6>    |bcdoutput<8>   |   16.944|
+bcdinput<6>    |bcdoutput<9>   |   16.245|
+bcdinput<6>    |bcdoutput<10>  |   16.469|
+bcdinput<6>    |bcdoutput<11>  |   16.485|
+bcdinput<6>    |bcdoutput<12>  |   16.668|
+bcdinput<6>    |bcdoutput<13>  |   15.421|
+bcdinput<6>    |bcdoutput<14>  |   12.151|
+bcdinput<7>    |bcdoutput<1>   |   15.588|
+bcdinput<7>    |bcdoutput<2>   |   15.603|
+bcdinput<7>    |bcdoutput<3>   |   15.566|
+bcdinput<7>    |bcdoutput<4>   |   16.012|
+bcdinput<7>    |bcdoutput<5>   |   17.135|
+bcdinput<7>    |bcdoutput<6>   |   17.356|
+bcdinput<7>    |bcdoutput<7>   |   17.387|
+bcdinput<7>    |bcdoutput<8>   |   17.667|
+bcdinput<7>    |bcdoutput<9>   |   16.968|
+bcdinput<7>    |bcdoutput<10>  |   17.192|
+bcdinput<7>    |bcdoutput<11>  |   17.208|
+bcdinput<7>    |bcdoutput<12>  |   17.391|
+bcdinput<7>    |bcdoutput<13>  |   16.144|
+bcdinput<7>    |bcdoutput<14>  |   12.874|
+bcdinput<8>    |bcdoutput<1>   |   15.612|
+bcdinput<8>    |bcdoutput<2>   |   15.627|
+bcdinput<8>    |bcdoutput<3>   |   15.590|
+bcdinput<8>    |bcdoutput<4>   |   16.036|
+bcdinput<8>    |bcdoutput<5>   |   17.311|
+bcdinput<8>    |bcdoutput<6>   |   17.532|
+bcdinput<8>    |bcdoutput<7>   |   17.563|
+bcdinput<8>    |bcdoutput<8>   |   17.843|
+bcdinput<8>    |bcdoutput<9>   |   17.144|
+bcdinput<8>    |bcdoutput<10>  |   17.368|
+bcdinput<8>    |bcdoutput<11>  |   17.384|
+bcdinput<8>    |bcdoutput<12>  |   17.567|
+bcdinput<8>    |bcdoutput<13>  |   16.320|
+bcdinput<8>    |bcdoutput<14>  |   13.050|
+bcdinput<9>    |bcdoutput<1>   |   15.531|
+bcdinput<9>    |bcdoutput<2>   |   15.546|
+bcdinput<9>    |bcdoutput<3>   |   15.509|
+bcdinput<9>    |bcdoutput<4>   |   15.955|
+bcdinput<9>    |bcdoutput<5>   |   17.230|
+bcdinput<9>    |bcdoutput<6>   |   17.451|
+bcdinput<9>    |bcdoutput<7>   |   17.482|
+bcdinput<9>    |bcdoutput<8>   |   17.762|
+bcdinput<9>    |bcdoutput<9>   |   17.063|
+bcdinput<9>    |bcdoutput<10>  |   17.287|
+bcdinput<9>    |bcdoutput<11>  |   17.303|
+bcdinput<9>    |bcdoutput<12>  |   17.486|
+bcdinput<9>    |bcdoutput<13>  |   16.239|
+bcdinput<9>    |bcdoutput<14>  |   12.969|
+bcdinput<10>   |bcdoutput<1>   |   15.903|
+bcdinput<10>   |bcdoutput<2>   |   15.918|
+bcdinput<10>   |bcdoutput<3>   |   15.881|
+bcdinput<10>   |bcdoutput<4>   |   16.327|
+bcdinput<10>   |bcdoutput<5>   |   17.502|
+bcdinput<10>   |bcdoutput<6>   |   17.723|
+bcdinput<10>   |bcdoutput<7>   |   17.754|
+bcdinput<10>   |bcdoutput<8>   |   18.034|
+bcdinput<10>   |bcdoutput<9>   |   17.335|
+bcdinput<10>   |bcdoutput<10>  |   17.559|
+bcdinput<10>   |bcdoutput<11>  |   17.575|
+bcdinput<10>   |bcdoutput<12>  |   17.758|
+bcdinput<10>   |bcdoutput<13>  |   16.511|
+bcdinput<10>   |bcdoutput<14>  |   13.241|
+bcdinput<11>   |bcdoutput<1>   |   15.159|
+bcdinput<11>   |bcdoutput<2>   |   15.174|
+bcdinput<11>   |bcdoutput<3>   |   15.137|
+bcdinput<11>   |bcdoutput<4>   |   15.583|
+bcdinput<11>   |bcdoutput<5>   |   16.858|
+bcdinput<11>   |bcdoutput<6>   |   17.079|
+bcdinput<11>   |bcdoutput<7>   |   17.110|
+bcdinput<11>   |bcdoutput<8>   |   17.390|
+bcdinput<11>   |bcdoutput<9>   |   16.691|
+bcdinput<11>   |bcdoutput<10>  |   16.915|
+bcdinput<11>   |bcdoutput<11>  |   16.931|
+bcdinput<11>   |bcdoutput<12>  |   17.114|
+bcdinput<11>   |bcdoutput<13>  |   15.867|
+bcdinput<11>   |bcdoutput<14>  |   12.597|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Mar  6 14:22:25 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 382 MB
+
+
+

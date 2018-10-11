@@ -1,0 +1,711 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: SPI_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SPI_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SPI_top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : SPI_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/kevin/Downloads/mojo-base-project-master/src/spi_slave.v" into library work
+Parsing module <spi_slave>.
+Analyzing Verilog file "/home/kevin/Downloads/mojo-base-project-master/src/serial_tx.v" into library work
+Parsing module <serial_tx>.
+INFO:HDLCompiler:693 - "/home/kevin/Downloads/mojo-base-project-master/src/serial_tx.v" Line 14. parameter declaration becomes local in serial_tx with formal parameter declaration list
+Analyzing Verilog file "/home/kevin/Downloads/mojo-base-project-master/src/serial_rx.v" into library work
+Parsing module <serial_rx>.
+INFO:HDLCompiler:693 - "/home/kevin/Downloads/mojo-base-project-master/src/serial_rx.v" Line 12. parameter declaration becomes local in serial_rx with formal parameter declaration list
+Analyzing Verilog file "/home/kevin/Downloads/mojo-base-project-master/src/cclk_detector.v" into library work
+Parsing module <cclk_detector>.
+INFO:HDLCompiler:693 - "/home/kevin/Downloads/mojo-base-project-master/src/cclk_detector.v" Line 10. parameter declaration becomes local in cclk_detector with formal parameter declaration list
+Analyzing Verilog file "/home/kevin/Downloads/mojo-base-project-master/src/avr_interface.v" into library work
+Parsing module <avr_interface>.
+INFO:HDLCompiler:693 - "/home/kevin/Downloads/mojo-base-project-master/src/avr_interface.v" Line 80. parameter declaration becomes local in avr_interface with formal parameter declaration list
+Parsing VHDL file "/home/kevin/project/ise/Serial_Port_Interface/RAM_module.vhd" into library work
+Parsing entity <RAM_module>.
+Parsing architecture <Behavioral> of entity <ram_module>.
+Parsing VHDL file "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" into library work
+Parsing entity <SPI_top>.
+Parsing architecture <Behavioral> of entity <spi_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SPI_top> (architecture <Behavioral>) from library <work>.
+Going to verilog side to elaborate module avr_interface
+
+Elaborating module <avr_interface(CLK_RATE=50000000,SERIAL_BAUD_RATE=500000)>.
+
+Elaborating module <cclk_detector(CLK_RATE=50000000)>.
+
+Elaborating module <spi_slave>.
+
+Elaborating module <serial_rx(CLK_PER_BIT=100)>.
+
+Elaborating module <serial_tx(CLK_PER_BIT=100)>.
+Back to vhdl to continue elaboration
+WARNING:HDLCompiler:1127 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" Line 115: Assignment to new_sample ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" Line 116: Assignment to sample ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" Line 117: Assignment to sample_channel ignored, since the identifier is never used
+
+Elaborating entity <RAM_module> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" Line 151: Using initial value 0 for count since it is never assigned
+WARNING:HDLCompiler:634 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" Line 68: Net <new_tx_data> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" Line 69: Net <tx_data[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SPI_top>.
+    Related source file is "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd".
+WARNING:Xst:647 - Input <clock_up> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clock_down> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clock_select> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" line 81: Output port <sample> of the instance <AVR> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" line 81: Output port <sample_channel> of the instance <AVR> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" line 81: Output port <new_sample> of the instance <AVR> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/kevin/project/ise/Serial_Port_Interface/SPI_top.vhd" line 81: Output port <tx_busy> of the instance <AVR> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <tx_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <new_tx_data> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <data_in>.
+    Found 4-bit register for signal <addr>.
+    Found 4-bit adder for signal <addr[3]_GND_3_o_add_5_OUT> created at line 157.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+Unit <SPI_top> synthesized.
+
+Synthesizing Unit <avr_interface>.
+    Related source file is "/home/kevin/Downloads/mojo-base-project-master/src/avr_interface.v".
+        CLK_RATE = 50000000
+        SERIAL_BAUD_RATE = 500000
+    Found 10-bit register for signal <sample_q>.
+    Found 1-bit register for signal <new_sample_q>.
+    Found 4-bit register for signal <block_q>.
+    Found 1-bit register for signal <busy_q>.
+    Found 4-bit register for signal <sample_channel_q>.
+    Found 1-bit register for signal <byte_ct_q>.
+    Found 1-bit tristate buffer for signal <spi_channel<3>> created at line 106
+    Found 1-bit tristate buffer for signal <spi_channel<2>> created at line 106
+    Found 1-bit tristate buffer for signal <spi_channel<1>> created at line 106
+    Found 1-bit tristate buffer for signal <spi_channel<0>> created at line 106
+    Found 1-bit tristate buffer for signal <spi_miso> created at line 107
+    Found 1-bit tristate buffer for signal <tx> created at line 108
+    Summary:
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   6 Tristate(s).
+Unit <avr_interface> synthesized.
+
+Synthesizing Unit <cclk_detector>.
+    Related source file is "/home/kevin/Downloads/mojo-base-project-master/src/cclk_detector.v".
+        CLK_RATE = 50000000
+    Found 1-bit register for signal <ready_q>.
+    Found 10-bit register for signal <ctr_q>.
+    Found 10-bit adder for signal <ctr_q[9]_GND_6_o_add_2_OUT> created at line 24.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <cclk_detector> synthesized.
+
+Synthesizing Unit <spi_slave>.
+    Related source file is "/home/kevin/Downloads/mojo-base-project-master/src/spi_slave.v".
+    Found 3-bit register for signal <bit_ct_q>.
+    Found 8-bit register for signal <dout_q>.
+    Found 1-bit register for signal <miso_q>.
+    Found 1-bit register for signal <sck_q>.
+    Found 1-bit register for signal <mosi_q>.
+    Found 1-bit register for signal <ss_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 1-bit register for signal <sck_old_q>.
+    Found 1-bit register for signal <done_q>.
+    Found 3-bit adder for signal <bit_ct_q[2]_GND_7_o_add_1_OUT> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <spi_slave> synthesized.
+
+Synthesizing Unit <serial_rx>.
+    Related source file is "/home/kevin/Downloads/mojo-base-project-master/src/serial_rx.v".
+        CLK_PER_BIT = 100
+    Found 3-bit register for signal <bit_ctr_q>.
+    Found 1-bit register for signal <new_data_q>.
+    Found 2-bit register for signal <state_q>.
+    Found 1-bit register for signal <rx_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 7-bit register for signal <ctr_q>.
+    Found finite state machine <FSM_0> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit adder for signal <ctr_q[6]_GND_8_o_add_7_OUT> created at line 54.
+    Found 3-bit adder for signal <bit_ctr_q[2]_GND_8_o_add_9_OUT> created at line 57.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_rx> synthesized.
+
+Synthesizing Unit <serial_tx>.
+    Related source file is "/home/kevin/Downloads/mojo-base-project-master/src/serial_tx.v".
+        CLK_PER_BIT = 100
+    Found 1-bit register for signal <tx_q>.
+    Found 1-bit register for signal <block_q>.
+    Found 3-bit register for signal <bit_ctr_q>.
+    Found 7-bit register for signal <ctr_q>.
+    Found 1-bit register for signal <busy_q>.
+    Found 2-bit register for signal <state_q>.
+INFO:Xst:1799 - State 10 is never reached in FSM <state_q>.
+INFO:Xst:1799 - State 11 is never reached in FSM <state_q>.
+    Found finite state machine <FSM_1> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 1                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serial_tx> synthesized.
+
+Synthesizing Unit <RAM_module>.
+    Related source file is "/home/kevin/project/ise/Serial_Port_Interface/RAM_module.vhd".
+        bits = 8
+        words = 16
+    Found 16x8-bit single-port RAM <Mram_memory> for signal <memory>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <RAM_module> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port RAM                              : 1
+# Adders/Subtractors                                   : 5
+ 10-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Registers                                            : 28
+ 1-bit register                                        : 15
+ 10-bit register                                       : 2
+ 3-bit register                                        : 2
+ 4-bit register                                        : 3
+ 7-bit register                                        : 2
+ 8-bit register                                        : 4
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 3
+ 10-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 6
+# FSMs                                                 : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <block_q> (without init value) has a constant value of 0 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <busy_q> (without init value) has a constant value of 0 in block <AVR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_0> is unconnected in block <AVR>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_1> is unconnected in block <AVR>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_2> is unconnected in block <AVR>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_3> is unconnected in block <AVR>.
+
+Synthesizing (advanced) Unit <RAM_module>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memory> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr_ena>        | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM_module> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SPI_top>.
+The following registers are absorbed into counter <addr>: 1 register on signal <addr>.
+Unit <SPI_top> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cclk_detector>.
+The following registers are absorbed into counter <ctr_q>: 1 register on signal <ctr_q>.
+Unit <cclk_detector> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serial_rx>.
+The following registers are absorbed into counter <bit_ctr_q>: 1 register on signal <bit_ctr_q>.
+Unit <serial_rx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_slave>.
+The following registers are absorbed into counter <bit_ct_q>: 1 register on signal <bit_ct_q>.
+Unit <spi_slave> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed RAM                  : 1
+# Adders/Subtractors                                   : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 3-bit up counter                                      : 2
+ 4-bit up counter                                      : 1
+# Registers                                            : 79
+ Flip-Flops                                            : 79
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 3
+ 10-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <busy_q> (without init value) has a constant value of 0 in block <avr_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_0> is unconnected in block <avr_interface>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_1> is unconnected in block <avr_interface>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_2> is unconnected in block <avr_interface>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <block_q_3> is unconnected in block <avr_interface>.
+WARNING:Xst:1710 - FF/Latch <block_q> (without init value) has a constant value of 0 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <AVR/serial_rx/FSM_0> on signal <state_q[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <AVR/serial_tx/FSM_1> on signal <state_q[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 10    | unreached
+ 11    | unreached
+-------------------
+WARNING:Xst:1710 - FF/Latch <tx_q> (without init value) has a constant value of 1 in block <serial_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ctr_q_0> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <ctr_q_1> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <ctr_q_2> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <ctr_q_3> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <ctr_q_4> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <ctr_q_5> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <ctr_q_6> of sequential type is unconnected in block <serial_tx>.
+WARNING:Xst:2677 - Node <AVR/sample_q_9> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_8> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_7> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_6> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_5> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_4> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_3> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_2> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_1> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_q_0> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/new_sample_q> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/byte_ct_q> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_channel_q_3> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_channel_q_2> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_channel_q_1> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/sample_channel_q_0> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/serial_tx/busy_q> of sequential type is unconnected in block <SPI_top>.
+
+Optimizing unit <SPI_top> ...
+
+Optimizing unit <spi_slave> ...
+
+Optimizing unit <serial_rx> ...
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_7> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_6> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_5> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_4> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_3> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_2> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_1> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/dout_q_0> of sequential type is unconnected in block <SPI_top>.
+WARNING:Xst:2677 - Node <AVR/spi_slave/done_q> of sequential type is unconnected in block <SPI_top>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SPI_top, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SPI_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 100
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 9
+#      LUT2                        : 8
+#      LUT3                        : 4
+#      LUT4                        : 15
+#      LUT5                        : 8
+#      LUT6                        : 31
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 61
+#      FD                          : 14
+#      FDE                         : 12
+#      FDR                         : 6
+#      FDRE                        : 20
+#      FDS                         : 1
+#      FDSE                        : 8
+# RAMS                             : 8
+#      RAM16X1S                    : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 6
+#      OBUF                        : 16
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              61  out of  11440     0%  
+ Number of Slice LUTs:                   87  out of   5720     1%  
+    Number used as Logic:                79  out of   5720     1%  
+    Number used as Memory:                8  out of   1440     0%  
+       Number used as RAM:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     99
+   Number with an unused Flip Flop:      38  out of     99    38%  
+   Number with an unused LUT:            12  out of     99    12%  
+   Number of fully used LUT-FF pairs:    49  out of     99    49%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  29  out of    102    28%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 69    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.611ns (Maximum Frequency: 276.897MHz)
+   Minimum input arrival time before clock: 3.432ns
+   Maximum output required time after clock: 4.945ns
+   Maximum combinational path delay: 5.296ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.611ns (frequency: 276.897MHz)
+  Total number of paths / destination ports: 601 / 170
+-------------------------------------------------------------------------
+Delay:               3.611ns (Levels of Logic = 2)
+  Source:            AVR/cclk_detector/ctr_q_0 (FF)
+  Destination:       AVR/cclk_detector/ctr_q_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: AVR/cclk_detector/ctr_q_0 to AVR/cclk_detector/ctr_q_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.961  AVR/cclk_detector/ctr_q_0 (AVR/cclk_detector/ctr_q_0)
+     LUT5:I0->O            2   0.203   0.617  AVR/cclk_detector/ctr_q[9]_INV_5_o<9>_SW0 (N01)
+     LUT6:I5->O           10   0.205   0.856  AVR/cclk_detector/ctr_q[9]_INV_5_o_inv (AVR/cclk_detector/ctr_q[9]_INV_5_o_inv)
+     FDRE:CE                   0.322          AVR/cclk_detector/ctr_q_0
+    ----------------------------------------
+    Total                      3.611ns (1.177ns logic, 2.434ns route)
+                                       (32.6% logic, 67.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 26 / 15
+-------------------------------------------------------------------------
+Offset:              3.432ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       AVR/cclk_detector/ctr_q_8 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to AVR/cclk_detector/ctr_q_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           10   0.203   0.856  AVR/cclk_detector/Mcount_ctr_q_val1 (AVR/cclk_detector/Mcount_ctr_q_val)
+     FDRE:R                    0.430          AVR/cclk_detector/ctr_q_0
+    ----------------------------------------
+    Total                      3.432ns (1.855ns logic, 1.577ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 47 / 14
+-------------------------------------------------------------------------
+Offset:              4.945ns (Levels of Logic = 2)
+  Source:            AVR/cclk_detector/ready_q (FF)
+  Destination:       spi_channel<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: AVR/cclk_detector/ready_q to spi_channel<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.650  AVR/cclk_detector/ready_q (AVR/cclk_detector/ready_q)
+     INV:I->O             19   0.206   1.071  AVR/n_rdy1_INV_0 (AVR/n_rdy)
+     OBUFT:T->O                2.571          spi_channel_3_OBUFT (spi_channel<3>)
+    ----------------------------------------
+    Total                      4.945ns (3.224ns logic, 1.721ns route)
+                                       (65.2% logic, 34.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.296ns (Levels of Logic = 3)
+  Source:            spi_ss (PAD)
+  Destination:       spi_miso (PAD)
+
+  Data Path: spi_ss to spi_miso
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.721  spi_ss_IBUF (spi_ss_IBUF)
+     LUT2:I0->O            1   0.203   0.579  AVR/ready_spi_ss_AND_3_o_inv1 (AVR/ready_spi_ss_AND_3_o_inv)
+     OBUFT:T->O                2.571          spi_miso_OBUFT (spi_miso)
+    ----------------------------------------
+    Total                      5.296ns (3.996ns logic, 1.300ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.611|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.57 secs
+ 
+--> 
+
+
+Total memory usage is 387700 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   57 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

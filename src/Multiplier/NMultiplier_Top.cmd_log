@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 NMultiplier_Top.ngc NMultiplier_Top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NMultiplier_Top_map.ncd NMultiplier_Top.ngd NMultiplier_Top.pcf 
+par -w -intstyle ise -ol high -mt off NMultiplier_Top_map.ncd NMultiplier_Top.ncd NMultiplier_Top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NMultiplier_Top.twx NMultiplier_Top.ncd -o NMultiplier_Top.twr NMultiplier_Top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.xst" -ofn "/home/kevin/project/ise/Multiplier/NMultiplier_Top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 NMultiplier_Top.ngc NMultiplier_Top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NMultiplier_Top_map.ncd NMultiplier_Top.ngd NMultiplier_Top.pcf 

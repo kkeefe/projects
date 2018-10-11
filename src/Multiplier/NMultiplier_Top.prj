@@ -1,0 +1,2 @@
+vhdl work "../adder2/adder2.vhd"
+vhdl work "Multiplier_Top.vhd"

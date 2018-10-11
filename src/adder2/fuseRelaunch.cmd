@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/kevin/project/ise/adder2/adder2_isim_beh.exe" -prj "/home/kevin/project/ise/adder2/adder2_beh.prj" "work.adder2" 

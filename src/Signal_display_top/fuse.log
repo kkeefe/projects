@@ -1,0 +1,48 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/kevin/project/ise/Signal_display_top/signal_display_top_isim_beh.exe -prj /home/kevin/project/ise/Signal_display_top/signal_display_top_beh.prj work.signal_display_top work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/spi_slave.v" into library work
+Analyzing Verilog file "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/serial_tx.v" into library work
+WARNING:HDLCompiler:693 - "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/serial_tx.v" Line 14: Parameter declaration becomes local in serial_tx with formal parameter declaration list
+Analyzing Verilog file "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/serial_rx.v" into library work
+WARNING:HDLCompiler:693 - "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/serial_rx.v" Line 12: Parameter declaration becomes local in serial_rx with formal parameter declaration list
+Analyzing Verilog file "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/cclk_detector.v" into library work
+WARNING:HDLCompiler:693 - "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/cclk_detector.v" Line 10: Parameter declaration becomes local in cclk_detector with formal parameter declaration list
+Analyzing Verilog file "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/avr_interface.v" into library work
+WARNING:HDLCompiler:693 - "/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/avr_interface.v" Line 80: Parameter declaration becomes local in avr_interface with formal parameter declaration list
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "/home/kevin/project/ise/Signal_display_top/../Input_Module/PWM_module.vhd" into library work
+Parsing VHDL file "/home/kevin/project/ise/Signal_display_top/../SSD_display/SSD_display.vhd" into library work
+Parsing VHDL file "/home/kevin/project/ise/Signal_display_top/../Input_Module/Input_module_1.vhd" into library work
+Parsing VHDL file "/home/kevin/project/ise/Signal_display_top/../DecimalToBinary/BinaryToDecimal.vhd" into library work
+Parsing VHDL file "/home/kevin/project/ise/Signal_display_top/../adder2/adder2.vhd" into library work
+Parsing VHDL file "/home/kevin/project/ise/Signal_display_top/signal_display_top.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 97244 KB
+Fuse CPU Usage: 1190 ms
+Compiling module glbl
+Compiling module cclk_detector(CLK_RATE=50000000)
+Compiling module spi_slave
+Compiling module serial_rx(CLK_PER_BIT=100)
+Compiling module serial_tx(CLK_PER_BIT=100)
+Compiling module avr_interface(50000000,500000)
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vl_types
+Compiling architecture behavioral of entity adder2 [adder2_default]
+Compiling architecture behavioral of entity BinaryToDecimal [binarytodecimal_default]
+Compiling architecture behavioral of entity SSD_display [ssd_display_default]
+Compiling architecture behavioral of entity PWM_module [pwm_module_default]
+Compiling architecture behavioral of entity Input_module_1 [input_module_1_default]
+Compiling architecture behavioral of entity signal_display_top
+Time Resolution for simulation is 1ps.
+Compiled 15 VHDL Units
+Compiled 6 Verilog Units
+Built simulation executable /home/kevin/project/ise/Signal_display_top/signal_display_top_isim_beh.exe
+Fuse Memory Usage: 116620 KB
+Fuse CPU Usage: 1360 ms
+GCC CPU Usage: 2370 ms

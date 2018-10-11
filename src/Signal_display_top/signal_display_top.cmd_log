@@ -1,0 +1,198 @@
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/Signal_display_top/signal_display_top.xst" -ofn "/home/kevin/project/ise/Signal_display_top/signal_display_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/clock_shield.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 signal_display_top.ngc signal_display_top.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o signal_display_top_map.ncd signal_display_top.ngd signal_display_top.pcf 
+par -w -intstyle ise -ol high -mt off signal_display_top_map.ncd signal_display_top.ncd signal_display_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml signal_display_top.twx signal_display_top.ncd -o signal_display_top.twr signal_display_top.pcf 
+bitgen -intstyle ise -f signal_display_top.ut signal_display_top.ncd 

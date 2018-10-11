@@ -1,0 +1,7 @@
+verilog work "../../../Downloads/mojo-base-project-master/src/spi_slave.v"
+verilog work "../../../Downloads/mojo-base-project-master/src/serial_tx.v"
+verilog work "../../../Downloads/mojo-base-project-master/src/serial_rx.v"
+verilog work "../../../Downloads/mojo-base-project-master/src/cclk_detector.v"
+vhdl work "../DecimalToBinary/BinaryToDecimal.vhd"
+verilog work "../../../Downloads/mojo-base-project-master/src/avr_interface.v"
+vhdl work "RBG_128_TOP.vhd"

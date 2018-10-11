@@ -1,0 +1,107 @@
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx75-csg484-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo.ucf -uc clock_shield.ucf -p xc6slx75-csg484-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -p xc6slx75-csg484-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -p xc6slx75-csg484-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx75-csg484-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx75-csg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc io_shield.ucf -uc clock_shield.ucf -uc mojo.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc io_shield.ucf -uc clock_shield.ucf -uc mojo.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc io_shield.ucf -uc clock_shield.ucf -uc mojo.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf io_shield.ucf -ucf clock_shield.ucf -ucf mojo.ucf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf clock_shield.ucf -ucf mojo.ucf -ucf io_shield.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf clock_shield.ucf -ucf mojo.ucf -ucf io_shield.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf clock_shield.ucf -ucf mojo.ucf -ucf io_shield.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf clock_shield.ucf -ucf mojo.ucf -ucf io_shield.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc io_shield.ucf -uc clock_shield.ucf -uc mojo.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf io_shield.ucf -ucf clock_shield.ucf -ucf mojo.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo.ucf -uc io_shield.ucf -uc clock_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo.ucf -uc io_shield.ucf -uc clock_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo.ucf -uc io_shield.ucf -uc clock_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf mojo.ucf -ucf io_shield.ucf -ucf clock_shield.ucf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc mojo.ucf -uc io_shield.ucf -uc clock_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf mojo.ucf -ucf io_shield.ucf -ucf clock_shield.ucf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clock_shield.ucf -uc mojo.ucf -uc io_shield.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf clock_shield.ucf -ucf mojo.ucf -ucf io_shield.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.xst" -ofn "/home/kevin/project/ise/RGB_128_OUTPUT/RBG_128_TOP.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc io_shield.ucf -uc clock_shield.ucf -uc mojo.ucf -p xc6slx9-tqg144-3 RBG_128_TOP.ngc RBG_128_TOP.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o RBG_128_TOP_map.ncd RBG_128_TOP.ngd RBG_128_TOP.pcf 
+par -w -intstyle ise -ol high -mt off RBG_128_TOP_map.ncd RBG_128_TOP.ncd RBG_128_TOP.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml RBG_128_TOP.twx RBG_128_TOP.ncd -o RBG_128_TOP.twr RBG_128_TOP.pcf -ucf io_shield.ucf -ucf clock_shield.ucf -ucf mojo.ucf 
+bitgen -intstyle ise -f RBG_128_TOP.ut RBG_128_TOP.ncd 

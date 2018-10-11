@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/kevin/project/ise/Serial_Port_Interface/impact.xsl
+OUTFILE=/home/kevin/project/ise/Serial_Port_Interface/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/home/kevin/project/ise/Serial_Port_Interface
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,416 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: SSD_display.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SSD_display.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SSD_display"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : SSD_display
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/kevin/project/ise/SSD_display/SSD_display.vhd" into library work
+Parsing entity <SSD_display>.
+Parsing architecture <Behavioral> of entity <ssd_display>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SSD_display> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SSD_display>.
+    Related source file is "/home/kevin/project/ise/SSD_display/SSD_display.vhd".
+    Found 4-bit register for signal <io_sel>.
+    Found 4-bit register for signal <Reader>.
+    Found 16-bit register for signal <count>.
+    Found 16-bit adder for signal <count[15]_GND_3_o_add_0_OUT> created at line 53.
+    Found 16x8-bit Read Only RAM for signal <io_seg>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <SSD_display> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Registers                                            : 3
+ 16-bit register                                       : 1
+ 4-bit register                                        : 2
+# Multiplexers                                         : 3
+ 4-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <SSD_display>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3231 - The small RAM <Mram_io_seg> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Reader>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <io_seg>        |          |
+    -----------------------------------------------------------------------
+Unit <SSD_display> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Counters                                             : 1
+ 16-bit up counter                                     : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+# Multiplexers                                         : 3
+ 4-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SSD_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SSD_display, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SSD_display.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 145
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 30
+#      LUT2                        : 16
+#      LUT3                        : 8
+#      LUT4                        : 8
+#      LUT5                        : 5
+#      LUT6                        : 12
+#      MUXCY                       : 30
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 24
+#      FD                          : 20
+#      FDE                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 16
+#      OBUF                        : 12
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              24  out of  11440     0%  
+ Number of Slice LUTs:                   81  out of   5720     1%  
+    Number used as Logic:                81  out of   5720     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     81
+   Number with an unused Flip Flop:      57  out of     81    70%  
+   Number with an unused LUT:             0  out of     81     0%  
+   Number of fully used LUT-FF pairs:    24  out of     81    29%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    102    28%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.990ns (Maximum Frequency: 200.395MHz)
+   Minimum input arrival time before clock: 5.033ns
+   Maximum output required time after clock: 4.904ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.990ns (frequency: 200.395MHz)
+  Total number of paths / destination ports: 3448 / 28
+-------------------------------------------------------------------------
+Delay:               4.990ns (Levels of Logic = 6)
+  Source:            count_0 (FF)
+  Destination:       count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: count_0 to count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  count_0 (count_0)
+     INV:I->O              1   0.206   0.000  Madd_count[15]_GND_3_o_add_0_OUT_lut<0>_INV_0 (Madd_count[15]_GND_3_o_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_count[15]_GND_3_o_add_0_OUT_cy<0> (Madd_count[15]_GND_3_o_add_0_OUT_cy<0>)
+     XORCY:CI->O           1   0.180   0.924  Madd_count[15]_GND_3_o_add_0_OUT_xor<1> (count[15]_GND_3_o_add_0_OUT<1>)
+     LUT6:I1->O            6   0.203   0.849  PWR_3_o_count[15]_equal_2_o<15>2 (PWR_3_o_count[15]_equal_2_o<15>1)
+     LUT6:I4->O           11   0.203   0.883  PWR_3_o_count[15]_equal_2_o<15>3 (PWR_3_o_count[15]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  count_0_rstpot (count_0_rstpot)
+     FD:D                      0.102          count_0
+    ----------------------------------------
+    Total                      4.990ns (1.718ns logic, 3.272ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Offset:              5.033ns (Levels of Logic = 5)
+  Source:            Product<12> (PAD)
+  Destination:       Reader_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Product<12> to Reader_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.924  Product_12_IBUF (Product_12_IBUF)
+     LUT5:I0->O            1   0.203   0.808  Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11 (Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT1)
+     LUT6:I3->O            1   0.205   0.580  PWR_3_o_count[15]_equal_2_o<15>3_rstpot_SW0_G (N19)
+     LUT3:I2->O            1   0.205   0.580  PWR_3_o_count[15]_equal_2_o<15>3_rstpot_SW01 (N10)
+     LUT6:I5->O            1   0.205   0.000  Reader_0_dpot1 (Reader_0_dpot1)
+     FDE:D                     0.102          Reader_0
+    ----------------------------------------
+    Total                      5.033ns (2.142ns logic, 2.891ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              4.904ns (Levels of Logic = 2)
+  Source:            Reader_0 (FF)
+  Destination:       io_seg<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Reader_0 to io_seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.447   1.104  Reader_0 (Reader_0)
+     LUT4:I0->O            1   0.203   0.579  Mram_io_seg41 (io_seg_4_OBUF)
+     OBUF:I->O                 2.571          io_seg_4_OBUF (io_seg<4>)
+    ----------------------------------------
+    Total                      4.904ns (3.221ns logic, 1.683ns route)
+                                       (65.7% logic, 34.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.990|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.20 secs
+ 
+--> 
+
+
+Total memory usage is 386728 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/kevin/project/ise/adder2/adder2.ncd
+OUTFILE=/home/kevin/project/ise/adder2/adder2.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/kevin/project/ise/adder2
+LICENSE=WebPack
+USER_INFO=211463778_0_0_918

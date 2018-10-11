@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/kevin/project/ise/Serial_Port_Interface/SPI_top.ncd
+OUTFILE=/home/kevin/project/ise/Serial_Port_Interface/SPI_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/kevin/project/ise/Serial_Port_Interface
+LICENSE=WebPack
+USER_INFO=211463778_0_0_918

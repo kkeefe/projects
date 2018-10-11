@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/serial_tx.v" Line 14: Parameter declaration becomes local in <arg fmt="%s" index="1">serial_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/serial_rx.v" Line 12: Parameter declaration becomes local in <arg fmt="%s" index="1">serial_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/cclk_detector.v" Line 10: Parameter declaration becomes local in <arg fmt="%s" index="1">cclk_detector</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/kevin/project/ise/Signal_display_top/../../../Downloads/mojo-base-project-master/src/avr_interface.v" Line 80: Parameter declaration becomes local in <arg fmt="%s" index="1">avr_interface</arg> with formal parameter declaration list
+</msg>
+
+</messages>
+

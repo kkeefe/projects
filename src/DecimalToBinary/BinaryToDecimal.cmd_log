@@ -1,0 +1,60 @@
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+par -w -intstyle ise -ol high -mt off BinaryToDecimal_map.ncd BinaryToDecimal.ncd BinaryToDecimal.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryToDecimal.twx BinaryToDecimal.ncd -o BinaryToDecimal.twr BinaryToDecimal.pcf 
+bitgen -intstyle ise -f BinaryToDecimal.ut BinaryToDecimal.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/io_shield.ucf -uc /home/kevin/Downloads/mojo-ide-B1.3.6/library/components/mojo.ucf -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+par -w -intstyle ise -ol high -mt off BinaryToDecimal_map.ncd BinaryToDecimal.ncd BinaryToDecimal.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryToDecimal.twx BinaryToDecimal.ncd -o BinaryToDecimal.twr BinaryToDecimal.pcf 
+bitgen -intstyle ise -f BinaryToDecimal.ut BinaryToDecimal.ncd 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+par -w -intstyle ise -ol high -mt off BinaryToDecimal_map.ncd BinaryToDecimal.ncd BinaryToDecimal.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryToDecimal.twx BinaryToDecimal.ncd -o BinaryToDecimal.twr BinaryToDecimal.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+par -w -intstyle ise -ol high -mt off BinaryToDecimal_map.ncd BinaryToDecimal.ncd BinaryToDecimal.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryToDecimal.twx BinaryToDecimal.ncd -o BinaryToDecimal.twr BinaryToDecimal.pcf 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+xst -intstyle ise -ifn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.xst" -ofn "/home/kevin/project/ise/DecimalToBinary/BinaryToDecimal.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 BinaryToDecimal.ngc BinaryToDecimal.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o BinaryToDecimal_map.ncd BinaryToDecimal.ngd BinaryToDecimal.pcf 
+par -w -intstyle ise -ol high -mt off BinaryToDecimal_map.ncd BinaryToDecimal.ncd BinaryToDecimal.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml BinaryToDecimal.twx BinaryToDecimal.ncd -o BinaryToDecimal.twr BinaryToDecimal.pcf 

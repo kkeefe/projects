@@ -1,0 +1,2 @@
+vhdl isim_temp "ISERDES_primitive.vhd"
+vhdl isim_temp "ISERDES2_sim1.vhd"

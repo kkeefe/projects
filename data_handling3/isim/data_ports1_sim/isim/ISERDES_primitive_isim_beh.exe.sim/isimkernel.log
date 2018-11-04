@@ -1,0 +1,28 @@
+Command line:
+   ISERDES_primitive_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  45486
+
+Sat Oct 20 02:19:15 2018
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 205.91 Meg
+
+ Total Signals          : 150
+ Total Nets             : 199
+ Total Signal Drivers   : 101
+ Total Blocks           : 11
+ Total Primitive Blocks : 10
+ Total Processes        : 73
+ Total Traceable Variables  : 136
+ Total Scalar Nets and Variables : 5386
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 283.509 Meg
+
+Sat Oct 20 02:19:18 2018
+

@@ -1,0 +1,487 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.02 secs
+ 
+--> 
+Reading design: data_handling_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "data_handling_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "data_handling_module"
+Output Format                      : NGC
+Target Device                      : xc6slx150t-3-fgg676
+
+---- Source Options
+Top Module Name                    : data_handling_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Xilinx/projects/src/data_handling/ipcore_dir/BRAM_storage.vhd" into library work
+Parsing entity <BRAM_storage>.
+Parsing architecture <BRAM_storage_a> of entity <bram_storage>.
+Parsing VHDL file "/home/ise/Xilinx/projects/src/data_handling/syncBit_en.vhd" into library work
+Parsing entity <syncBit_en>.
+Parsing architecture <Behavioral> of entity <syncbit_en>.
+Parsing VHDL file "/home/ise/Xilinx/projects/src/data_handling/process_trigger.vhd" into library work
+Parsing entity <process_trigger>.
+Parsing architecture <Behavioral> of entity <process_trigger>.
+Parsing VHDL file "/home/ise/Xilinx/projects/src/data_handling/tranLoc_TOP.vhd" into library work
+Parsing entity <tranLoc_TOP>.
+Parsing architecture <Behavioral> of entity <tranloc_top>.
+Parsing VHDL file "/home/ise/Xilinx/projects/src/data_handling/ISERDES_primitive.vhd" into library work
+Parsing entity <ISERDES_primitive>.
+Parsing architecture <Behavioral> of entity <iserdes_primitive>.
+Parsing VHDL file "/home/ise/Xilinx/projects/src/data_handling/data_handling_module.vhd" into library work
+Parsing entity <data_handling_module>.
+Parsing architecture <Behavioral> of entity <data_handling_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <data_handling_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ISERDES_primitive> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tranLoc_TOP> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <syncBit_en> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <process_trigger> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <BRAM_storage> (architecture <BRAM_storage_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <data_handling_module>.
+    Related source file is "/home/ise/Xilinx/projects/src/data_handling/data_handling_module.vhd".
+    Found 8-bit register for signal <addra>.
+    Found 8-bit register for signal <address_var>.
+    Found 8-bit adder for signal <address_var[7]_GND_5_o_add_4_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <data_handling_module> synthesized.
+
+Synthesizing Unit <ISERDES_primitive>.
+    Related source file is "/home/ise/Xilinx/projects/src/data_handling/ISERDES_primitive.vhd".
+    Summary:
+	no macro.
+Unit <ISERDES_primitive> synthesized.
+
+Synthesizing Unit <tranLoc_TOP>.
+    Related source file is "/home/ise/Xilinx/projects/src/data_handling/tranLoc_TOP.vhd".
+        input_size = 4
+        output_size = 4
+    Summary:
+	no macro.
+Unit <tranLoc_TOP> synthesized.
+
+Synthesizing Unit <syncBit_en>.
+    Related source file is "/home/ise/Xilinx/projects/src/data_handling/syncBit_en.vhd".
+WARNING:Xst:647 - Input <CE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <syncBit_en> synthesized.
+
+Synthesizing Unit <process_trigger>.
+    Related source file is "/home/ise/Xilinx/projects/src/data_handling/process_trigger.vhd".
+        input_size = 4
+        output_size = 4
+    Found 1-bit register for signal <new_hit>.
+    Found 4-bit register for signal <prev_hit>.
+    Found 4-bit register for signal <async_bit_out>.
+    Found 4-bit comparator equal for signal <n0000> created at line 60
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <process_trigger> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 4-bit register                                        : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/BRAM_storage.ngc>.
+Loading core <BRAM_storage> for timing and area information for instance <BRAM_storage>.
+
+Synthesizing (advanced) Unit <data_handling_module>.
+The following registers are absorbed into counter <address_var>: 1 register on signal <address_var>.
+Unit <data_handling_module> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <data_handling_module> ...
+
+Optimizing unit <process_trigger> ...
+INFO:Xst:2261 - The FF/Latch <addra_0> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_0> 
+INFO:Xst:2261 - The FF/Latch <addra_1> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_1> 
+INFO:Xst:2261 - The FF/Latch <addra_2> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_2> 
+INFO:Xst:2261 - The FF/Latch <addra_3> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_3> 
+INFO:Xst:2261 - The FF/Latch <addra_4> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_4> 
+INFO:Xst:2261 - The FF/Latch <addra_5> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_5> 
+INFO:Xst:2261 - The FF/Latch <addra_6> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_6> 
+INFO:Xst:2261 - The FF/Latch <addra_7> in Unit <data_handling_module> is equivalent to the following FF/Latch, which will be removed : <address_var_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block data_handling_module, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : data_handling_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 24
+#      GND                         : 2
+#      INV                         : 1
+#      LUT2                        : 2
+#      LUT3                        : 6
+#      LUT4                        : 2
+#      LUT5                        : 3
+#      LUT6                        : 6
+#      VCC                         : 2
+# FlipFlops/Latches                : 25
+#      FD                          : 12
+#      FDR                         : 5
+#      FDRE                        : 8
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 11
+#      OBUF                        : 5
+# Others                           : 1
+#      ISERDES2                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150tfgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              25  out of  184304     0%  
+ Number of Slice LUTs:                   20  out of  92152     0%  
+    Number used as Logic:                20  out of  92152     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     28
+   Number with an unused Flip Flop:       3  out of     28    10%  
+   Number with an unused LUT:             8  out of     28    28%  
+   Number of fully used LUT-FF pairs:    17  out of     28    60%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    396     4%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    268     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock100                           | BUFGP                  | 26    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.549ns (Maximum Frequency: 392.311MHz)
+   Minimum input arrival time before clock: 2.785ns
+   Maximum output required time after clock: 5.000ns
+   Maximum combinational path delay: 2.249ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock100'
+  Clock period: 2.549ns (frequency: 392.311MHz)
+  Total number of paths / destination ports: 106 / 33
+-------------------------------------------------------------------------
+Delay:               2.549ns (Levels of Logic = 2)
+  Source:            addra_2 (FF)
+  Destination:       addra_6 (FF)
+  Source Clock:      clock100 rising
+  Destination Clock: clock100 rising
+
+  Data Path: addra_2 to addra_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.447   0.973  addra_2 (addra_2)
+     LUT3:I0->O            2   0.205   0.617  address_var[7]_GND_5_o_add_4_OUT<3>11 (address_var[7]_GND_5_o_add_4_OUT<3>_bdd0)
+     LUT5:I4->O            1   0.205   0.000  address_var[7]_GND_5_o_add_4_OUT<6>1 (address_var[7]_GND_5_o_add_4_OUT<6>)
+     FD:D                      0.102          addra_6
+    ----------------------------------------
+    Total                      2.549ns (0.959ns logic, 1.590ns route)
+                                       (37.6% logic, 62.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock100'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              2.785ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       data_process/process_hit/prev_hit_3 (FF)
+  Destination Clock: clock100 rising
+
+  Data Path: reset to data_process/process_hit/prev_hit_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.256  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.205   0.000  data_process/process_hit/prev_hit_3_rstpot (data_process/process_hit/prev_hit_3_rstpot)
+     FD:D                      0.102          data_process/process_hit/prev_hit_3
+    ----------------------------------------
+    Total                      2.785ns (1.529ns logic, 1.256ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock100'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              5.000ns (Levels of Logic = 2)
+  Source:            BRAM_storage/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (RAM)
+  Destination:       data_out<3> (PAD)
+  Source Clock:      clock100 rising
+
+  Data Path: BRAM_storage/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram to data_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO8    1   1.850   0.579  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.WIDE_PRIM9.ram (doutb<3>)
+     end scope: 'BRAM_storage:doutb<3>'
+     OBUF:I->O                 2.571          data_out_3_OBUF (data_out<3>)
+    ----------------------------------------
+    Total                      5.000ns (4.421ns logic, 0.579ns route)
+                                       (88.4% logic, 11.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               2.249ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       data_acquire/ISERDES2_inst1:RST (PAD)
+
+  Data Path: reset to data_acquire/ISERDES2_inst1:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            17   1.222   1.027  reset_IBUF (reset_IBUF)
+    ISERDES2:RST               0.000          data_acquire/ISERDES2_inst1
+    ----------------------------------------
+    Total                      2.249ns (1.222ns logic, 1.027ns route)
+                                       (54.3% logic, 45.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock100       |    2.549|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.19 secs
+ 
+--> 
+
+
+Total memory usage is 497992 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

@@ -1,0 +1,583 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -filter
+/home/ise/Xilinx/projects/src/USB_to_SSD/iseconfig/filter.filter -intstyle ise
+-v 3 -s 3 -n 3 -fastpaths -xml USB_to_SSD_top.twx USB_to_SSD_top.ncd -o
+USB_to_SSD_top.twr USB_to_SSD_top.pcf -ucf io_shield.ucf -ucf mojo.ucf
+
+Design file:              USB_to_SSD_top.ncd
+Physical constraint file: USB_to_SSD_top.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2016-11-22)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 4625 paths analyzed, 418 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.481ns.
+--------------------------------------------------------------------------------
+
+Paths for end point SSD/Reader_2 (SLICE_X2Y43.A5), 110 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.519ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_5 (FF)
+  Destination:          SSD/Reader_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.432ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.014ns (0.644 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_5 to SSD/Reader_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.BQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_5
+    SLICE_X7Y32.B1       net (fanout=14)       1.415   bcdinput<5>
+    SLICE_X7Y32.B        Tilo                  0.259   BCD/Madd_bcdinput[5]_GND_21_o_add_44_OUT_lut<3>
+                                                       BCD/Mmux_bcdinput[4]_bcdinput[6]_MUX_173_o11
+    SLICE_X6Y32.A2       net (fanout=2)        0.405   BCD/Madd_bcdinput[5]_GND_21_o_add_44_OUT_lut<2>
+    SLICE_X6Y32.A        Tilo                  0.205   BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT32
+    SLICE_X6Y35.CX       net (fanout=1)        0.564   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT31
+    SLICE_X6Y35.CMUX     Tcxc                  0.163   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT3
+                                                       SSD/Reader_2_dpot
+    SLICE_X2Y43.B3       net (fanout=1)        1.298   SSD/Reader_2_dpot
+    SLICE_X2Y43.B        Tilo                  0.205   SSD/Reader<3>
+                                                       SSD/Reader_2_dpot1_G
+    SLICE_X2Y43.A5       net (fanout=1)        0.169   N39
+    SLICE_X2Y43.CLK      Tas                   0.341   SSD/Reader<3>
+                                                       SSD/Reader_2_dpot11
+                                                       SSD/Reader_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.432ns (1.581ns logic, 3.851ns route)
+                                                       (29.1% logic, 70.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.546ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_5 (FF)
+  Destination:          SSD/Reader_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.405ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.014ns (0.644 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_5 to SSD/Reader_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.BQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_5
+    SLICE_X6Y32.B2       net (fanout=14)       1.443   bcdinput<5>
+    SLICE_X6Y32.B        Tilo                  0.205   BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+                                                       BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o111
+    SLICE_X6Y32.A3       net (fanout=2)        0.404   BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+    SLICE_X6Y32.A        Tilo                  0.205   BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT32
+    SLICE_X6Y35.CX       net (fanout=1)        0.564   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT31
+    SLICE_X6Y35.CMUX     Tcxc                  0.163   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT3
+                                                       SSD/Reader_2_dpot
+    SLICE_X2Y43.B3       net (fanout=1)        1.298   SSD/Reader_2_dpot
+    SLICE_X2Y43.B        Tilo                  0.205   SSD/Reader<3>
+                                                       SSD/Reader_2_dpot1_G
+    SLICE_X2Y43.A5       net (fanout=1)        0.169   N39
+    SLICE_X2Y43.CLK      Tas                   0.341   SSD/Reader<3>
+                                                       SSD/Reader_2_dpot11
+                                                       SSD/Reader_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.405ns (1.527ns logic, 3.878ns route)
+                                                       (28.3% logic, 71.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.621ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_4 (FF)
+  Destination:          SSD/Reader_2 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.330ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.014ns (0.644 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_4 to SSD/Reader_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.AQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_4
+    SLICE_X7Y32.B3       net (fanout=13)       1.313   bcdinput<4>
+    SLICE_X7Y32.B        Tilo                  0.259   BCD/Madd_bcdinput[5]_GND_21_o_add_44_OUT_lut<3>
+                                                       BCD/Mmux_bcdinput[4]_bcdinput[6]_MUX_173_o11
+    SLICE_X6Y32.A2       net (fanout=2)        0.405   BCD/Madd_bcdinput[5]_GND_21_o_add_44_OUT_lut<2>
+    SLICE_X6Y32.A        Tilo                  0.205   BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT32
+    SLICE_X6Y35.CX       net (fanout=1)        0.564   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT31
+    SLICE_X6Y35.CMUX     Tcxc                  0.163   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT3
+                                                       SSD/Reader_2_dpot
+    SLICE_X2Y43.B3       net (fanout=1)        1.298   SSD/Reader_2_dpot
+    SLICE_X2Y43.B        Tilo                  0.205   SSD/Reader<3>
+                                                       SSD/Reader_2_dpot1_G
+    SLICE_X2Y43.A5       net (fanout=1)        0.169   N39
+    SLICE_X2Y43.CLK      Tas                   0.341   SSD/Reader<3>
+                                                       SSD/Reader_2_dpot11
+                                                       SSD/Reader_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.330ns (1.581ns logic, 3.749ns route)
+                                                       (29.7% logic, 70.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SSD/Reader_1 (SLICE_X5Y42.A5), 148 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.586ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_4 (FF)
+  Destination:          SSD/Reader_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.355ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.024ns (0.634 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_4 to SSD/Reader_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.AQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_4
+    SLICE_X6Y33.A3       net (fanout=13)       1.479   bcdinput<4>
+    SLICE_X6Y33.A        Tilo                  0.205   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT4
+                                                       BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+    SLICE_X6Y36.CX       net (fanout=2)        0.570   BCD/Madd_bcdinput[8]_GND_21_o_add_52_OUT_cy<0>
+    SLICE_X6Y36.CMUX     Tcxc                  0.163   SSD/_n0061_inv1_rstpot
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT24
+    SLICE_X6Y36.A2       net (fanout=1)        0.595   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT23
+    SLICE_X6Y36.A        Tilo                  0.205   SSD/_n0061_inv1_rstpot
+                                                       SSD/Reader_1_dpot
+    SLICE_X5Y42.B4       net (fanout=1)        0.962   SSD/Reader_1_dpot
+    SLICE_X5Y42.B        Tilo                  0.259   SSD/Reader<1>
+                                                       SSD/Reader_1_rstpot_G
+    SLICE_X5Y42.A5       net (fanout=1)        0.187   N35
+    SLICE_X5Y42.CLK      Tas                   0.322   SSD/Reader<1>
+                                                       SSD/Reader_1_rstpot1
+                                                       SSD/Reader_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.355ns (1.562ns logic, 3.793ns route)
+                                                       (29.2% logic, 70.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.718ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_7 (FF)
+  Destination:          SSD/Reader_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.223ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.024ns (0.634 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_7 to SSD/Reader_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.DQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_7
+    SLICE_X6Y36.C2       net (fanout=14)       1.942   bcdinput<7>
+    SLICE_X6Y36.CMUX     Tilo                  0.343   SSD/_n0061_inv1_rstpot
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT24_G
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT24
+    SLICE_X6Y36.A2       net (fanout=1)        0.595   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT23
+    SLICE_X6Y36.A        Tilo                  0.205   SSD/_n0061_inv1_rstpot
+                                                       SSD/Reader_1_dpot
+    SLICE_X5Y42.B4       net (fanout=1)        0.962   SSD/Reader_1_dpot
+    SLICE_X5Y42.B        Tilo                  0.259   SSD/Reader<1>
+                                                       SSD/Reader_1_rstpot_G
+    SLICE_X5Y42.A5       net (fanout=1)        0.187   N35
+    SLICE_X5Y42.CLK      Tas                   0.322   SSD/Reader<1>
+                                                       SSD/Reader_1_rstpot1
+                                                       SSD/Reader_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.223ns (1.537ns logic, 3.686ns route)
+                                                       (29.4% logic, 70.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     14.787ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_3 (FF)
+  Destination:          SSD/Reader_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.157ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.021ns (0.634 - 0.655)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_3 to SSD/Reader_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y22.DQ       Tcko                  0.391   bcdinput<3>
+                                                       bcdinput_3
+    SLICE_X6Y33.A1       net (fanout=13)       1.298   bcdinput<3>
+    SLICE_X6Y33.A        Tilo                  0.205   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT4
+                                                       BCD/Mmux_bcdinput[5]_bcdinput[5]_MUX_183_o11
+    SLICE_X6Y36.CX       net (fanout=2)        0.570   BCD/Madd_bcdinput[8]_GND_21_o_add_52_OUT_cy<0>
+    SLICE_X6Y36.CMUX     Tcxc                  0.163   SSD/_n0061_inv1_rstpot
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT24
+    SLICE_X6Y36.A2       net (fanout=1)        0.595   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT23
+    SLICE_X6Y36.A        Tilo                  0.205   SSD/_n0061_inv1_rstpot
+                                                       SSD/Reader_1_dpot
+    SLICE_X5Y42.B4       net (fanout=1)        0.962   SSD/Reader_1_dpot
+    SLICE_X5Y42.B        Tilo                  0.259   SSD/Reader<1>
+                                                       SSD/Reader_1_rstpot_G
+    SLICE_X5Y42.A5       net (fanout=1)        0.187   N35
+    SLICE_X5Y42.CLK      Tas                   0.322   SSD/Reader<1>
+                                                       SSD/Reader_1_rstpot1
+                                                       SSD/Reader_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.157ns (1.545ns logic, 3.612ns route)
+                                                       (30.0% logic, 70.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point SSD/Reader_0 (SLICE_X8Y43.A5), 94 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     14.897ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_5 (FF)
+  Destination:          SSD/Reader_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      5.038ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.030ns (0.628 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_5 to SSD/Reader_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.BQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_5
+    SLICE_X6Y31.D1       net (fanout=14)       1.260   bcdinput<5>
+    SLICE_X6Y31.CMUX     Topdc                 0.338   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT1
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11_F
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+    SLICE_X6Y34.C3       net (fanout=1)        0.711   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT1
+    SLICE_X6Y34.CMUX     Tilo                  0.343   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+                                                       SSD/Reader_0_dpot_G
+                                                       SSD/Reader_0_dpot
+    SLICE_X8Y43.B3       net (fanout=1)        1.264   SSD/Reader_0_dpot
+    SLICE_X8Y43.B        Tilo                  0.203   SSD/Reader<0>
+                                                       SSD/Reader_0_dpot1_G
+    SLICE_X8Y43.A5       net (fanout=1)        0.222   N37
+    SLICE_X8Y43.CLK      Tas                   0.289   SSD/Reader<0>
+                                                       SSD/Reader_0_dpot11
+                                                       SSD/Reader_0
+    -------------------------------------------------  ---------------------------
+    Total                                      5.038ns (1.581ns logic, 3.457ns route)
+                                                       (31.4% logic, 68.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.062ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_7 (FF)
+  Destination:          SSD/Reader_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.873ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.030ns (0.628 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_7 to SSD/Reader_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.DQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_7
+    SLICE_X6Y31.D2       net (fanout=14)       1.095   bcdinput<7>
+    SLICE_X6Y31.CMUX     Topdc                 0.338   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT1
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11_F
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+    SLICE_X6Y34.C3       net (fanout=1)        0.711   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT1
+    SLICE_X6Y34.CMUX     Tilo                  0.343   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+                                                       SSD/Reader_0_dpot_G
+                                                       SSD/Reader_0_dpot
+    SLICE_X8Y43.B3       net (fanout=1)        1.264   SSD/Reader_0_dpot
+    SLICE_X8Y43.B        Tilo                  0.203   SSD/Reader<0>
+                                                       SSD/Reader_0_dpot1_G
+    SLICE_X8Y43.A5       net (fanout=1)        0.222   N37
+    SLICE_X8Y43.CLK      Tas                   0.289   SSD/Reader<0>
+                                                       SSD/Reader_0_dpot11
+                                                       SSD/Reader_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.873ns (1.581ns logic, 3.292ns route)
+                                                       (32.4% logic, 67.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.077ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               bcdinput_7 (FF)
+  Destination:          SSD/Reader_0 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.858ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.030ns (0.628 - 0.658)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: bcdinput_7 to SSD/Reader_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y21.DQ       Tcko                  0.408   bcdinput<7>
+                                                       bcdinput_7
+    SLICE_X6Y34.B1       net (fanout=14)       1.486   bcdinput<7>
+    SLICE_X6Y34.B        Tilo                  0.205   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+                                                       SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT12
+    SLICE_X6Y34.D1       net (fanout=1)        0.443   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+    SLICE_X6Y34.CMUX     Topdc                 0.338   SSD/Mmux_io_sel[3]_Reader[3]_wide_mux_2_OUT11
+                                                       SSD/Reader_0_dpot_F
+                                                       SSD/Reader_0_dpot
+    SLICE_X8Y43.B3       net (fanout=1)        1.264   SSD/Reader_0_dpot
+    SLICE_X8Y43.B        Tilo                  0.203   SSD/Reader<0>
+                                                       SSD/Reader_0_dpot1_G
+    SLICE_X8Y43.A5       net (fanout=1)        0.222   N37
+    SLICE_X8Y43.CLK      Tas                   0.289   SSD/Reader<0>
+                                                       SSD/Reader_0_dpot11
+                                                       SSD/Reader_0
+    -------------------------------------------------  ---------------------------
+    Total                                      4.858ns (1.443ns logic, 3.415ns route)
+                                                       (29.7% logic, 70.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point AVR/spi_slave/data_q_5 (SLICE_X3Y3.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.404ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               AVR/spi_slave/data_q_4 (FF)
+  Destination:          AVR/spi_slave/data_q_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.404ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: AVR/spi_slave/data_q_4 to AVR/spi_slave/data_q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y3.CQ        Tcko                  0.198   AVR/spi_slave/data_q<6>
+                                                       AVR/spi_slave/data_q_4
+    SLICE_X3Y3.C5        net (fanout=1)        0.051   AVR/spi_slave/data_q<4>
+    SLICE_X3Y3.CLK       Tah         (-Th)    -0.155   AVR/spi_slave/data_q<6>
+                                                       AVR/spi_slave/Mmux_data_q[6]_din[7]_mux_4_OUT61
+                                                       AVR/spi_slave/data_q_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.404ns (0.353ns logic, 0.051ns route)
+                                                       (87.4% logic, 12.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point AVR/spi_slave/data_q_3 (SLICE_X3Y3.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.420ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               AVR/spi_slave/data_q_2 (FF)
+  Destination:          AVR/spi_slave/data_q_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.420ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: AVR/spi_slave/data_q_2 to AVR/spi_slave/data_q_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y3.BQ        Tcko                  0.198   AVR/spi_slave/data_q<6>
+                                                       AVR/spi_slave/data_q_2
+    SLICE_X3Y3.B5        net (fanout=1)        0.067   AVR/spi_slave/data_q<2>
+    SLICE_X3Y3.CLK       Tah         (-Th)    -0.155   AVR/spi_slave/data_q<6>
+                                                       AVR/spi_slave/Mmux_data_q[6]_din[7]_mux_4_OUT41
+                                                       AVR/spi_slave/data_q_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.420ns (0.353ns logic, 0.067ns route)
+                                                       (84.0% logic, 16.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point AVR/spi_slave/bit_ct_q_0 (SLICE_X2Y3.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.428ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               AVR/spi_slave/bit_ct_q_0 (FF)
+  Destination:          AVR/spi_slave/bit_ct_q_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.428ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: AVR/spi_slave/bit_ct_q_0 to AVR/spi_slave/bit_ct_q_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y3.AQ        Tcko                  0.200   AVR/spi_slave/bit_ct_q<2>
+                                                       AVR/spi_slave/bit_ct_q_0
+    SLICE_X2Y3.A6        net (fanout=6)        0.038   AVR/spi_slave/bit_ct_q<0>
+    SLICE_X2Y3.CLK       Tah         (-Th)    -0.190   AVR/spi_slave/bit_ct_q<2>
+                                                       AVR/spi_slave/Mcount_bit_ct_q_xor<0>11_INV_0
+                                                       AVR/spi_slave/bit_ct_q_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.428ns (0.390ns logic, 0.038ns route)
+                                                       (91.1% logic, 8.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 50 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 18.270ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X2Y11.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 19.000ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: AVR/busy_q/CLK
+  Logical resource: AVR/Mshreg_block_q_2/CLK
+  Location pin: SLICE_X8Y13.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 19.570ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: AVR/spi_slave/mosi_q/CLK
+  Logical resource: AVR/spi_slave/sck_q/CK
+  Location pin: SLICE_X2Y2.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.481|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 4625 paths, 0 nets, and 669 connections
+
+Design statistics:
+   Minimum period:   5.481ns{1}   (Maximum frequency: 182.448MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Oct 14 21:30:45 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 393 MB
+
+
+

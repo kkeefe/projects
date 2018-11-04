@@ -1,0 +1,475 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: read_out_data.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "read_out_data.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "read_out_data"
+Output Format                      : NGC
+Target Device                      : xc6slx150t-3-fgg676
+
+---- Source Options
+Top Module Name                    : read_out_data
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/isim/read_out_data_sim1/read_out_data.vhd" into library work
+Parsing entity <read_out_data>.
+Parsing architecture <Behavioral> of entity <read_out_data>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <read_out_data> (architecture <Behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/home/ise/Xilinx/test_1/test_1/data_handling3/isim/read_out_data_sim1/read_out_data.vhd" Line 278. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <read_out_data>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/isim/read_out_data_sim1/read_out_data.vhd".
+    Set property "dont_touch = true" for signal <evtFifoReady>.
+    Found 32-bit register for signal <r_evtNumber>.
+    Found 32-bit register for signal <r_evtData>.
+    Found 8-bit register for signal <r_evtAddrOut>.
+    Found 8-bit register for signal <r_evtAddrStop>.
+    Found 2-bit register for signal <r_evtPhaseSel>.
+    Found 1-bit register for signal <r_phase_change>.
+    Found 1-bit register for signal <r_half_phase>.
+    Found 4-bit register for signal <r_num_addr_bef>.
+    Found 4-bit register for signal <r_num_addr_aft>.
+    Found 1-bit register for signal <r_evtDataValid>.
+    Found 1-bit register for signal <r_evtDataLast>.
+    Found 1-bit register for signal <r_dataReady>.
+    Found 32-bit register for signal <evtCounts>.
+    Found 3-bit register for signal <r_state>.
+    Found finite state machine <FSM_0> for signal <r_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 32                                             |
+    | Clock              | clk100 (rising_edge)                           |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | chillin                                        |
+    | Power Up State     | chillin                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <data_addr_hits[7]_GND_4_o_add_8_OUT> created at line 155.
+    Found 8-bit adder for signal <r_evtAddrOut[7]_GND_4_o_add_18_OUT> created at line 184.
+    Found 32-bit adder for signal <evtCounts[31]_GND_4_o_add_68_OUT> created at line 1241.
+    Found 8-bit subtractor for signal <GND_4_o_GND_4_o_sub_10_OUT<7:0>> created at line 156.
+    Found 8-bit comparator equal for signal <r_evtAddrStop[7]_r_evtAddrOut[7]_equal_28_o> created at line 253
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 127 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  37 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <read_out_data> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Registers                                            : 13
+ 1-bit register                                        : 5
+ 2-bit register                                        : 1
+ 32-bit register                                       : 3
+ 4-bit register                                        : 2
+ 8-bit register                                        : 2
+# Comparators                                          : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 37
+ 1-bit 2-to-1 multiplexer                              : 19
+ 32-bit 2-to-1 multiplexer                             : 9
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 7
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <read_out_data>.
+The following registers are absorbed into counter <evtCounts>: 1 register on signal <evtCounts>.
+Unit <read_out_data> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 95
+ Flip-Flops                                            : 95
+# Comparators                                          : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 51
+ 32-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 7
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <r_state[1:3]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ chillin | 000
+ header  | 001
+ phase_0 | 010
+ phase_1 | 011
+ phase_2 | 100
+ phase_3 | 101
+ footer  | 110
+ done    | 111
+---------------------
+
+Optimizing unit <read_out_data> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block read_out_data, actual ratio is 0.
+FlipFlop r_half_phase has been replicated 2 time(s)
+FlipFlop r_phase_change has been replicated 2 time(s)
+FlipFlop r_state_FSM_FFd1 has been replicated 3 time(s)
+FlipFlop r_state_FSM_FFd2 has been replicated 3 time(s)
+FlipFlop r_state_FSM_FFd3 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 142
+ Flip-Flops                                            : 142
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : read_out_data.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 295
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 35
+#      LUT2                        : 22
+#      LUT3                        : 45
+#      LUT4                        : 14
+#      LUT5                        : 26
+#      LUT6                        : 55
+#      MUXCY                       : 45
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 142
+#      FDE                         : 32
+#      FDR                         : 52
+#      FDRE                        : 56
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 128
+#      IBUF                        : 83
+#      OBUF                        : 45
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150tfgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             142  out of  184304     0%  
+ Number of Slice LUTs:                  199  out of  92152     0%  
+    Number used as Logic:               199  out of  92152     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    207
+   Number with an unused Flip Flop:      65  out of    207    31%  
+   Number with an unused LUT:             8  out of    207     3%  
+   Number of fully used LUT-FF pairs:   134  out of    207    64%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                         129
+ Number of bonded IOBs:                 129  out of    396    32%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk100                             | BUFGP                  | 142   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.548ns (Maximum Frequency: 281.853MHz)
+   Minimum input arrival time before clock: 4.612ns
+   Maximum output required time after clock: 3.732ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk100'
+  Clock period: 3.548ns (frequency: 281.853MHz)
+  Total number of paths / destination ports: 1661 / 200
+-------------------------------------------------------------------------
+Delay:               3.548ns (Levels of Logic = 3)
+  Source:            r_evtAddrStop_5 (FF)
+  Destination:       r_half_phase (FF)
+  Source Clock:      clk100 rising
+  Destination Clock: clk100 rising
+
+  Data Path: r_evtAddrStop_5 to r_half_phase
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.944  r_evtAddrStop_5 (r_evtAddrStop_5)
+     LUT6:I0->O            2   0.203   0.864  r_evtAddrStop[7]_r_evtAddrOut[7]_equal_28_o81 (r_evtAddrStop[7]_r_evtAddrOut[7]_equal_28_o8)
+     LUT6:I2->O            1   0.203   0.580  Mmux_r_state[2]_GND_4_o_Mux_37_o11 (r_state[2]_GND_4_o_Mux_37_o)
+     LUT5:I4->O            3   0.205   0.000  r_half_phase_rstpot (r_half_phase_rstpot)
+     FDR:D                     0.102          r_half_phase
+    ----------------------------------------
+    Total                      3.548ns (1.160ns logic, 2.388ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk100'
+  Total number of paths / destination ports: 455 / 210
+-------------------------------------------------------------------------
+Offset:              4.612ns (Levels of Logic = 11)
+  Source:            new_trigger (PAD)
+  Destination:       r_evtAddrOut_7 (FF)
+  Destination Clock: clk100 rising
+
+  Data Path: new_trigger to r_evtAddrOut_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            56   1.222   1.835  new_trigger_IBUF (new_trigger_IBUF)
+     LUT5:I1->O            1   0.203   0.000  Mmux__n0197_rs_lut<0> (Mmux__n0197_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mmux__n0197_rs_cy<0> (Mmux__n0197_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux__n0197_rs_cy<1> (Mmux__n0197_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux__n0197_rs_cy<2> (Mmux__n0197_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux__n0197_rs_cy<3> (Mmux__n0197_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux__n0197_rs_cy<4> (Mmux__n0197_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mmux__n0197_rs_cy<5> (Mmux__n0197_rs_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  Mmux__n0197_rs_cy<6> (Mmux__n0197_rs_cy<6>)
+     XORCY:CI->O           1   0.180   0.580  Mmux__n0197_rs_xor<7> (_n0197<7>)
+     LUT2:I1->O            1   0.205   0.000  Mmux_r_state[2]_GND_4_o_wide_mux_33_OUT81 (r_state[2]_GND_4_o_wide_mux_33_OUT<7>)
+     FDRE:D                    0.102          r_evtAddrOut_7
+    ----------------------------------------
+    Total                      4.612ns (2.198ns logic, 2.414ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk100'
+  Total number of paths / destination ports: 45 / 45
+-------------------------------------------------------------------------
+Offset:              3.732ns (Levels of Logic = 1)
+  Source:            r_evtAddrOut_0 (FF)
+  Destination:       data_read_out<0> (PAD)
+  Source Clock:      clk100 rising
+
+  Data Path: r_evtAddrOut_0 to data_read_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.447   0.714  r_evtAddrOut_0 (r_evtAddrOut_0)
+     OBUF:I->O                 2.571          data_read_out_0_OBUF (data_read_out<0>)
+    ----------------------------------------
+    Total                      3.732ns (3.018ns logic, 0.714ns route)
+                                       (80.9% logic, 19.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk100         |    3.548|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.17 secs
+ 
+--> 
+
+
+Total memory usage is 484168 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

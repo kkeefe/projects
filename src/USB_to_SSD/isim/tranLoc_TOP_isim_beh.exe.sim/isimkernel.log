@@ -1,0 +1,28 @@
+Command line:
+   tranLoc_TOP_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  34314
+
+Sun Oct 14 21:38:48 2018
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 205.382 Meg
+
+ Total Signals          : 207
+ Total Nets             : 117
+ Total Signal Drivers   : 45
+ Total Blocks           : 36
+ Total Primitive Blocks : 19
+ Total Processes        : 43
+ Total Traceable Variables  : 36
+ Total Scalar Nets and Variables : 505
+
+ Total Simulation Time: 0.05 sec
+
+ Current Memory Usage: 282.98 Meg
+
+Sun Oct 14 21:38:51 2018
+

@@ -1,0 +1,3 @@
+vhdl work "syncBit_en.vhd"
+vhdl work "process_trigger.vhd"
+vhdl work "tranLoc_TOP.vhd"

@@ -1,0 +1,1296 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: data_processing_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "data_processing_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "data_processing_top"
+Output Format                      : NGC
+Target Device                      : xc6slx150t-3-fgg676
+
+---- Source Options
+Top Module Name                    : data_processing_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/ipcore_dir/BRAM_storage.vhd" into library work
+Parsing entity <BRAM_storage>.
+Parsing architecture <BRAM_storage_a> of entity <bram_storage>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/ipcore_dir/clk_gen.vhd" into library work
+Parsing entity <clk_gen>.
+Parsing architecture <xilinx> of entity <clk_gen>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/ipcore_dir/axis_fifo_synth.vhd" into library work
+Parsing entity <axis_fifo>.
+Parsing architecture <spartan6> of entity <axis_fifo>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/syncBit_en.vhd" into library work
+Parsing entity <syncBit_en>.
+Parsing architecture <Behavioral> of entity <syncbit_en>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/process_trigger.vhd" into library work
+Parsing entity <process_trigger>.
+Parsing architecture <Behavioral> of entity <process_trigger>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/tranLoc_TOP.vhd" into library work
+Parsing entity <tranLoc_TOP>.
+Parsing architecture <Behavioral> of entity <tranloc_top>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/ISERDES_primitive.vhd" into library work
+Parsing entity <ISERDES_primitive>.
+Parsing architecture <Behavioral> of entity <iserdes_primitive>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/data_handling_module.vhd" into library work
+Parsing entity <data_handling_module>.
+Parsing architecture <Behavioral> of entity <data_handling_module>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/trigger_addr_sel.vhd" into library work
+Parsing entity <trigger_addr_sel>.
+Parsing architecture <Behavioral> of entity <trigger_addr_sel>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/read_out_data.vhd" into library work
+Parsing entity <read_out_data>.
+Parsing architecture <Behavioral> of entity <read_out_data>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" into library work
+Parsing entity <data_ports>.
+Parsing architecture <Behavioral> of entity <data_ports>.
+Parsing VHDL file "/home/ise/Xilinx/test_1/test_1/data_handling3/data_processing_top.vhd" into library work
+Parsing entity <data_processing_top>.
+Parsing architecture <Behavioral> of entity <data_processing_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <data_processing_top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <data_ports> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <data_handling_module> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ISERDES_primitive> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tranLoc_TOP> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <syncBit_en> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <process_trigger> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <BRAM_storage> (architecture <BRAM_storage_a>) from library <work>.
+
+Elaborating entity <read_out_data> (architecture <Behavioral>) with generics from library <work>.
+INFO:HDLCompiler:679 - "/home/ise/Xilinx/test_1/test_1/data_handling3/read_out_data.vhd" Line 278. Case statement is complete. others clause is never selected
+
+Elaborating entity <trigger_addr_sel> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <axis_fifo> (architecture <spartan6>) from library <work>.
+
+Elaborating entity <clk_gen> (architecture <xilinx>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <data_processing_top>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/data_processing_top.vhd".
+    Summary:
+	no macro.
+Unit <data_processing_top> synthesized.
+
+Synthesizing Unit <data_ports>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd".
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[1].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[2].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[3].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[4].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[5].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[6].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[7].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[8].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[9].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[10].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[11].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[12].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[13].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[14].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[15].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[16].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[17].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[18].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[19].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[20].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[21].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[22].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[23].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[24].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[25].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[26].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[27].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[28].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[29].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[30].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[31].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[32].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[33].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[34].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[35].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[36].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[37].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[38].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[39].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[40].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[41].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[42].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[43].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[44].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[45].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[46].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[47].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[48].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[49].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[50].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[51].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[52].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[53].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[54].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[55].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[56].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[57].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[58].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[59].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[60].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[61].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[62].Inst_data_handling_module> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/Xilinx/test_1/test_1/data_handling3/data_ports.vhd" line 94: Output port <data_addr_out> of the instance <gen_data_handling[63].Inst_data_handling_module> is unconnected or connected to loadless signal.
+    Found 64-bit 4-to-1 multiplexer for signal <DATA_OUTPUT> created at line 32.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <data_ports> synthesized.
+
+Synthesizing Unit <data_handling_module>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/data_handling_module.vhd".
+    Found 8-bit register for signal <addra>.
+    Found 8-bit register for signal <address_var>.
+    Found 8-bit adder for signal <address_var[7]_GND_7_o_add_5_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <data_handling_module> synthesized.
+
+Synthesizing Unit <ISERDES_primitive>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/ISERDES_primitive.vhd".
+    Summary:
+	no macro.
+Unit <ISERDES_primitive> synthesized.
+
+Synthesizing Unit <tranLoc_TOP>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/tranLoc_TOP.vhd".
+        input_size = 4
+        output_size = 4
+    Summary:
+	no macro.
+Unit <tranLoc_TOP> synthesized.
+
+Synthesizing Unit <syncBit_en>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/syncBit_en.vhd".
+    Summary:
+	no macro.
+Unit <syncBit_en> synthesized.
+
+Synthesizing Unit <process_trigger>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/process_trigger.vhd".
+        input_size = 4
+        output_size = 4
+    Found 1-bit register for signal <new_hit>.
+    Found 4-bit register for signal <prev_hit>.
+    Found 4-bit register for signal <async_bit_out>.
+    Found 4-bit comparator equal for signal <n0000> created at line 60
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <process_trigger> synthesized.
+
+Synthesizing Unit <read_out_data>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/read_out_data.vhd".
+    Set property "dont_touch = true" for signal <evtFifoReady>.
+    Found 32-bit register for signal <r_evtNumber>.
+    Found 32-bit register for signal <r_evtData>.
+    Found 8-bit register for signal <r_evtAddrOut>.
+    Found 8-bit register for signal <r_evtAddrStop>.
+    Found 2-bit register for signal <r_evtPhaseSel>.
+    Found 1-bit register for signal <r_phase_change>.
+    Found 1-bit register for signal <r_half_phase>.
+    Found 4-bit register for signal <r_num_addr_bef>.
+    Found 4-bit register for signal <r_num_addr_aft>.
+    Found 1-bit register for signal <r_evtDataValid>.
+    Found 1-bit register for signal <r_evtDataLast>.
+    Found 1-bit register for signal <r_dataReady>.
+    Found 32-bit register for signal <evtCounts>.
+    Found 3-bit register for signal <r_state>.
+    Found finite state machine <FSM_0> for signal <r_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 32                                             |
+    | Clock              | clk100 (rising_edge)                           |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | chillin                                        |
+    | Power Up State     | chillin                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <data_addr_hits[7]_GND_16_o_add_8_OUT> created at line 155.
+    Found 8-bit adder for signal <r_evtAddrOut[7]_GND_16_o_add_18_OUT> created at line 184.
+    Found 32-bit adder for signal <evtCounts[31]_GND_16_o_add_68_OUT> created at line 1241.
+    Found 8-bit subtractor for signal <GND_16_o_GND_16_o_sub_10_OUT<7:0>> created at line 156.
+    Found 8-bit comparator equal for signal <r_evtAddrStop[7]_r_evtAddrOut[7]_equal_28_o> created at line 253
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 127 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  37 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <read_out_data> synthesized.
+
+Synthesizing Unit <trigger_addr_sel>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/trigger_addr_sel.vhd".
+    Found 8-bit register for signal <data_addr_writes>.
+    Found 1-bit register for signal <new_trigger>.
+    Found 64-bit register for signal <prev_trigger>.
+    Found 64-bit comparator equal for signal <n0004> created at line 71
+    Summary:
+	inferred  73 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <trigger_addr_sel> synthesized.
+
+Synthesizing Unit <clk_gen>.
+    Related source file is "/home/ise/Xilinx/test_1/test_1/data_handling3/ipcore_dir/clk_gen.vhd".
+    Summary:
+	no macro.
+Unit <clk_gen> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 67
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 65
+ 8-bit addsub                                          : 1
+# Registers                                            : 336
+ 1-bit register                                        : 70
+ 2-bit register                                        : 1
+ 32-bit register                                       : 3
+ 4-bit register                                        : 130
+ 64-bit register                                       : 1
+ 8-bit register                                        : 131
+# Comparators                                          : 66
+ 4-bit comparator equal                                : 64
+ 64-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 38
+ 1-bit 2-to-1 multiplexer                              : 19
+ 32-bit 2-to-1 multiplexer                             : 9
+ 4-bit 2-to-1 multiplexer                              : 2
+ 64-bit 4-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 7
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/axis_fifo.ngc>.
+Reading core <ipcore_dir/BRAM_storage.ngc>.
+Loading core <axis_fifo> for timing and area information for instance <axis_fifo1>.
+Loading core <BRAM_storage> for timing and area information for instance <BRAM_storage>.
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[0].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[1].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[2].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[3].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[4].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[5].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[6].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[7].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[8].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[9].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[10].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[11].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[12].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[13].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[14].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[15].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[16].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[17].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[18].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[19].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[20].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[21].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[22].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[23].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[24].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[25].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[26].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[27].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[28].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[29].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[30].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[31].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[32].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[33].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[34].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[35].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[36].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[37].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[38].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[39].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[40].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[41].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[42].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[43].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[44].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[45].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[46].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[47].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[48].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[49].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[50].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[51].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[52].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[53].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[54].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[55].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[56].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[57].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[58].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[59].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[60].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[61].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[62].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+INFO:Xst:2261 - The FF/Latch <address_var_0> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_0> 
+INFO:Xst:2261 - The FF/Latch <address_var_1> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_1> 
+INFO:Xst:2261 - The FF/Latch <address_var_2> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_2> 
+INFO:Xst:2261 - The FF/Latch <address_var_3> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_3> 
+INFO:Xst:2261 - The FF/Latch <address_var_4> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_4> 
+INFO:Xst:2261 - The FF/Latch <address_var_5> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_5> 
+INFO:Xst:2261 - The FF/Latch <address_var_6> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_6> 
+INFO:Xst:2261 - The FF/Latch <address_var_7> in Unit <gen_data_handling[63].Inst_data_handling_module> is equivalent to the following FF/Latch, which will be removed : <addra_7> 
+
+Synthesizing (advanced) Unit <data_handling_module>.
+The following registers are absorbed into counter <address_var>: 1 register on signal <address_var>.
+Unit <data_handling_module> synthesized (advanced).
+
+Synthesizing (advanced) Unit <read_out_data>.
+The following registers are absorbed into counter <evtCounts>: 1 register on signal <evtCounts>.
+Unit <read_out_data> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 66
+ 8-bit adder                                           : 65
+ 8-bit addsub                                          : 1
+# Counters                                             : 65
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 64
+# Registers                                            : 1768
+ Flip-Flops                                            : 1768
+# Comparators                                          : 66
+ 4-bit comparator equal                                : 64
+ 64-bit comparator equal                               : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 69
+ 1-bit 2-to-1 multiplexer                              : 51
+ 32-bit 2-to-1 multiplexer                             : 8
+ 4-bit 2-to-1 multiplexer                              : 2
+ 64-bit 4-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 7
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <data_ports>, Counter <gen_data_handling[63].Inst_data_handling_module/address_var> <gen_data_handling[62].Inst_data_handling_module/address_var> <gen_data_handling[61].Inst_data_handling_module/address_var> <gen_data_handling[60].Inst_data_handling_module/address_var> <gen_data_handling[59].Inst_data_handling_module/address_var> <gen_data_handling[58].Inst_data_handling_module/address_var> <gen_data_handling[57].Inst_data_handling_module/address_var> <gen_data_handling[56].Inst_data_handling_module/address_var> <gen_data_handling[55].Inst_data_handling_module/address_var> <gen_data_handling[54].Inst_data_handling_module/address_var> <gen_data_handling[53].Inst_data_handling_module/address_var> <gen_data_handling[52].Inst_data_handling_module/address_var> <gen_data_handling[51].Inst_data_handling_module/address_var> <gen_data_handling[50].Inst_data_handling_module/address_var> <gen_data_handling[49].Inst_data_handling_module/address_var> <gen_data_handling[48].Inst_data_handling_module/address_var> <gen_data_handling[47].Inst_data_handling_module/address_var> <gen_data_handling[46].Inst_data_handling_module/address_var> <gen_data_handling[45].Inst_data_handling_module/address_var> <gen_data_handling[44].Inst_data_handling_module/address_var> <gen_data_handling[43].Inst_data_handling_module/address_var> <gen_data_handling[42].Inst_data_handling_module/address_var> <gen_data_handling[41].Inst_data_handling_module/address_var> <gen_data_handling[40].Inst_data_handling_module/address_var> <gen_data_handling[39].Inst_data_handling_module/address_var> <gen_data_handling[38].Inst_data_handling_module/address_var> <gen_data_handling[37].Inst_data_handling_module/address_var> <gen_data_handling[36].Inst_data_handling_module/address_var> <gen_data_handling[35].Inst_data_handling_module/address_var> <gen_data_handling[34].Inst_data_handling_module/address_var> <gen_data_handling[33].Inst_data_handling_module/address_var> <gen_data_handling[32].Inst_data_handling_module/address_var> <gen_data_handling[31].Inst_data_handling_module/address_var> <gen_data_handling[30].Inst_data_handling_module/address_var> <gen_data_handling[29].Inst_data_handling_module/address_var> <gen_data_handling[28].Inst_data_handling_module/address_var> <gen_data_handling[27].Inst_data_handling_module/address_var> <gen_data_handling[26].Inst_data_handling_module/address_var> <gen_data_handling[25].Inst_data_handling_module/address_var> <gen_data_handling[24].Inst_data_handling_module/address_var> <gen_data_handling[23].Inst_data_handling_module/address_var> <gen_data_handling[22].Inst_data_handling_module/address_var> <gen_data_handling[21].Inst_data_handling_module/address_var> <gen_data_handling[20].Inst_data_handling_module/address_var> <gen_data_handling[19].Inst_data_handling_module/address_var> <gen_data_handling[18].Inst_data_handling_module/address_var> <gen_data_handling[17].Inst_data_handling_module/address_var> <gen_data_handling[16].Inst_data_handling_module/address_var> <gen_data_handling[15].Inst_data_handling_module/address_var> <gen_data_handling[14].Inst_data_handling_module/address_var> <gen_data_handling[13].Inst_data_handling_module/address_var> <gen_data_handling[12].Inst_data_handling_module/address_var> <gen_data_handling[11].Inst_data_handling_module/address_var> <gen_data_handling[10].Inst_data_handling_module/address_var> <gen_data_handling[9].Inst_data_handling_module/address_var> <gen_data_handling[8].Inst_data_handling_module/address_var> <gen_data_handling[7].Inst_data_handling_module/address_var> <gen_data_handling[6].Inst_data_handling_module/address_var> <gen_data_handling[5].Inst_data_handling_module/address_var> <gen_data_handling[4].Inst_data_handling_module/address_var> <gen_data_handling[3].Inst_data_handling_module/address_var> <gen_data_handling[2].Inst_data_handling_module/address_var> <gen_data_handling[1].Inst_data_handling_module/address_var> <gen_data_handling[0].Inst_data_handling_module/address_var> are equivalent, XST will keep only <gen_data_handling[63].Inst_data_handling_module/address_var>.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <read_out_data1/FSM_0> on signal <r_state[1:3]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ chillin | 000
+ header  | 001
+ phase_0 | 010
+ phase_1 | 011
+ phase_2 | 100
+ phase_3 | 101
+ footer  | 110
+ done    | 111
+---------------------
+INFO:Xst:1901 - Instance clk_gen1/pll_base_inst in unit clk_gen1/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_0> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_0> <gen_data_handling[61].Inst_data_handling_module/addra_0> <gen_data_handling[60].Inst_data_handling_module/addra_0> <gen_data_handling[59].Inst_data_handling_module/addra_0> <gen_data_handling[58].Inst_data_handling_module/addra_0> <gen_data_handling[57].Inst_data_handling_module/addra_0> <gen_data_handling[56].Inst_data_handling_module/addra_0> <gen_data_handling[55].Inst_data_handling_module/addra_0> <gen_data_handling[54].Inst_data_handling_module/addra_0> <gen_data_handling[53].Inst_data_handling_module/addra_0> <gen_data_handling[52].Inst_data_handling_module/addra_0> <gen_data_handling[51].Inst_data_handling_module/addra_0> <gen_data_handling[50].Inst_data_handling_module/addra_0> <gen_data_handling[49].Inst_data_handling_module/addra_0>
+   <gen_data_handling[48].Inst_data_handling_module/addra_0> <gen_data_handling[47].Inst_data_handling_module/addra_0> <gen_data_handling[46].Inst_data_handling_module/addra_0> <gen_data_handling[45].Inst_data_handling_module/addra_0> <gen_data_handling[44].Inst_data_handling_module/addra_0> <gen_data_handling[43].Inst_data_handling_module/addra_0> <gen_data_handling[42].Inst_data_handling_module/addra_0> <gen_data_handling[41].Inst_data_handling_module/addra_0> <gen_data_handling[40].Inst_data_handling_module/addra_0> <gen_data_handling[39].Inst_data_handling_module/addra_0> <gen_data_handling[38].Inst_data_handling_module/addra_0> <gen_data_handling[37].Inst_data_handling_module/addra_0> <gen_data_handling[36].Inst_data_handling_module/addra_0> <gen_data_handling[35].Inst_data_handling_module/addra_0> <gen_data_handling[34].Inst_data_handling_module/addra_0> <gen_data_handling[33].Inst_data_handling_module/addra_0> <gen_data_handling[32].Inst_data_handling_module/addra_0>
+   <gen_data_handling[31].Inst_data_handling_module/addra_0> <gen_data_handling[30].Inst_data_handling_module/addra_0> <gen_data_handling[29].Inst_data_handling_module/addra_0> <gen_data_handling[28].Inst_data_handling_module/addra_0> <gen_data_handling[27].Inst_data_handling_module/addra_0> <gen_data_handling[26].Inst_data_handling_module/addra_0> <gen_data_handling[25].Inst_data_handling_module/addra_0> <gen_data_handling[24].Inst_data_handling_module/addra_0> <gen_data_handling[23].Inst_data_handling_module/addra_0> <gen_data_handling[22].Inst_data_handling_module/addra_0> <gen_data_handling[21].Inst_data_handling_module/addra_0> <gen_data_handling[20].Inst_data_handling_module/addra_0> <gen_data_handling[19].Inst_data_handling_module/addra_0> <gen_data_handling[18].Inst_data_handling_module/addra_0> <gen_data_handling[17].Inst_data_handling_module/addra_0> <gen_data_handling[16].Inst_data_handling_module/addra_0> <gen_data_handling[15].Inst_data_handling_module/addra_0>
+   <gen_data_handling[14].Inst_data_handling_module/addra_0> <gen_data_handling[13].Inst_data_handling_module/addra_0> <gen_data_handling[12].Inst_data_handling_module/addra_0> <gen_data_handling[11].Inst_data_handling_module/addra_0> <gen_data_handling[10].Inst_data_handling_module/addra_0> <gen_data_handling[9].Inst_data_handling_module/addra_0> <gen_data_handling[8].Inst_data_handling_module/addra_0> <gen_data_handling[7].Inst_data_handling_module/addra_0> <gen_data_handling[6].Inst_data_handling_module/addra_0> <gen_data_handling[5].Inst_data_handling_module/addra_0> <gen_data_handling[4].Inst_data_handling_module/addra_0> <gen_data_handling[3].Inst_data_handling_module/addra_0> <gen_data_handling[2].Inst_data_handling_module/addra_0> <gen_data_handling[1].Inst_data_handling_module/addra_0> <gen_data_handling[0].Inst_data_handling_module/addra_0> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_1> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_1> <gen_data_handling[61].Inst_data_handling_module/addra_1> <gen_data_handling[60].Inst_data_handling_module/addra_1> <gen_data_handling[59].Inst_data_handling_module/addra_1> <gen_data_handling[58].Inst_data_handling_module/addra_1> <gen_data_handling[57].Inst_data_handling_module/addra_1> <gen_data_handling[56].Inst_data_handling_module/addra_1> <gen_data_handling[55].Inst_data_handling_module/addra_1> <gen_data_handling[54].Inst_data_handling_module/addra_1> <gen_data_handling[53].Inst_data_handling_module/addra_1> <gen_data_handling[52].Inst_data_handling_module/addra_1> <gen_data_handling[51].Inst_data_handling_module/addra_1> <gen_data_handling[50].Inst_data_handling_module/addra_1> <gen_data_handling[49].Inst_data_handling_module/addra_1>
+   <gen_data_handling[48].Inst_data_handling_module/addra_1> <gen_data_handling[47].Inst_data_handling_module/addra_1> <gen_data_handling[46].Inst_data_handling_module/addra_1> <gen_data_handling[45].Inst_data_handling_module/addra_1> <gen_data_handling[44].Inst_data_handling_module/addra_1> <gen_data_handling[43].Inst_data_handling_module/addra_1> <gen_data_handling[42].Inst_data_handling_module/addra_1> <gen_data_handling[41].Inst_data_handling_module/addra_1> <gen_data_handling[40].Inst_data_handling_module/addra_1> <gen_data_handling[39].Inst_data_handling_module/addra_1> <gen_data_handling[38].Inst_data_handling_module/addra_1> <gen_data_handling[37].Inst_data_handling_module/addra_1> <gen_data_handling[36].Inst_data_handling_module/addra_1> <gen_data_handling[35].Inst_data_handling_module/addra_1> <gen_data_handling[34].Inst_data_handling_module/addra_1> <gen_data_handling[33].Inst_data_handling_module/addra_1> <gen_data_handling[32].Inst_data_handling_module/addra_1>
+   <gen_data_handling[31].Inst_data_handling_module/addra_1> <gen_data_handling[30].Inst_data_handling_module/addra_1> <gen_data_handling[29].Inst_data_handling_module/addra_1> <gen_data_handling[28].Inst_data_handling_module/addra_1> <gen_data_handling[27].Inst_data_handling_module/addra_1> <gen_data_handling[26].Inst_data_handling_module/addra_1> <gen_data_handling[25].Inst_data_handling_module/addra_1> <gen_data_handling[24].Inst_data_handling_module/addra_1> <gen_data_handling[23].Inst_data_handling_module/addra_1> <gen_data_handling[22].Inst_data_handling_module/addra_1> <gen_data_handling[21].Inst_data_handling_module/addra_1> <gen_data_handling[20].Inst_data_handling_module/addra_1> <gen_data_handling[19].Inst_data_handling_module/addra_1> <gen_data_handling[18].Inst_data_handling_module/addra_1> <gen_data_handling[17].Inst_data_handling_module/addra_1> <gen_data_handling[16].Inst_data_handling_module/addra_1> <gen_data_handling[15].Inst_data_handling_module/addra_1>
+   <gen_data_handling[14].Inst_data_handling_module/addra_1> <gen_data_handling[13].Inst_data_handling_module/addra_1> <gen_data_handling[12].Inst_data_handling_module/addra_1> <gen_data_handling[11].Inst_data_handling_module/addra_1> <gen_data_handling[10].Inst_data_handling_module/addra_1> <gen_data_handling[9].Inst_data_handling_module/addra_1> <gen_data_handling[8].Inst_data_handling_module/addra_1> <gen_data_handling[7].Inst_data_handling_module/addra_1> <gen_data_handling[6].Inst_data_handling_module/addra_1> <gen_data_handling[5].Inst_data_handling_module/addra_1> <gen_data_handling[4].Inst_data_handling_module/addra_1> <gen_data_handling[3].Inst_data_handling_module/addra_1> <gen_data_handling[2].Inst_data_handling_module/addra_1> <gen_data_handling[1].Inst_data_handling_module/addra_1> <gen_data_handling[0].Inst_data_handling_module/addra_1> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_2> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_2> <gen_data_handling[61].Inst_data_handling_module/addra_2> <gen_data_handling[60].Inst_data_handling_module/addra_2> <gen_data_handling[59].Inst_data_handling_module/addra_2> <gen_data_handling[58].Inst_data_handling_module/addra_2> <gen_data_handling[57].Inst_data_handling_module/addra_2> <gen_data_handling[56].Inst_data_handling_module/addra_2> <gen_data_handling[55].Inst_data_handling_module/addra_2> <gen_data_handling[54].Inst_data_handling_module/addra_2> <gen_data_handling[53].Inst_data_handling_module/addra_2> <gen_data_handling[52].Inst_data_handling_module/addra_2> <gen_data_handling[51].Inst_data_handling_module/addra_2> <gen_data_handling[50].Inst_data_handling_module/addra_2> <gen_data_handling[49].Inst_data_handling_module/addra_2>
+   <gen_data_handling[48].Inst_data_handling_module/addra_2> <gen_data_handling[47].Inst_data_handling_module/addra_2> <gen_data_handling[46].Inst_data_handling_module/addra_2> <gen_data_handling[45].Inst_data_handling_module/addra_2> <gen_data_handling[44].Inst_data_handling_module/addra_2> <gen_data_handling[43].Inst_data_handling_module/addra_2> <gen_data_handling[42].Inst_data_handling_module/addra_2> <gen_data_handling[41].Inst_data_handling_module/addra_2> <gen_data_handling[40].Inst_data_handling_module/addra_2> <gen_data_handling[39].Inst_data_handling_module/addra_2> <gen_data_handling[38].Inst_data_handling_module/addra_2> <gen_data_handling[37].Inst_data_handling_module/addra_2> <gen_data_handling[36].Inst_data_handling_module/addra_2> <gen_data_handling[35].Inst_data_handling_module/addra_2> <gen_data_handling[34].Inst_data_handling_module/addra_2> <gen_data_handling[33].Inst_data_handling_module/addra_2> <gen_data_handling[32].Inst_data_handling_module/addra_2>
+   <gen_data_handling[31].Inst_data_handling_module/addra_2> <gen_data_handling[30].Inst_data_handling_module/addra_2> <gen_data_handling[29].Inst_data_handling_module/addra_2> <gen_data_handling[28].Inst_data_handling_module/addra_2> <gen_data_handling[27].Inst_data_handling_module/addra_2> <gen_data_handling[26].Inst_data_handling_module/addra_2> <gen_data_handling[25].Inst_data_handling_module/addra_2> <gen_data_handling[24].Inst_data_handling_module/addra_2> <gen_data_handling[23].Inst_data_handling_module/addra_2> <gen_data_handling[22].Inst_data_handling_module/addra_2> <gen_data_handling[21].Inst_data_handling_module/addra_2> <gen_data_handling[20].Inst_data_handling_module/addra_2> <gen_data_handling[19].Inst_data_handling_module/addra_2> <gen_data_handling[18].Inst_data_handling_module/addra_2> <gen_data_handling[17].Inst_data_handling_module/addra_2> <gen_data_handling[16].Inst_data_handling_module/addra_2> <gen_data_handling[15].Inst_data_handling_module/addra_2>
+   <gen_data_handling[14].Inst_data_handling_module/addra_2> <gen_data_handling[13].Inst_data_handling_module/addra_2> <gen_data_handling[12].Inst_data_handling_module/addra_2> <gen_data_handling[11].Inst_data_handling_module/addra_2> <gen_data_handling[10].Inst_data_handling_module/addra_2> <gen_data_handling[9].Inst_data_handling_module/addra_2> <gen_data_handling[8].Inst_data_handling_module/addra_2> <gen_data_handling[7].Inst_data_handling_module/addra_2> <gen_data_handling[6].Inst_data_handling_module/addra_2> <gen_data_handling[5].Inst_data_handling_module/addra_2> <gen_data_handling[4].Inst_data_handling_module/addra_2> <gen_data_handling[3].Inst_data_handling_module/addra_2> <gen_data_handling[2].Inst_data_handling_module/addra_2> <gen_data_handling[1].Inst_data_handling_module/addra_2> <gen_data_handling[0].Inst_data_handling_module/addra_2> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_3> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_3> <gen_data_handling[61].Inst_data_handling_module/addra_3> <gen_data_handling[60].Inst_data_handling_module/addra_3> <gen_data_handling[59].Inst_data_handling_module/addra_3> <gen_data_handling[58].Inst_data_handling_module/addra_3> <gen_data_handling[57].Inst_data_handling_module/addra_3> <gen_data_handling[56].Inst_data_handling_module/addra_3> <gen_data_handling[55].Inst_data_handling_module/addra_3> <gen_data_handling[54].Inst_data_handling_module/addra_3> <gen_data_handling[53].Inst_data_handling_module/addra_3> <gen_data_handling[52].Inst_data_handling_module/addra_3> <gen_data_handling[51].Inst_data_handling_module/addra_3> <gen_data_handling[50].Inst_data_handling_module/addra_3> <gen_data_handling[49].Inst_data_handling_module/addra_3>
+   <gen_data_handling[48].Inst_data_handling_module/addra_3> <gen_data_handling[47].Inst_data_handling_module/addra_3> <gen_data_handling[46].Inst_data_handling_module/addra_3> <gen_data_handling[45].Inst_data_handling_module/addra_3> <gen_data_handling[44].Inst_data_handling_module/addra_3> <gen_data_handling[43].Inst_data_handling_module/addra_3> <gen_data_handling[42].Inst_data_handling_module/addra_3> <gen_data_handling[41].Inst_data_handling_module/addra_3> <gen_data_handling[40].Inst_data_handling_module/addra_3> <gen_data_handling[39].Inst_data_handling_module/addra_3> <gen_data_handling[38].Inst_data_handling_module/addra_3> <gen_data_handling[37].Inst_data_handling_module/addra_3> <gen_data_handling[36].Inst_data_handling_module/addra_3> <gen_data_handling[35].Inst_data_handling_module/addra_3> <gen_data_handling[34].Inst_data_handling_module/addra_3> <gen_data_handling[33].Inst_data_handling_module/addra_3> <gen_data_handling[32].Inst_data_handling_module/addra_3>
+   <gen_data_handling[31].Inst_data_handling_module/addra_3> <gen_data_handling[30].Inst_data_handling_module/addra_3> <gen_data_handling[29].Inst_data_handling_module/addra_3> <gen_data_handling[28].Inst_data_handling_module/addra_3> <gen_data_handling[27].Inst_data_handling_module/addra_3> <gen_data_handling[26].Inst_data_handling_module/addra_3> <gen_data_handling[25].Inst_data_handling_module/addra_3> <gen_data_handling[24].Inst_data_handling_module/addra_3> <gen_data_handling[23].Inst_data_handling_module/addra_3> <gen_data_handling[22].Inst_data_handling_module/addra_3> <gen_data_handling[21].Inst_data_handling_module/addra_3> <gen_data_handling[20].Inst_data_handling_module/addra_3> <gen_data_handling[19].Inst_data_handling_module/addra_3> <gen_data_handling[18].Inst_data_handling_module/addra_3> <gen_data_handling[17].Inst_data_handling_module/addra_3> <gen_data_handling[16].Inst_data_handling_module/addra_3> <gen_data_handling[15].Inst_data_handling_module/addra_3>
+   <gen_data_handling[14].Inst_data_handling_module/addra_3> <gen_data_handling[13].Inst_data_handling_module/addra_3> <gen_data_handling[12].Inst_data_handling_module/addra_3> <gen_data_handling[11].Inst_data_handling_module/addra_3> <gen_data_handling[10].Inst_data_handling_module/addra_3> <gen_data_handling[9].Inst_data_handling_module/addra_3> <gen_data_handling[8].Inst_data_handling_module/addra_3> <gen_data_handling[7].Inst_data_handling_module/addra_3> <gen_data_handling[6].Inst_data_handling_module/addra_3> <gen_data_handling[5].Inst_data_handling_module/addra_3> <gen_data_handling[4].Inst_data_handling_module/addra_3> <gen_data_handling[3].Inst_data_handling_module/addra_3> <gen_data_handling[2].Inst_data_handling_module/addra_3> <gen_data_handling[1].Inst_data_handling_module/addra_3> <gen_data_handling[0].Inst_data_handling_module/addra_3> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_4> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_4> <gen_data_handling[61].Inst_data_handling_module/addra_4> <gen_data_handling[60].Inst_data_handling_module/addra_4> <gen_data_handling[59].Inst_data_handling_module/addra_4> <gen_data_handling[58].Inst_data_handling_module/addra_4> <gen_data_handling[57].Inst_data_handling_module/addra_4> <gen_data_handling[56].Inst_data_handling_module/addra_4> <gen_data_handling[55].Inst_data_handling_module/addra_4> <gen_data_handling[54].Inst_data_handling_module/addra_4> <gen_data_handling[53].Inst_data_handling_module/addra_4> <gen_data_handling[52].Inst_data_handling_module/addra_4> <gen_data_handling[51].Inst_data_handling_module/addra_4> <gen_data_handling[50].Inst_data_handling_module/addra_4> <gen_data_handling[49].Inst_data_handling_module/addra_4>
+   <gen_data_handling[48].Inst_data_handling_module/addra_4> <gen_data_handling[47].Inst_data_handling_module/addra_4> <gen_data_handling[46].Inst_data_handling_module/addra_4> <gen_data_handling[45].Inst_data_handling_module/addra_4> <gen_data_handling[44].Inst_data_handling_module/addra_4> <gen_data_handling[43].Inst_data_handling_module/addra_4> <gen_data_handling[42].Inst_data_handling_module/addra_4> <gen_data_handling[41].Inst_data_handling_module/addra_4> <gen_data_handling[40].Inst_data_handling_module/addra_4> <gen_data_handling[39].Inst_data_handling_module/addra_4> <gen_data_handling[38].Inst_data_handling_module/addra_4> <gen_data_handling[37].Inst_data_handling_module/addra_4> <gen_data_handling[36].Inst_data_handling_module/addra_4> <gen_data_handling[35].Inst_data_handling_module/addra_4> <gen_data_handling[34].Inst_data_handling_module/addra_4> <gen_data_handling[33].Inst_data_handling_module/addra_4> <gen_data_handling[32].Inst_data_handling_module/addra_4>
+   <gen_data_handling[31].Inst_data_handling_module/addra_4> <gen_data_handling[30].Inst_data_handling_module/addra_4> <gen_data_handling[29].Inst_data_handling_module/addra_4> <gen_data_handling[28].Inst_data_handling_module/addra_4> <gen_data_handling[27].Inst_data_handling_module/addra_4> <gen_data_handling[26].Inst_data_handling_module/addra_4> <gen_data_handling[25].Inst_data_handling_module/addra_4> <gen_data_handling[24].Inst_data_handling_module/addra_4> <gen_data_handling[23].Inst_data_handling_module/addra_4> <gen_data_handling[22].Inst_data_handling_module/addra_4> <gen_data_handling[21].Inst_data_handling_module/addra_4> <gen_data_handling[20].Inst_data_handling_module/addra_4> <gen_data_handling[19].Inst_data_handling_module/addra_4> <gen_data_handling[18].Inst_data_handling_module/addra_4> <gen_data_handling[17].Inst_data_handling_module/addra_4> <gen_data_handling[16].Inst_data_handling_module/addra_4> <gen_data_handling[15].Inst_data_handling_module/addra_4>
+   <gen_data_handling[14].Inst_data_handling_module/addra_4> <gen_data_handling[13].Inst_data_handling_module/addra_4> <gen_data_handling[12].Inst_data_handling_module/addra_4> <gen_data_handling[11].Inst_data_handling_module/addra_4> <gen_data_handling[10].Inst_data_handling_module/addra_4> <gen_data_handling[9].Inst_data_handling_module/addra_4> <gen_data_handling[8].Inst_data_handling_module/addra_4> <gen_data_handling[7].Inst_data_handling_module/addra_4> <gen_data_handling[6].Inst_data_handling_module/addra_4> <gen_data_handling[5].Inst_data_handling_module/addra_4> <gen_data_handling[4].Inst_data_handling_module/addra_4> <gen_data_handling[3].Inst_data_handling_module/addra_4> <gen_data_handling[2].Inst_data_handling_module/addra_4> <gen_data_handling[1].Inst_data_handling_module/addra_4> <gen_data_handling[0].Inst_data_handling_module/addra_4> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_5> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_5> <gen_data_handling[61].Inst_data_handling_module/addra_5> <gen_data_handling[60].Inst_data_handling_module/addra_5> <gen_data_handling[59].Inst_data_handling_module/addra_5> <gen_data_handling[58].Inst_data_handling_module/addra_5> <gen_data_handling[57].Inst_data_handling_module/addra_5> <gen_data_handling[56].Inst_data_handling_module/addra_5> <gen_data_handling[55].Inst_data_handling_module/addra_5> <gen_data_handling[54].Inst_data_handling_module/addra_5> <gen_data_handling[53].Inst_data_handling_module/addra_5> <gen_data_handling[52].Inst_data_handling_module/addra_5> <gen_data_handling[51].Inst_data_handling_module/addra_5> <gen_data_handling[50].Inst_data_handling_module/addra_5> <gen_data_handling[49].Inst_data_handling_module/addra_5>
+   <gen_data_handling[48].Inst_data_handling_module/addra_5> <gen_data_handling[47].Inst_data_handling_module/addra_5> <gen_data_handling[46].Inst_data_handling_module/addra_5> <gen_data_handling[45].Inst_data_handling_module/addra_5> <gen_data_handling[44].Inst_data_handling_module/addra_5> <gen_data_handling[43].Inst_data_handling_module/addra_5> <gen_data_handling[42].Inst_data_handling_module/addra_5> <gen_data_handling[41].Inst_data_handling_module/addra_5> <gen_data_handling[40].Inst_data_handling_module/addra_5> <gen_data_handling[39].Inst_data_handling_module/addra_5> <gen_data_handling[38].Inst_data_handling_module/addra_5> <gen_data_handling[37].Inst_data_handling_module/addra_5> <gen_data_handling[36].Inst_data_handling_module/addra_5> <gen_data_handling[35].Inst_data_handling_module/addra_5> <gen_data_handling[34].Inst_data_handling_module/addra_5> <gen_data_handling[33].Inst_data_handling_module/addra_5> <gen_data_handling[32].Inst_data_handling_module/addra_5>
+   <gen_data_handling[31].Inst_data_handling_module/addra_5> <gen_data_handling[30].Inst_data_handling_module/addra_5> <gen_data_handling[29].Inst_data_handling_module/addra_5> <gen_data_handling[28].Inst_data_handling_module/addra_5> <gen_data_handling[27].Inst_data_handling_module/addra_5> <gen_data_handling[26].Inst_data_handling_module/addra_5> <gen_data_handling[25].Inst_data_handling_module/addra_5> <gen_data_handling[24].Inst_data_handling_module/addra_5> <gen_data_handling[23].Inst_data_handling_module/addra_5> <gen_data_handling[22].Inst_data_handling_module/addra_5> <gen_data_handling[21].Inst_data_handling_module/addra_5> <gen_data_handling[20].Inst_data_handling_module/addra_5> <gen_data_handling[19].Inst_data_handling_module/addra_5> <gen_data_handling[18].Inst_data_handling_module/addra_5> <gen_data_handling[17].Inst_data_handling_module/addra_5> <gen_data_handling[16].Inst_data_handling_module/addra_5> <gen_data_handling[15].Inst_data_handling_module/addra_5>
+   <gen_data_handling[14].Inst_data_handling_module/addra_5> <gen_data_handling[13].Inst_data_handling_module/addra_5> <gen_data_handling[12].Inst_data_handling_module/addra_5> <gen_data_handling[11].Inst_data_handling_module/addra_5> <gen_data_handling[10].Inst_data_handling_module/addra_5> <gen_data_handling[9].Inst_data_handling_module/addra_5> <gen_data_handling[8].Inst_data_handling_module/addra_5> <gen_data_handling[7].Inst_data_handling_module/addra_5> <gen_data_handling[6].Inst_data_handling_module/addra_5> <gen_data_handling[5].Inst_data_handling_module/addra_5> <gen_data_handling[4].Inst_data_handling_module/addra_5> <gen_data_handling[3].Inst_data_handling_module/addra_5> <gen_data_handling[2].Inst_data_handling_module/addra_5> <gen_data_handling[1].Inst_data_handling_module/addra_5> <gen_data_handling[0].Inst_data_handling_module/addra_5> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_6> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_6> <gen_data_handling[61].Inst_data_handling_module/addra_6> <gen_data_handling[60].Inst_data_handling_module/addra_6> <gen_data_handling[59].Inst_data_handling_module/addra_6> <gen_data_handling[58].Inst_data_handling_module/addra_6> <gen_data_handling[57].Inst_data_handling_module/addra_6> <gen_data_handling[56].Inst_data_handling_module/addra_6> <gen_data_handling[55].Inst_data_handling_module/addra_6> <gen_data_handling[54].Inst_data_handling_module/addra_6> <gen_data_handling[53].Inst_data_handling_module/addra_6> <gen_data_handling[52].Inst_data_handling_module/addra_6> <gen_data_handling[51].Inst_data_handling_module/addra_6> <gen_data_handling[50].Inst_data_handling_module/addra_6> <gen_data_handling[49].Inst_data_handling_module/addra_6>
+   <gen_data_handling[48].Inst_data_handling_module/addra_6> <gen_data_handling[47].Inst_data_handling_module/addra_6> <gen_data_handling[46].Inst_data_handling_module/addra_6> <gen_data_handling[45].Inst_data_handling_module/addra_6> <gen_data_handling[44].Inst_data_handling_module/addra_6> <gen_data_handling[43].Inst_data_handling_module/addra_6> <gen_data_handling[42].Inst_data_handling_module/addra_6> <gen_data_handling[41].Inst_data_handling_module/addra_6> <gen_data_handling[40].Inst_data_handling_module/addra_6> <gen_data_handling[39].Inst_data_handling_module/addra_6> <gen_data_handling[38].Inst_data_handling_module/addra_6> <gen_data_handling[37].Inst_data_handling_module/addra_6> <gen_data_handling[36].Inst_data_handling_module/addra_6> <gen_data_handling[35].Inst_data_handling_module/addra_6> <gen_data_handling[34].Inst_data_handling_module/addra_6> <gen_data_handling[33].Inst_data_handling_module/addra_6> <gen_data_handling[32].Inst_data_handling_module/addra_6>
+   <gen_data_handling[31].Inst_data_handling_module/addra_6> <gen_data_handling[30].Inst_data_handling_module/addra_6> <gen_data_handling[29].Inst_data_handling_module/addra_6> <gen_data_handling[28].Inst_data_handling_module/addra_6> <gen_data_handling[27].Inst_data_handling_module/addra_6> <gen_data_handling[26].Inst_data_handling_module/addra_6> <gen_data_handling[25].Inst_data_handling_module/addra_6> <gen_data_handling[24].Inst_data_handling_module/addra_6> <gen_data_handling[23].Inst_data_handling_module/addra_6> <gen_data_handling[22].Inst_data_handling_module/addra_6> <gen_data_handling[21].Inst_data_handling_module/addra_6> <gen_data_handling[20].Inst_data_handling_module/addra_6> <gen_data_handling[19].Inst_data_handling_module/addra_6> <gen_data_handling[18].Inst_data_handling_module/addra_6> <gen_data_handling[17].Inst_data_handling_module/addra_6> <gen_data_handling[16].Inst_data_handling_module/addra_6> <gen_data_handling[15].Inst_data_handling_module/addra_6>
+   <gen_data_handling[14].Inst_data_handling_module/addra_6> <gen_data_handling[13].Inst_data_handling_module/addra_6> <gen_data_handling[12].Inst_data_handling_module/addra_6> <gen_data_handling[11].Inst_data_handling_module/addra_6> <gen_data_handling[10].Inst_data_handling_module/addra_6> <gen_data_handling[9].Inst_data_handling_module/addra_6> <gen_data_handling[8].Inst_data_handling_module/addra_6> <gen_data_handling[7].Inst_data_handling_module/addra_6> <gen_data_handling[6].Inst_data_handling_module/addra_6> <gen_data_handling[5].Inst_data_handling_module/addra_6> <gen_data_handling[4].Inst_data_handling_module/addra_6> <gen_data_handling[3].Inst_data_handling_module/addra_6> <gen_data_handling[2].Inst_data_handling_module/addra_6> <gen_data_handling[1].Inst_data_handling_module/addra_6> <gen_data_handling[0].Inst_data_handling_module/addra_6> 
+INFO:Xst:2261 - The FF/Latch <gen_data_handling[63].Inst_data_handling_module/addra_7> in Unit <data_ports> is equivalent to the following 63 FFs/Latches, which will be removed : <gen_data_handling[62].Inst_data_handling_module/addra_7> <gen_data_handling[61].Inst_data_handling_module/addra_7> <gen_data_handling[60].Inst_data_handling_module/addra_7> <gen_data_handling[59].Inst_data_handling_module/addra_7> <gen_data_handling[58].Inst_data_handling_module/addra_7> <gen_data_handling[57].Inst_data_handling_module/addra_7> <gen_data_handling[56].Inst_data_handling_module/addra_7> <gen_data_handling[55].Inst_data_handling_module/addra_7> <gen_data_handling[54].Inst_data_handling_module/addra_7> <gen_data_handling[53].Inst_data_handling_module/addra_7> <gen_data_handling[52].Inst_data_handling_module/addra_7> <gen_data_handling[51].Inst_data_handling_module/addra_7> <gen_data_handling[50].Inst_data_handling_module/addra_7> <gen_data_handling[49].Inst_data_handling_module/addra_7>
+   <gen_data_handling[48].Inst_data_handling_module/addra_7> <gen_data_handling[47].Inst_data_handling_module/addra_7> <gen_data_handling[46].Inst_data_handling_module/addra_7> <gen_data_handling[45].Inst_data_handling_module/addra_7> <gen_data_handling[44].Inst_data_handling_module/addra_7> <gen_data_handling[43].Inst_data_handling_module/addra_7> <gen_data_handling[42].Inst_data_handling_module/addra_7> <gen_data_handling[41].Inst_data_handling_module/addra_7> <gen_data_handling[40].Inst_data_handling_module/addra_7> <gen_data_handling[39].Inst_data_handling_module/addra_7> <gen_data_handling[38].Inst_data_handling_module/addra_7> <gen_data_handling[37].Inst_data_handling_module/addra_7> <gen_data_handling[36].Inst_data_handling_module/addra_7> <gen_data_handling[35].Inst_data_handling_module/addra_7> <gen_data_handling[34].Inst_data_handling_module/addra_7> <gen_data_handling[33].Inst_data_handling_module/addra_7> <gen_data_handling[32].Inst_data_handling_module/addra_7>
+   <gen_data_handling[31].Inst_data_handling_module/addra_7> <gen_data_handling[30].Inst_data_handling_module/addra_7> <gen_data_handling[29].Inst_data_handling_module/addra_7> <gen_data_handling[28].Inst_data_handling_module/addra_7> <gen_data_handling[27].Inst_data_handling_module/addra_7> <gen_data_handling[26].Inst_data_handling_module/addra_7> <gen_data_handling[25].Inst_data_handling_module/addra_7> <gen_data_handling[24].Inst_data_handling_module/addra_7> <gen_data_handling[23].Inst_data_handling_module/addra_7> <gen_data_handling[22].Inst_data_handling_module/addra_7> <gen_data_handling[21].Inst_data_handling_module/addra_7> <gen_data_handling[20].Inst_data_handling_module/addra_7> <gen_data_handling[19].Inst_data_handling_module/addra_7> <gen_data_handling[18].Inst_data_handling_module/addra_7> <gen_data_handling[17].Inst_data_handling_module/addra_7> <gen_data_handling[16].Inst_data_handling_module/addra_7> <gen_data_handling[15].Inst_data_handling_module/addra_7>
+   <gen_data_handling[14].Inst_data_handling_module/addra_7> <gen_data_handling[13].Inst_data_handling_module/addra_7> <gen_data_handling[12].Inst_data_handling_module/addra_7> <gen_data_handling[11].Inst_data_handling_module/addra_7> <gen_data_handling[10].Inst_data_handling_module/addra_7> <gen_data_handling[9].Inst_data_handling_module/addra_7> <gen_data_handling[8].Inst_data_handling_module/addra_7> <gen_data_handling[7].Inst_data_handling_module/addra_7> <gen_data_handling[6].Inst_data_handling_module/addra_7> <gen_data_handling[5].Inst_data_handling_module/addra_7> <gen_data_handling[4].Inst_data_handling_module/addra_7> <gen_data_handling[3].Inst_data_handling_module/addra_7> <gen_data_handling[2].Inst_data_handling_module/addra_7> <gen_data_handling[1].Inst_data_handling_module/addra_7> <gen_data_handling[0].Inst_data_handling_module/addra_7> 
+
+Optimizing unit <data_processing_top> ...
+
+Optimizing unit <data_ports> ...
+
+Optimizing unit <process_trigger> ...
+
+Optimizing unit <read_out_data> ...
+
+Optimizing unit <trigger_addr_sel> ...
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_0> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_0> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_1> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_1> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_2> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_2> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_3> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_3> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_4> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_4> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_5> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_5> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_6> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_6> 
+INFO:Xst:2261 - The FF/Latch <data_ports1/gen_data_handling[63].Inst_data_handling_module/address_var_7> in Unit <data_processing_top> is equivalent to the following FF/Latch, which will be removed : <data_ports1/gen_data_handling[63].Inst_data_handling_module/addra_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block data_processing_top, actual ratio is 2.
+FlipFlop read_out_data1/r_evtAddrOut_1 has been replicated 1 time(s)
+FlipFlop read_out_data1/r_evtAddrOut_2 has been replicated 1 time(s)
+FlipFlop read_out_data1/r_evtAddrOut_3 has been replicated 1 time(s)
+FlipFlop read_out_data1/r_evtAddrOut_4 has been replicated 1 time(s)
+FlipFlop read_out_data1/r_evtAddrOut_5 has been replicated 1 time(s)
+FlipFlop read_out_data1/r_evtAddrOut_6 has been replicated 1 time(s)
+FlipFlop read_out_data1/r_state_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop read_out_data1/r_state_FSM_FFd2 has been replicated 3 time(s)
+FlipFlop read_out_data1/r_state_FSM_FFd3 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1312
+ Flip-Flops                                            : 1312
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : data_processing_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 854
+#      GND                         : 65
+#      INV                         : 5
+#      LUT1                        : 42
+#      LUT2                        : 23
+#      LUT3                        : 117
+#      LUT4                        : 80
+#      LUT5                        : 100
+#      LUT6                        : 224
+#      MUXCY                       : 75
+#      MUXF7                       : 1
+#      VCC                         : 66
+#      XORCY                       : 56
+# FlipFlops/Latches                : 1362
+#      FD                          : 11
+#      FDE                         : 329
+#      FDR                         : 189
+#      FDRE                        : 830
+#      FDS                         : 1
+#      FDSE                        : 2
+# RAMS                             : 64
+#      RAMB8BWER                   : 64
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 87
+#      IBUF                        : 75
+#      IBUFG                       : 1
+#      OBUF                        : 11
+# Others                           : 65
+#      ISERDES2                    : 64
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150tfgg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1362  out of  184304     0%  
+ Number of Slice LUTs:                  591  out of  92152     0%  
+    Number used as Logic:               591  out of  92152     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1660
+   Number with an unused Flip Flop:     298  out of   1660    17%  
+   Number with an unused LUT:          1069  out of   1660    64%  
+   Number of fully used LUT-FF pairs:   293  out of   1660    17%  
+   Number of unique control sets:       140
+
+IO Utilization: 
+ Number of IOs:                          87
+ Number of bonded IOBs:                  87  out of    396    21%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of    268    11%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of PLL_ADVs:                      1  out of      6    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_gen1/pll_base_inst/CLKOUT0     | BUFG                   | 1426  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.209ns (Maximum Frequency: 237.588MHz)
+   Minimum input arrival time before clock: 5.120ns
+   Maximum output required time after clock: 5.696ns
+   Maximum combinational path delay: 3.448ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_gen1/pll_base_inst/CLKOUT0'
+  Clock period: 4.209ns (frequency: 237.588MHz)
+  Total number of paths / destination ports: 18838 / 3032
+-------------------------------------------------------------------------
+Delay:               4.209ns (Levels of Logic = 24)
+  Source:            trigger_addr_sel1/prev_trigger_0 (FF)
+  Destination:       trigger_addr_sel1/data_addr_writes_7 (FF)
+  Source Clock:      clk_gen1/pll_base_inst/CLKOUT0 rising
+  Destination Clock: clk_gen1/pll_base_inst/CLKOUT0 rising
+
+  Data Path: trigger_addr_sel1/prev_trigger_0 to trigger_addr_sel1/data_addr_writes_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.981  trigger_addr_sel1/prev_trigger_0 (trigger_addr_sel1/prev_trigger_0)
+     LUT6:I0->O            1   0.203   0.000  trigger_addr_sel1/Mcompar_n0004_lut<0> (trigger_addr_sel1/Mcompar_n0004_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  trigger_addr_sel1/Mcompar_n0004_cy<0> (trigger_addr_sel1/Mcompar_n0004_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<1> (trigger_addr_sel1/Mcompar_n0004_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<2> (trigger_addr_sel1/Mcompar_n0004_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<3> (trigger_addr_sel1/Mcompar_n0004_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<4> (trigger_addr_sel1/Mcompar_n0004_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<5> (trigger_addr_sel1/Mcompar_n0004_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<6> (trigger_addr_sel1/Mcompar_n0004_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<7> (trigger_addr_sel1/Mcompar_n0004_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<8> (trigger_addr_sel1/Mcompar_n0004_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<9> (trigger_addr_sel1/Mcompar_n0004_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<10> (trigger_addr_sel1/Mcompar_n0004_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<11> (trigger_addr_sel1/Mcompar_n0004_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<12> (trigger_addr_sel1/Mcompar_n0004_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<13> (trigger_addr_sel1/Mcompar_n0004_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<14> (trigger_addr_sel1/Mcompar_n0004_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<15> (trigger_addr_sel1/Mcompar_n0004_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<16> (trigger_addr_sel1/Mcompar_n0004_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<17> (trigger_addr_sel1/Mcompar_n0004_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<18> (trigger_addr_sel1/Mcompar_n0004_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<19> (trigger_addr_sel1/Mcompar_n0004_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  trigger_addr_sel1/Mcompar_n0004_cy<20> (trigger_addr_sel1/Mcompar_n0004_cy<20>)
+     MUXCY:CI->O          73   0.019   1.700  trigger_addr_sel1/Mcompar_n0004_cy<21> (trigger_addr_sel1/n0004)
+     LUT3:I2->O            1   0.205   0.000  trigger_addr_sel1/data_addr_writes_7_rstpot (trigger_addr_sel1/data_addr_writes_7_rstpot)
+     FDR:D                     0.102          trigger_addr_sel1/data_addr_writes_7
+    ----------------------------------------
+    Total                      4.209ns (1.528ns logic, 2.681ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_gen1/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 1546 / 1544
+-------------------------------------------------------------------------
+Offset:              5.120ns (Levels of Logic = 4)
+  Source:            rst (PAD)
+  Destination:       axis_fifo1/inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/areset_r (FF)
+  Destination Clock: clk_gen1/pll_base_inst/CLKOUT0 rising
+
+  Data Path: rst to axis_fifo1/inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/areset_r
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1081   1.222   2.226  rst_IBUF (rst_IBUF)
+     INV:I->O              1   0.206   0.579  rst_n1_INV_0 (rst_n)
+     begin scope: 'axis_fifo1:ARESETN'
+     INV:I->O              1   0.206   0.579  inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/areset_r_rstpot1_INV_0 (inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/areset_r_rstpot)
+     FD:D                      0.102          inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/areset_r
+    ----------------------------------------
+    Total                      5.120ns (1.736ns logic, 3.384ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_gen1/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 54 / 11
+-------------------------------------------------------------------------
+Offset:              5.696ns (Levels of Logic = 3)
+  Source:            axis_fifo1/inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/gen_downsizer_conversion.axisc_downsizer_0/state_FSM_FFd3 (FF)
+  Destination:       output_data_last (PAD)
+  Source Clock:      clk_gen1/pll_base_inst/CLKOUT0 rising
+
+  Data Path: axis_fifo1/inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/gen_downsizer_conversion.axisc_downsizer_0/state_FSM_FFd3 to output_data_last
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             87   0.447   1.896  inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/gen_downsizer_conversion.axisc_downsizer_0/state_FSM_FFd3 (S00_AXIS_TREADY)
+     LUT4:I2->O            1   0.203   0.579  inst/axis_interconnect_0/inst_si_datapath[0].dynamic_datapath_si/gen_nested.dynamic_datapath_0/gen_nested.dynamic_datapath_0/gen_dwidth_converter.axis_dwidth_converter_0/gen_downsizer_conversion.axisc_downsizer_0/Mmux_last_out11 (M00_AXIS_TLAST)
+     end scope: 'axis_fifo1:M00_AXIS_TLAST'
+     OBUF:I->O                 2.571          output_data_last_OBUF (output_data_last)
+    ----------------------------------------
+    Total                      5.696ns (3.221ns logic, 2.475ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Delay:               3.448ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       data_ports1/gen_data_handling[63].Inst_data_handling_module/data_acquire/ISERDES2_inst1:RST (PAD)
+
+  Data Path: rst to data_ports1/gen_data_handling[63].Inst_data_handling_module/data_acquire/ISERDES2_inst1:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1081   1.222   2.226  rst_IBUF (rst_IBUF)
+    ISERDES2:RST               0.000          data_ports1/gen_data_handling[0].Inst_data_handling_module/data_acquire/ISERDES2_inst1
+    ----------------------------------------
+    Total                      3.448ns (1.222ns logic, 2.226ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_gen1/pll_base_inst/CLKOUT0
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+clk_gen1/pll_base_inst/CLKOUT0|    4.209|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 18.82 secs
+ 
+--> 
+
+
+Total memory usage is 505568 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :  594 (   0 filtered)
+

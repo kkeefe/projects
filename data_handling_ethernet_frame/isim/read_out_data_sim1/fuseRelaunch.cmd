@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Documents/Projects/data_handling3/isim/read_out_data_sim1/read_out_data_sim1_isim_beh.exe" -prj "/home/ise/Documents/Projects/data_handling3/isim/read_out_data_sim1/read_out_data_sim1_beh.prj" "work.read_out_data_sim1" 

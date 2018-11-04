@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="exampleProject.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="RegControl.vhi"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/AXIS_fifo_0.asy" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/AXIS_fifo_0.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/AXIS_fifo_1.asy" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/AXIS_fifo_1.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/axis_fifo.asy" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/axis_fifo.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0.ngc"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="microblaze_0.vhi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITINIT_OPT" xil_pn:name="microblaze_0/__xps/bitinit.opt" xil_pn:origination="imported" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPS_SIM" xil_pn:name="microblaze_0/__xps/ise/microblaze_0.xpssim" xil_pn:origination="imported" xil_pn:subbranch="Par">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XPS_SYN" xil_pn:name="microblaze_0/__xps/ise/microblaze_0.xpssyn" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XPS_UPB" xil_pn:name="microblaze_0/__xps/ise/microblaze_0.xpsupb" xil_pn:origination="imported" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PLATGEN_OPT" xil_pn:name="microblaze_0/__xps/platgen.opt" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XPS_UCF" xil_pn:name="microblaze_0/data/microblaze_0.ucf" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_MHS" xil_pn:name="microblaze_0/microblaze_0.mhs" xil_pn:origination="imported" xil_pn:subbranch="FPGAConfiguration">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0_axi4lite_0_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_axi4lite_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_axi_timebase_wdt_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_axi_timer_0_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0_clock_generator_0_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_clock_generator_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_debug_module_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_iomodule_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_0_bram_block_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_0_d_bram_ctrl_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0_microblaze_0_dlmb_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_0_dlmb_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_0_i_bram_ctrl_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0_microblaze_0_ilmb_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_0_ilmb_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_SYNPLIFY_MISC" xil_pn:name="microblaze_0_microblaze_0_wrapper.ncf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_0_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_1_d_bram_ctrl_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_1_l_bram_ctrl_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_microblaze_1_wrapper.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="microblaze_0_proc_sys_reset_0_wrapper.ngc"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="microblaze_0_top.vhi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="scrodEthernetExample.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_BIN" xil_pn:name="scrodEthernetExample.bin"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="scrodEthernetExample.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="scrodEthernetExample.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="scrodEthernetExample.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="scrodEthernetExample.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="scrodEthernetExample.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="scrodEthernetExample.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="scrodEthernetExample.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="scrodEthernetExample.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="scrodEthernetExample.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="scrodEthernetExample.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="scrodEthernetExample.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="scrodEthernetExample.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="scrodEthernetExample.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="scrodEthernetExample.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="scrodEthernetExample.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="scrodEthernetExample.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="scrodEthernetExample.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="scrodEthernetExample.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="scrodEthernetExample.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="scrodEthernetExample.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="scrodEthernetExample.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="scrodEthernetExample.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="scrodEthernetExample_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="scrodEthernetExample_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="scrodEthernetExample_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="scrodEthernetExample_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="scrodEthernetExample_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="scrodEthernetExample_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scrodEthernetExample_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scrodEthernetExample_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="scrodEthernetExample_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="scrodEthernetExample_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scrodEthernetExample_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="scrodEthernetExample_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="scrodEthernetExample_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="scrodEthernetExample_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="scrodEthernetExample_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1541096665" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1541096665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1541096665" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8406186982015189127" xil_pn:start_ts="1541096665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1541184299" xil_pn:in_ck="-8149635788059598821" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6401546122162821594" xil_pn:start_ts="1541184299">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="coregen/fifo18x16.ngc"/>
+      <outfile xil_pn:name="coregen/fifo18x16.vhd"/>
+      <outfile xil_pn:name="coregen/fifo8x64.ngc"/>
+      <outfile xil_pn:name="coregen/fifo8x64.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/AXIS_fifo_0.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/AXIS_fifo_0_synth.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/AXIS_fifo_1.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/AXIS_fifo_1_synth.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/BRAM_storage.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/BRAM_storage.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/axis_fifo.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/axis_fifo_synth.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/clk_gen.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1541096665" xil_pn:in_ck="373613947947492271" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1541096665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1541096665" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="3559764968199475465" xil_pn:start_ts="1541096665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1541096665" xil_pn:in_ck="373613947947492271" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-563469029221826088" xil_pn:start_ts="1541096665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1541096668" xil_pn:in_ck="8961018674827850603" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7960687402011470308" xil_pn:start_ts="1541096665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="microblaze_0.ngc"/>
+      <outfile xil_pn:name="microblaze_0_axi4lite_0_wrapper.ncf"/>
+      <outfile xil_pn:name="microblaze_0_axi4lite_0_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_axi_timebase_wdt_0_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_axi_timer_0_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_clock_generator_0_wrapper.ncf"/>
+      <outfile xil_pn:name="microblaze_0_clock_generator_0_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_debug_module_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_iomodule_0_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_bram_block_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_d_bram_ctrl_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_dlmb_wrapper.ncf"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_dlmb_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_i_bram_ctrl_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_ilmb_wrapper.ncf"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_ilmb_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_wrapper.ncf"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_0_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_1_d_bram_ctrl_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_1_l_bram_ctrl_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_microblaze_1_wrapper.ngc"/>
+      <outfile xil_pn:name="microblaze_0_proc_sys_reset_0_wrapper.ngc"/>
+    </transform>
+    <transform xil_pn:end_ts="1541188938" xil_pn:in_ck="8257109151881251430" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-747309185908525570" xil_pn:start_ts="1541188912">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="scrodEthernetExample.lso"/>
+      <outfile xil_pn:name="scrodEthernetExample.ngc"/>
+      <outfile xil_pn:name="scrodEthernetExample.ngr"/>
+      <outfile xil_pn:name="scrodEthernetExample.prj"/>
+      <outfile xil_pn:name="scrodEthernetExample.stx"/>
+      <outfile xil_pn:name="scrodEthernetExample.syr"/>
+      <outfile xil_pn:name="scrodEthernetExample.xst"/>
+      <outfile xil_pn:name="scrodEthernetExample_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1541189727" xil_pn:in_ck="-7125888259341429999" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5124647783092455138" xil_pn:start_ts="1541189727">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1541189766" xil_pn:in_ck="-7529894685764999691" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2386396517740767973" xil_pn:start_ts="1541189727">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="microblaze_0.ncf"/>
+      <outfile xil_pn:name="scrodEthernetExample.bld"/>
+      <outfile xil_pn:name="scrodEthernetExample.ngd"/>
+      <outfile xil_pn:name="scrodEthernetExample_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1541189819" xil_pn:in_ck="-2848211151440128328" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="346394261158932323" xil_pn:start_ts="1541189766">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="scrodEthernetExample.pcf"/>
+      <outfile xil_pn:name="scrodEthernetExample_map.map"/>
+      <outfile xil_pn:name="scrodEthernetExample_map.mrp"/>
+      <outfile xil_pn:name="scrodEthernetExample_map.ngm"/>
+      <outfile xil_pn:name="scrodEthernetExample_map.xrpt"/>
+      <outfile xil_pn:name="scrodEthernetExample_summary.xml"/>
+      <outfile xil_pn:name="scrodEthernetExample_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1541189347" xil_pn:in_ck="-7003076133056134703" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3717135755049403020" xil_pn:start_ts="1541189162">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="scrodEthernetExample.ncd"/>
+      <outfile xil_pn:name="scrodEthernetExample.pad"/>
+      <outfile xil_pn:name="scrodEthernetExample.par"/>
+      <outfile xil_pn:name="scrodEthernetExample.ptwx"/>
+      <outfile xil_pn:name="scrodEthernetExample.unroutes"/>
+      <outfile xil_pn:name="scrodEthernetExample.xpi"/>
+      <outfile xil_pn:name="scrodEthernetExample_pad.csv"/>
+      <outfile xil_pn:name="scrodEthernetExample_pad.txt"/>
+      <outfile xil_pn:name="scrodEthernetExample_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1541189391" xil_pn:in_ck="-8600878992102779959" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-6778459577953582440" xil_pn:start_ts="1541189347">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="scrodEthernetExample.bgn"/>
+      <outfile xil_pn:name="scrodEthernetExample.bin"/>
+      <outfile xil_pn:name="scrodEthernetExample.bit"/>
+      <outfile xil_pn:name="scrodEthernetExample.drc"/>
+      <outfile xil_pn:name="scrodEthernetExample.ut"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1540591864" xil_pn:in_ck="3945904126842468742" xil_pn:name="TRAN_exportToSDK" xil_pn:prop_ck="4296800" xil_pn:start_ts="1540591859">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1540445171" xil_pn:in_ck="-8600878992102792813" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1540445171">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1541189347" xil_pn:in_ck="-2848211151440128460" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1541189324">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="scrodEthernetExample.twr"/>
+      <outfile xil_pn:name="scrodEthernetExample.twx"/>
+    </transform>
+    <transform xil_pn:name="TRAN_exportToSDKnobit">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

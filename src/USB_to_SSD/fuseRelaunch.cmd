@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Xilinx/projects/src/USB_to_SSD/tranLoc_TOP_isim_beh.exe" -prj "/home/ise/Xilinx/projects/src/USB_to_SSD/tranLoc_TOP_beh.prj" "work.tranLoc_TOP" 

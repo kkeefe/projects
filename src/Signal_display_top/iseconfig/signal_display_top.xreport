@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-10T12:24:21</DateModified>
+  <DateModified>2018-10-14T20:50:17</DateModified>
   <ModuleName>signal_display_top</ModuleName>
   <SummaryTimeStamp>2018-08-09T10:31:05</SummaryTimeStamp>
-  <SavedFilePath>/home/kevin/project/src/Signal_display_top/iseconfig/signal_display_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/kevin/project/src/Signal_display_top/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/Xilinx/projects/src/Signal_display_top/iseconfig/signal_display_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/Xilinx/projects/src/Signal_display_top/</ImplementationReportsDirectory>
   <DateInitialized>2018-03-02T14:06:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

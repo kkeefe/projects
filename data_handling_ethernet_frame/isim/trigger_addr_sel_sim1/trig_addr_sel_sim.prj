@@ -1,0 +1,2 @@
+vhdl work "trigger_addr_sel.vhd"
+vhdl work "trig_addr_sel_sim.vhd"

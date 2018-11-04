@@ -1,0 +1,2 @@
+vhdtdtfi -prj data_handling -o /home/ise/Xilinx/projects/src/data_handling/trigger_addr_sel.vhi -module trigger_addr_sel -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work trigger_addr_sel.vhd -lib work ipcore_dir/axis_fifo_synth.vhd 
+vhdtdtfi -prj data_handling -o /home/ise/Xilinx/projects/src/data_handling/trigger_addr_sel.vhi -module trigger_addr_sel -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work trigger_addr_sel.vhd -lib work ipcore_dir/axis_fifo_synth.vhd 

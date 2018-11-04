@@ -1,0 +1,742 @@
+/*
+ * Simple DHCP Client
+ * License : BSD
+ * Author : Samuel Jacob (samueldotj@gmail.com)
+ */
+/* #include <sys/types.h> */
+/* #include <sys/socket.h> */
+/* #include <sys/ioctl.h> */
+/* #include <net/ethernet.h> */
+/* #include <net/if.h> */
+/* #ifndef __linux__ */
+/* #include <net/if_dl.h> */
+/* #endif */
+/* #include <netinet/in.h> */
+/* #include <netinet/ip.h> */
+
+/* #define __FAVOR_BSD */
+/* #include <netinet/udp.h> */
+/* #include <pcap.h> */
+/* #include <stdio.h> */
+/* #include <stdlib.h> */
+/* #include <string.h> */
+/* #include <unistd.h> */
+/* #include <errno.h> */
+/* #include <ifaddrs.h> */
+
+
+// Includes for ublaze
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <errno.h>
+#include <malloc.h>
+/* Lets see which ones of these actually work */
+#include "xparameters.h"
+#include "mb_interface.h"
+#include "fsl.h"
+#include "xil_types.h"
+#include "xil_io.h"
+
+// Things for NISHIPhy
+// #define IBUFLEN 128
+
+// IOModule custom offsets
+#define CUSTOM_REG_OFFSET 0x20
+
+// Unions are sick af
+// Define a 5-byte object
+union cuteStuff {
+  u32 u32View;
+  char8 strView[5];
+};
+
+
+//u_char packet[512];
+
+#define DHCP_CHADDR_LEN 16
+#define DHCP_SNAME_LEN  64
+#define DHCP_FILE_LEN   128
+
+/*
+ * http://www.tcpipguide.com/free/t_DHCPMessageFormat.htm
+ */
+typedef u_int32_t ip4_t;
+
+typedef struct dhcp
+{
+    u_int8_t    opcode;
+    u_int8_t    htype;
+    u_int8_t    hlen;
+    u_int8_t    hops;
+    u_int32_t   xid;
+    u_int16_t   secs;
+    u_int16_t   flags;
+    ip4_t       ciaddr;
+    ip4_t       yiaddr;
+    ip4_t       siaddr;
+    ip4_t       giaddr;
+    u_int8_t    chaddr[DHCP_CHADDR_LEN];
+    char        bp_sname[DHCP_SNAME_LEN];
+    char        bp_file[DHCP_FILE_LEN];
+    uint32_t    magic_cookie;
+    u_int8_t    bp_options[0];
+} dhcp_t;
+
+#define DHCP_BOOTREQUEST                    1
+#define DHCP_BOOTREPLY                      2
+
+#define DHCP_HARDWARE_TYPE_10_EHTHERNET     1
+
+#define MESSAGE_TYPE_PAD                    0
+#define MESSAGE_TYPE_REQ_SUBNET_MASK        1
+#define MESSAGE_TYPE_ROUTER                 3
+#define MESSAGE_TYPE_DNS                    6
+#define MESSAGE_TYPE_DOMAIN_NAME            15
+#define MESSAGE_TYPE_REQ_IP                 50
+#define MESSAGE_TYPE_DHCP                   53
+#define MESSAGE_TYPE_PARAMETER_REQ_LIST     55
+#define MESSAGE_TYPE_END                    255
+
+#define DHCP_OPTION_DISCOVER                1
+#define DHCP_OPTION_OFFER                   2
+#define DHCP_OPTION_REQUEST                 3
+#define DHCP_OPTION_PACK                    4
+
+#define DHCP_SERVER_PORT    67
+#define DHCP_CLIENT_PORT    68
+
+#define DHCP_MAGIC_COOKIE   0x63825363
+
+/*  
+ * KC 10/18/18
+ *
+ * This is just quick and dirty.  I've pasted from the standard POSIX/libc headers
+ * And changed wonky typedef things to just bare types.
+ *
+ * Many of these header files look like they can be imported verbatim, though
+ * somewhat simplified.
+ *
+ */
+
+/* Things from various header files that are needed for ethernet, ip, and udp */
+/* These were things that I didn't look hard for because I know what they are... */
+#define ETH_ALEN 6
+#define IPVERSION 4
+
+// From: net/ethernet.h
+struct ether_header
+{
+  u_int8_t  ether_dhost[ETH_ALEN];	/* destination eth addr	*/
+  u_int8_t  ether_shost[ETH_ALEN];	/* source ether addr	*/
+  u_int16_t ether_type;		        /* packet type ID field	*/
+} __attribute__ ((__packed__));
+
+#define	ETHERTYPE_IP		0x0800		/* IP */
+#define	ETHER_ADDR_LEN	ETH_ALEN                 /* size of ethernet addr */
+
+// From: netinet/in.h
+typedef u_int32_t in_addr_t;
+
+struct in_addr
+{  
+  in_addr_t s_addr;
+}; // __attribute__ ((aligned(4)));
+
+/* Standard well-defined IP protocols.  */
+enum
+  {
+    IPPROTO_IP = 0,	   /* Dummy protocol for TCP.  */
+#define IPPROTO_IP		IPPROTO_IP
+    IPPROTO_ICMP = 1,	   /* Internet Control Message Protocol.  */
+#define IPPROTO_ICMP		IPPROTO_ICMP
+    IPPROTO_IGMP = 2,	   /* Internet Group Management Protocol. */
+#define IPPROTO_IGMP		IPPROTO_IGMP
+    IPPROTO_IPIP = 4,	   /* IPIP tunnels (older KA9Q tunnels use 94).  */
+#define IPPROTO_IPIP		IPPROTO_IPIP
+    IPPROTO_TCP = 6,	   /* Transmission Control Protocol.  */
+#define IPPROTO_TCP		IPPROTO_TCP
+    IPPROTO_EGP = 8,	   /* Exterior Gateway Protocol.  */
+#define IPPROTO_EGP		IPPROTO_EGP
+    IPPROTO_PUP = 12,	   /* PUP protocol.  */
+#define IPPROTO_PUP		IPPROTO_PUP
+    IPPROTO_UDP = 17,	   /* User Datagram Protocol.  */
+#define IPPROTO_UDP		IPPROTO_UDP
+    IPPROTO_IDP = 22,	   /* XNS IDP protocol.  */
+#define IPPROTO_IDP		IPPROTO_IDP
+    IPPROTO_TP = 29,	   /* SO Transport Protocol Class 4.  */
+#define IPPROTO_TP		IPPROTO_TP
+    IPPROTO_DCCP = 33,	   /* Datagram Congestion Control Protocol.  */
+#define IPPROTO_DCCP		IPPROTO_DCCP
+    IPPROTO_IPV6 = 41,     /* IPv6 header.  */
+#define IPPROTO_IPV6		IPPROTO_IPV6
+    IPPROTO_RSVP = 46,	   /* Reservation Protocol.  */
+#define IPPROTO_RSVP		IPPROTO_RSVP
+    IPPROTO_GRE = 47,	   /* General Routing Encapsulation.  */
+#define IPPROTO_GRE		IPPROTO_GRE
+    IPPROTO_ESP = 50,      /* encapsulating security payload.  */
+#define IPPROTO_ESP		IPPROTO_ESP
+    IPPROTO_AH = 51,       /* authentication header.  */
+#define IPPROTO_AH		IPPROTO_AH
+    IPPROTO_MTP = 92,	   /* Multicast Transport Protocol.  */
+#define IPPROTO_MTP		IPPROTO_MTP
+    IPPROTO_BEETPH = 94,   /* IP option pseudo header for BEET.  */
+#define IPPROTO_BEETPH		IPPROTO_BEETPH
+    IPPROTO_ENCAP = 98,	   /* Encapsulation Header.  */
+#define IPPROTO_ENCAP		IPPROTO_ENCAP
+    IPPROTO_PIM = 103,	   /* Protocol Independent Multicast.  */
+#define IPPROTO_PIM		IPPROTO_PIM
+    IPPROTO_COMP = 108,	   /* Compression Header Protocol.  */
+#define IPPROTO_COMP		IPPROTO_COMP
+    IPPROTO_SCTP = 132,	   /* Stream Control Transmission Protocol.  */
+#define IPPROTO_SCTP		IPPROTO_SCTP
+    IPPROTO_UDPLITE = 136, /* UDP-Lite protocol.  */
+#define IPPROTO_UDPLITE		IPPROTO_UDPLITE
+    IPPROTO_MPLS = 137,    /* MPLS in IP.  */
+#define IPPROTO_MPLS		IPPROTO_MPLS
+    IPPROTO_RAW = 255,	   /* Raw IP packets.  */
+#define IPPROTO_RAW		IPPROTO_RAW
+    IPPROTO_MAX
+  };
+
+// From: netinet/ip.h
+/*
+ * Definitions for internet protocol version 4.
+ * Per RFC 791, September 1981.
+ */
+
+/*
+ * Structure of an internet header, naked of options.
+ */
+/* Note, this is not what LITTLE_ENDIAN is in the POSIX/Linux headers... */
+// But the uBlaze is little endian */
+#define __LITTLE_ENDIAN 666
+#define __BYTE_ORDER __LITTLE_ENDIAN
+
+struct ip
+  {
+#if __BYTE_ORDER == __LITTLE_ENDIAN
+    unsigned int ip_hl:4;		/* header length */
+    unsigned int ip_v:4;		/* version */
+#endif
+#if __BYTE_ORDER == __BIG_ENDIAN
+    unsigned int ip_v:4;		/* version */
+    unsigned int ip_hl:4;		/* header length */
+#endif
+    u_int8_t ip_tos;			/* type of service */
+    u_short ip_len;			/* total length */
+    u_short ip_id;			/* identification */
+    u_short ip_off;			/* fragment offset field */
+#define	IP_RF 0x8000			/* reserved fragment flag */
+#define	IP_DF 0x4000			/* dont fragment flag */
+#define	IP_MF 0x2000			/* more fragments flag */
+#define	IP_OFFMASK 0x1fff		/* mask for fragmenting bits */
+    u_int8_t ip_ttl;			/* time to live */
+    u_int8_t ip_p;			/* protocol */
+    u_short ip_sum;			/* checksum */
+    struct in_addr ip_src, ip_dst;	/* source and dest address */
+  };
+
+// From: netinet/udp.h
+/* UDP header as specified by RFC 768, August 1980. */
+
+struct udphdr
+{
+  __extension__ union
+  {
+    struct
+    {
+      u_int16_t uh_sport;		/* source port */
+      u_int16_t uh_dport;		/* destination port */
+      u_int16_t uh_ulen;		/* udp length */
+      u_int16_t uh_sum;		/* udp checksum */
+    };
+    struct
+    {
+      u_int16_t source;
+      u_int16_t dest;
+      u_int16_t len;
+      u_int16_t check;
+    };
+  };
+};
+
+//
+// Now we import lowlevel FSL ether reads and writes from Kurtis
+//
+
+// From: ethPackets.h
+
+// Maximum Ethernet frame size, excluding checksum,
+// which is handled in the firmware rather than here.
+#define MAX_PACKET_SIZE 1514
+
+// Ethernet Frame
+#define ETH_HEADER_SIZE 14
+struct EthFrame {
+
+  // Start porting this over to standard stuff
+  struct ether_header eheader;
+  //	u8  destMac[6];
+  //	u8  srcMac[6];
+  //	u16 ethType;
+  u8  payload[MAX_PACKET_SIZE - ETH_HEADER_SIZE];
+} __attribute__ ((aligned(2)));
+
+// From: ethMain.c
+
+// Buffers for input data
+u8 *gInboundData;
+struct EthFrame *gInboundFrame;
+
+// Variables for tracking incoming data buffer positions and status
+u32 gInboundWordPos = 0;
+u32 gCompletePacket = 0;
+u32 *gpInboundFrame;
+
+
+void initMemory() {
+
+  // Set up 4 inbound buffers that can capture 1 MCU each
+  //int i = 0;
+  //	for (i = 0; i < 4; i += 1) {
+  gInboundData = (u8 *) memalign(4, MAX_PACKET_SIZE + 2);
+  if (gInboundData == NULL)
+    print("About to crash, my nigga");
+  
+  // KC 9/13/18 - why are we advancing 2 pointer widths?
+  gInboundData += 2;
+  gInboundFrame = (struct EthFrame *) gInboundData;
+  gpInboundFrame = (u32 *) gInboundData;
+
+  // Not needed for DHCP at the moment
+
+	/* // Set up an outgoing ARP packet */
+	/* gOutboundArp = (u8 *) memalign(4,2 + ARP_PAYLOAD_SIZE + ETH_HEADER_SIZE); */
+	/* if (gOutboundArp == NULL) { */
+	/* 	exit(1); */
+	/* } */
+	/* gOutboundArpFrame = (struct EthFrame *) gOutboundArp; */
+
+	/* // KC 9/13/18 - This looks dangerous.  It won't segfault because we have no */
+	/* //              memory protection, but payload is certainly not initialized */
+	/* gOutboundArpPayload = (struct ArpPayload *) gOutboundArpFrame->payload; */
+
+	/* // Set up an outgoing IPv4 packet */
+	/* gOutboundIp = (u8 *) memalign(4,2 + MAX_PACKET_SIZE); */
+	/* gOutboundIp += 2; */
+	/* if (gOutboundIp == NULL) { */
+	/* 	exit(1); */
+	/* } */
+	/* gOutboundIpFrame = (struct EthFrame *) gOutboundIp; */
+	/* gOutboundIpPayload = (struct Ipv4Payload *) gOutboundIpFrame->payload; */
+	/* gOutboundIpUdpPayload = (struct UdpPayload *) gOutboundIpPayload->payload; */
+}
+
+// KC 10/18/18: completely mysterious black box functions...
+void clearLast() {
+	u32 msrData = mfmsr();
+	msrData &= ~0x10;
+	mtmsr(msrData);
+}
+
+// Reads a single word off of a given channel
+// KC 10/18/18: changed to a single channel for now.
+// later, abstract this.
+void readFsl(void) {
+
+  u32 tempInvalid = 0;
+  u32 tempLast = 0;
+  u32 tempData = 0;
+  //The standard bogus workaround until we figure out how
+  //to get getdfslx to work.
+
+  getfslx(tempData, 0, FSL_NONBLOCKING);
+
+  // KC: guess this is checking for error conditionsa
+  fsl_isinvalid(tempInvalid);
+  fsl_iserror(tempLast);
+  
+  // Copy the data and update the word position if data was good
+  if (!tempInvalid) {
+    memcpy(gpInboundFrame, &tempData, 4);
+
+    // If the word position is at the maximum position, don't update...
+    // KC: why are we keeping a value that is always 1/4 of another value?
+    //     switching to bitshift for speed 
+    if (gInboundWordPos < MAX_PACKET_SIZE >> 2) {
+      ++gInboundWordPos; //++;
+      ++gpInboundFrame; //++;
+    }
+  }
+  
+  // Update the last flag
+  if (tempLast) {
+    gCompletePacket = 1;
+    clearLast();
+  }
+}
+
+void sendFrame(u8 *frame, u32 byteSize) {
+
+  //u32 *dataBuffer = (u32 *) frame;
+  //  u8 *dataBuffer = (u8 *) frame;
+  // Determine if we need to pad out bytes here
+  u32 padWords = 0;
+
+  if (byteSize % 8 != 0)
+    padWords = 1; //Actual formula could be: (8 - byteSize % 8)/4;, but this is always 0 or 1...
+
+  u32 thisWord = 0;
+  // KC: optimized /4 --> >> 2
+  u32 totalWords = (byteSize/4) + padWords;
+  u32 wordToSend = 0;
+  
+  while (thisWord < totalWords) {
+    //   memcpy(&wordToSend, &dataBuffer[thisWord*4], 4);
+    memcpy(&wordToSend, frame + thisWord * 4, 4);
+    putfslx(wordToSend,0,FSL_DEFAULT);
+    thisWord += 1;
+  }
+	
+  // Last word is either real or a pad word...
+  u32 lastWord = (padWords == 0 ? frame[thisWord] : 0x0);
+
+  // Last word should be sent with control (tLast) bit set
+  putfslx(lastWord,0,FSL_CONTROL);
+}
+
+void resetFrame(void) {
+  gInboundWordPos = 0;
+  gCompletePacket = 0;
+  memset((void *) gInboundData, 0, MAX_PACKET_SIZE);
+  gpInboundFrame = (u32 *) gInboundData;
+}
+
+/// End Kurtis FSL routines
+
+/// My rountines
+
+// This will block until a frame is read.
+void NIFT_intakeFrame(void) {
+
+  // This loads a frame
+  while(!gCompletePacket)
+    readFsl();
+}
+
+
+u32 ip;
+char dhcpDone = 0;
+
+static int get_mac_address(u8 *mac) {
+
+  u32 derp;
+
+  // For the NIFTPhy, the mac is built from the device dna
+  // Kurtis says only the top 57 bits matter, all we need is 48.
+  derp = *((u32 *)( XPAR_IOMODULE_0_IO_BASEADDR | CUSTOM_REG_OFFSET | 0x04));
+  memcpy(mac, &derp, 2);
+
+  // Now get the top
+  derp = *((u32 *)( XPAR_IOMODULE_0_IO_BASEADDR | CUSTOM_REG_OFFSET | 0x08));
+  memcpy(mac + 2, &derp, 4);
+
+  // XXX Check for IOModule failures...
+  return 0;
+}
+
+/*
+ * Return checksum for the given data.
+ * Copied from FreeBSD
+ */
+static unsigned short in_cksum(unsigned short *addr, int len)
+{
+    register int sum = 0;
+    u_short answer = 0;
+    register u_short *w = addr;
+    register int nleft = len;
+    /*
+     * Our algorithm is simple, using a 32 bit accumulator (sum), we add
+     * sequential 16 bit words to it, and at the end, fold back all the
+     * carry bits from the top 16 bits into the lower 16 bits.
+     */
+    while (nleft > 1)
+    {
+        sum += *w++;
+        nleft -= 2;
+    }
+    /* mop up an odd byte, if necessary */
+    if (nleft == 1)
+    {
+        *(u_char *)(&answer) = *(u_char *) w;
+        sum += answer;
+    }
+    /* add back carry outs from top 16 bits to low 16 bits */
+    sum = (sum >> 16) + (sum & 0xffff);     /* add hi 16 to low 16 */
+    sum += (sum >> 16);             /* add carry */
+    answer = ~sum;              /* truncate to 16 bits */
+    return (answer);
+}
+
+
+/*
+ * This function will be called for any incoming DHCP responses
+ */
+static void dhcp_input(dhcp_t *dhcp) {
+    if (dhcp->opcode != DHCP_OPTION_OFFER)
+        return;
+
+    /* Get the IP address given by the server */
+    ip = Xil_Ntohl(dhcp->yiaddr);
+
+    /* We are done - lets break the loop */
+    // pcap_breakloop(pcap_handle);
+    dhcpDone = 1;
+}
+
+/*
+ * UDP packet handler
+ */
+static void udp_input(struct udphdr * udp_packet) {
+  
+  /* Check if there is a response from DHCP server by checking the source Port */
+
+  // We push to dhcp processing the data minus the udp header
+  if (Xil_Ntohs(udp_packet->uh_sport) == DHCP_SERVER_PORT)
+    dhcp_input((dhcp_t *)((char *)udp_packet + sizeof(struct udphdr)));
+  else
+    print("Dropped non-dhcp packet\n");
+}
+
+/*
+ * IP Packet handler
+ */
+static void ip_input(struct ip * ip_packet) {
+
+  // We push to udp processing the data minus the ip header
+  if (ip_packet->ip_p == IPPROTO_UDP)
+    udp_input((struct udphdr *)((char *)ip_packet + sizeof(struct ip)));
+  else
+    print("Dropped non-udp packet\n");
+}
+
+/*
+ * Ethernet packet handler
+ */
+static void ether_input(const u8 *frame) {
+
+  // We cast as ether header, so that we can offset into the first bytes.
+  struct ether_header *eframe = (struct ether_header *)frame;
+
+  // We push to ip processing the data minus the ether_header
+  if (Xil_Htons(eframe->ether_type) == ETHERTYPE_IP)
+    ip_input((struct ip *)(frame + sizeof(struct ether_header)));
+  else
+    print("Dropped non-ethernet packet\n");
+}
+
+/*
+ * Ethernet output handler - Fills appropriate bytes in ethernet header
+ */
+static void ether_output(u8 *frame, u8 *mac, int len)
+{
+  //    int result;
+    struct ether_header *eframe = (struct ether_header *)frame;
+
+    // Note that this is only for DHCP, since we are broadcasting (-1 rolls over)
+    memcpy(eframe->ether_shost, mac, ETHER_ADDR_LEN);
+    memset(eframe->ether_dhost, -1,  ETHER_ADDR_LEN);
+    eframe->ether_type = Xil_Htons(ETHERTYPE_IP);
+
+    len = len + sizeof(struct ether_header);
+
+    sendFrame(frame, len);
+}
+
+/*
+ * IP Output handler - Fills appropriate bytes in IP header
+ */
+static void ip_output(struct ip *ip_header, int *len)
+{
+    *len += sizeof(struct ip);
+
+    ip_header->ip_hl = 5;
+    ip_header->ip_v = IPVERSION;
+    ip_header->ip_tos = 0x10;
+    ip_header->ip_len = Xil_Htons(*len);
+    ip_header->ip_id = Xil_Htons(0xffff);
+    ip_header->ip_off = 0;
+    ip_header->ip_ttl = 16;
+    ip_header->ip_p = IPPROTO_UDP;
+    ip_header->ip_sum = 0;
+    ip_header->ip_src.s_addr = 0x0;
+    ip_header->ip_dst.s_addr = Xil_Htonl(0xffffffff);
+
+    ip_header->ip_sum = in_cksum((unsigned short *) ip_header, sizeof(struct ip));
+}
+
+/*
+ * UDP output - Fills appropriate bytes in UDP header
+ */
+static void udp_output(struct udphdr *udp_header, int *len)
+{
+    if (*len & 1)
+        *len += 1;
+    *len += sizeof(struct udphdr);
+
+    udp_header->uh_sport = Xil_Htons(DHCP_CLIENT_PORT);
+    udp_header->uh_dport = Xil_Htons(DHCP_SERVER_PORT);
+    udp_header->uh_ulen = Xil_Htons(*len);
+    udp_header->uh_sum = 0;
+}
+
+/*
+ * DHCP output - Just fills DHCP_BOOTREQUEST
+ */
+static void dhcp_output(dhcp_t *dhcp, u_int8_t *mac, int *len)
+{
+    *len += sizeof(dhcp_t);
+    memset(dhcp, 0, sizeof(dhcp_t));
+
+    dhcp->opcode = DHCP_BOOTREQUEST;
+    dhcp->htype = DHCP_HARDWARE_TYPE_10_EHTHERNET;
+    dhcp->hlen = 6;
+    memcpy(dhcp->chaddr, mac, DHCP_CHADDR_LEN);
+
+    dhcp->magic_cookie = Xil_Htonl(DHCP_MAGIC_COOKIE);
+}
+
+/*
+ * Adds DHCP option to the bytestream
+ */
+static int fill_dhcp_option(u_int8_t *packet, u_int8_t code, u_int8_t *data, u_int8_t len)
+{
+    packet[0] = code;
+    packet[1] = len;
+    memcpy(&packet[2], data, len);
+
+    return len + (sizeof(u_int8_t) * 2);
+}
+
+/*
+ * Fill DHCP options
+ */
+static int fill_dhcp_discovery_options(dhcp_t *dhcp)
+{
+    int len = 0;
+    u32 req_ip;
+    u8 parameter_req_list[] = {MESSAGE_TYPE_REQ_SUBNET_MASK, MESSAGE_TYPE_ROUTER, MESSAGE_TYPE_DNS, MESSAGE_TYPE_DOMAIN_NAME};
+    u8 option;
+
+    option = DHCP_OPTION_DISCOVER;
+    len += fill_dhcp_option(&dhcp->bp_options[len], MESSAGE_TYPE_DHCP, &option, sizeof(option));
+    req_ip = Xil_Htonl(0xc0a8010a);
+    len += fill_dhcp_option(&dhcp->bp_options[len], MESSAGE_TYPE_REQ_IP, (u8 *)&req_ip, sizeof(req_ip));
+    len += fill_dhcp_option(&dhcp->bp_options[len], MESSAGE_TYPE_PARAMETER_REQ_LIST, (u8 *)&parameter_req_list, sizeof(parameter_req_list));
+    option = 0;
+    len += fill_dhcp_option(&dhcp->bp_options[len], MESSAGE_TYPE_END, &option, sizeof(option));
+
+    return len;
+}
+
+/*
+ * Send DHCP DISCOVERY packet
+ */
+static int dhcp_discovery(u8 *mac)
+{
+    int len = 0;
+    u_char *packet;
+    struct udphdr *udp_header;
+    struct ip *ip_header;
+    dhcp_t *dhcp;
+
+    // Dynamic allocate, because weird af behaviour
+    packet = (u_char *)malloc(512);
+    if(!packet)
+      return 1;
+
+    // Index into the packet cleverly!
+    ip_header = (struct ip *)(packet + sizeof(struct ether_header));
+    udp_header = (struct udphdr *)(((char *)ip_header) + sizeof(struct ip));
+    dhcp = (dhcp_t *)(((char *)udp_header) + sizeof(struct udphdr));
+
+    // Populate DHCP payload
+    len = fill_dhcp_discovery_options(dhcp);
+    dhcp_output(dhcp, mac, &len);
+
+    // Populate udp header
+    udp_output(udp_header, &len);
+
+    // Populate IP header
+    ip_output(ip_header, &len);
+
+    // Populate ethernet header and ship
+    ether_output(packet, mac, len);
+
+    // Clean up
+    free(packet);
+    return 0;
+}
+
+int main(int argc, char *argv[])
+{
+    int result;
+    u8 mac[6];
+
+    // Lol oops.
+    //    initMemory();
+
+    // Eats all the memory!
+    
+    /* Get the MAC address of the interface */
+    result = get_mac_address(mac);
+    if (result);
+    // XXX
+
+    ip = 0;
+   
+    /* Listen untill the DHCP OFFER comes */
+    /* If it doesn't come after some number of frames, ask again */
+    while(!dhcpDone) {
+
+      // Send DHCP DISCOVERY packet
+      result = dhcp_discovery(mac);
+      if(result)
+	break;
+
+      // Intake 100 frames, if none are offers, ask again.
+      result = 2;
+      
+      // NIFT_intakeFrame() will block until it gets a full frame for you
+      // pulls frames out of the hardware FIFO via the FSL
+      while(!dhcpDone && --result > 0) {
+
+	// Get an ethernet frame
+	NIFT_intakeFrame();
+	
+	// A frame now sits in gInboundFrame or alternatively gInboundData
+	
+	// Attempt to parse it
+	ether_input(gInboundData);
+      }
+    }
+
+    // Die.
+    if(!dhcpDone)
+      return 1;
+    
+    // Live!
+    print("I have been validated as a human: ");
+    putnum(ip & 0x000F);
+    print(".");
+    putnum((ip >> 4) & 0x000F);
+    print(".");
+    putnum((ip >> 8) & 0x000F);
+    print(".");
+    putnum((ip >> 12) & 0x000F);
+    print("\n");
+}

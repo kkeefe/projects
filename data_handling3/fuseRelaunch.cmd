@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Xilinx/projects/src/data_handling/trig_addr_sel_sim_isim_beh.exe" -prj "/home/ise/Xilinx/projects/src/data_handling/trig_addr_sel_sim_beh.prj" "work.trig_addr_sel_sim" 

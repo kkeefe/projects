@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Xilinx/projects/src/USB_to_SSD/USB_to_SSD_top.ncd
+OUTFILE=/home/ise/Xilinx/projects/src/USB_to_SSD/USB_to_SSD_top.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=/home/ise/Xilinx/projects/src/USB_to_SSD
+LICENSE=WebPack
+USER_INFO=176018512_208276174_210685983_860

@@ -1,0 +1,28 @@
+Command line:
+   trig_addr_sel_sim_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  34978
+
+Fri Oct 19 18:50:15 2018
+
+
+ Elaboration Time: 0.03 sec
+
+ Current Memory Usage: 205.218 Meg
+
+ Total Signals          : 17
+ Total Nets             : 228
+ Total Signal Drivers   : 10
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 7
+ Total Traceable Variables  : 14
+ Total Scalar Nets and Variables : 712
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 282.817 Meg
+
+Fri Oct 19 18:51:03 2018
+

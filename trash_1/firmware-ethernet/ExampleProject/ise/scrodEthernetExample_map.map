@@ -1,0 +1,373 @@
+Release 14.7 Map P.20160913 (lin64)
+Xilinx Map Application Log File for Design 'scrodEthernetExample'
+
+Design Information
+------------------
+Command Line   : map -filter
+/home/ise/Documents/Projects/trash_1/firmware-ethernet/ExampleProject/ise/isecon
+fig/filter.filter -intstyle ise -p xc6slx150t-fgg676-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o scrodEthernetExample_map.ncd
+scrodEthernetExample.ngd scrodEthernetExample.pcf 
+Target Device  : xc6slx150t
+Target Package : fgg676
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Fri Nov  2 20:16:07 2018
+
+Mapping design into LUTs...
+WARNING:MapLib:1073 - This design has 551 KEEP_HIERARCHY constraints specified
+   and therefore, may take a very long time to process. If your design has
+   unexpectedly long run times, please consider minimizing the number of
+   KEEP_HIERARCHY constraints in your design or use the -ignore_keep_hierarchy
+   command line switch to have them ignored by MAP.
+WARNING:MapLib:701 - Signal gtClkP connected to top level port gtClkP has been
+   removed.
+WARNING:MapLib:701 - Signal gtClkN connected to top level port gtClkN has been
+   removed.
+WARNING:MapLib:41 - All members of TNM group "microblaze_0_Interrupt_dst" have
+   been optimized out of the design.
+WARNING:MapLib:45 - All global TimeSpec-IGNORE (TIG) pins have been optimized
+   out of the design.
+WARNING:MapLib:48 - The timing specification "TS_TIG_microblaze_0_Interrupt" has
+   been discarded because its TO group (microblaze_0_Interrupt_dst) was
+   optimized away.
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+WARNING:Pack:1653 - At least one timing constraint is impossible to meet because component delays alone exceed the constraint. A timing
+   constraint summary below shows the failing constraints (preceded with an Asterisk (*)). Please use the Timing Analyzer (GUI) or TRCE
+   (command line) with the Mapped NCD and PCF files to identify which constraints and paths are failing because of the component delays
+   alone. If the failing path(s) is mapped to Xilinx components as expected, consider relaxing the constraint. If it is not mapped to
+   components as expected, re-evaluate your HDL and how synthesis is optimizing the path. To allow the tools to bypass this error, set the
+   environment variable XIL_TIMING_ALLOW_IMPOSSIBLE to 1.
+
+
+   For more information about the Timing Analyzer, consult the Xilinx Timing Analyzer Reference manual; for more information on TRCE,
+   consult the Xilinx Command Line Tools User Guide "TRACE" chapter.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+Number of Timing Constraints that were not applied: 12
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_U_S6EthTop_U_GtpS6_txRxUsrClk2Raw = PE | SETUP       |     6.513ns|     2.974ns|       0|           0
+  RIOD TIMEGRP "U_S6EthTop_U_GtpS6_txRxUsrC | HOLD        |    -0.632ns|            |     194|       45688
+  lk2Raw" TS_usrClkSource * 2 HIGH 50%      | MINPERIOD   |     9.750ns|     6.250ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+* TS_U_S6EthTop_U_GtpS6_txRxUsrClkRaw = PER | SETUP       |     5.393ns|     2.607ns|       0|           0
+  IOD TIMEGRP "U_S6EthTop_U_GtpS6_txRxUsrCl | HOLD        |    -0.097ns|            |      32|        2812
+  kRaw" TS_usrClkSource HIGH 50%            | MINLOWPULSE |     4.666ns|     3.334ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+* TS_microblaze_0_microblaze_0_microblaze_0 | SETUP       |     2.300ns|     6.962ns|       0|           0
+  _i_clock_generator_0_clock_generator_0_SI | HOLD        |    -0.097ns|            |     196|       18820
+  G_PLL0_CLKOUT0_0 = PERIOD TIMEGRP "microb |             |            |            |        |            
+  laze_0_microblaze_0_microblaze_0_i_clock_ |             |            |            |        |            
+  generator_0_clock_generator_0_SIG_PLL0_CL |             |            |            |        |            
+  KOUT0_0" TS_U_S6EthTop_U_GtpS6_txRxUsrClk |             |            |            |        |            
+  Raw / 0.6 HIGH 50%                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* TS_clk_generate_0__clk_gen1_clkout0_0 = P | SETUP       |     0.368ns|     8.160ns|       0|           0
+  ERIOD TIMEGRP "clk_generate_0__clk_gen1_c | HOLD        |    -0.097ns|            |      48|        4592
+  lkout0_0" TS_microblaze_0_microblaze_0_mi |             |            |            |        |            
+  croblaze_0_i_clock_generator_0_clock_gene |             |            |            |        |            
+  rator_0_SIG_PLL0_CLKOUT0_0 / 1.33333333 H |             |            |            |        |            
+  IGH 50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_microblaze_0_microblaze_0_microblaze_0 | MINLOWPULSE |    11.666ns|     5.000ns|       0|           0
+  _i_clock_generator_0_clock_generator_0_SI |             |            |            |        |            
+  G_PLL0_CLKOUT0 = PERIOD TIMEGRP "microbla |             |            |            |        |            
+  ze_0_microblaze_0_microblaze_0_i_clock_ge |             |            |            |        |            
+  nerator_0_clock_generator_0_SIG_PLL0_CLKO |             |            |            |        |            
+  UT0" TS_sys_clk_pin * 0.6 HIGH 50%        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_usrClkSource = PERIOD TIMEGRP "U_GtpS6 | MINLOWPULSE |     2.660ns|     5.340ns|       0|           0
+  /usrClkSource" 8 ns HIGH 50%              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk_generate_0__clk_gen1_clkout0 = PER | MINLOWPULSE |     4.500ns|     8.000ns|       0|           0
+  IOD TIMEGRP "clk_generate_0__clk_gen1_clk |             |            |            |        |            
+  out0" TS_microblaze_0_microblaze_0_microb |             |            |            |        |            
+  laze_0_i_clock_generator_0_clock_generato |             |            |            |        |            
+  r_0_SIG_PLL0_CLKOUT0 * 1.33333333 HIGH 50 |             |            |            |        |            
+  %                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.666ns|     3.334ns|       0|           0
+  pin" 100 MHz HIGH 50%                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CDC = MAXDELAY FROM TIMEGRP "EVERYTHIN | SETUP       |     7.152ns|     0.848ns|       0|           0
+  G" TO TIMEGRP "CLOCK_DOMAIN_CROSSING_REGS | HOLD        |     0.071ns|            |       0|           0
+  " 8 ns DATAPATHONLY                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_0_M00_AXIS_RAM_FF = MAXDELAY | SETUP       |     9.017ns|     0.983ns|       0|           0
+   FROM TIMEGRP "TNM_AXIS_FIFO_0_M00_AXIS_R | HOLD        |     0.500ns|            |       0|           0
+  AMSOURCE" TO TIMEGRP "TNM_AXIS_FIFO_0_M00 |             |            |            |        |            
+  _AXIS_FFDEST" 10 ns DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_M00_AXIS_RAM_FF = MAXDELAY F | SETUP       |     9.017ns|     0.983ns|       0|           0
+  ROM TIMEGRP "TNM_AXIS_FIFO_M00_AXIS_RAMSO | HOLD        |     0.500ns|            |       0|           0
+  URCE" TO TIMEGRP "TNM_AXIS_FIFO_M00_AXIS_ |             |            |            |        |            
+  FFDEST" 10 ns DATAPATHONLY                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_1_S01_AXIS_RAM_FF = MAXDELAY | SETUP       |     9.017ns|     0.983ns|       0|           0
+   FROM TIMEGRP "TNM_AXIS_FIFO_1_S01_AXIS_R | HOLD        |     0.500ns|            |       0|           0
+  AMSOURCE" TO TIMEGRP "TNM_AXIS_FIFO_1_S01 |             |            |            |        |            
+  _AXIS_FFDEST" 10 ns DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_1_S00_AXIS_RAM_FF = MAXDELAY | SETUP       |     9.017ns|     0.983ns|       0|           0
+   FROM TIMEGRP "TNM_AXIS_FIFO_1_S00_AXIS_R | HOLD        |     0.500ns|            |       0|           0
+  AMSOURCE" TO TIMEGRP "TNM_AXIS_FIFO_1_S00 |             |            |            |        |            
+  _AXIS_FFDEST" 10 ns DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_0_M00_AXIS_SRC_PNTR_TO_DEST_ | SETUP       |     9.476ns|     0.524ns|       0|           0
+  STG = MAXDELAY FROM TIMEGRP "TG_AXIS_FIFO | HOLD        |     0.257ns|            |       0|           0
+  _0_M00_AXIS_SRC_PNTR_GC" TO TIMEGRP "TG_A |             |            |            |        |            
+  XIS_FIFO_0_M00_AXIS_DEST_STG_INST_Q" 10 n |             |            |            |        |            
+  s DATAPATHONLY                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_M00_AXIS_SRC_PNTR_TO_DEST_ST | SETUP       |     9.476ns|     0.524ns|       0|           0
+  G = MAXDELAY FROM TIMEGRP "TG_AXIS_FIFO_M | HOLD        |     0.257ns|            |       0|           0
+  00_AXIS_SRC_PNTR_GC" TO TIMEGRP "TG_AXIS_ |             |            |            |        |            
+  FIFO_M00_AXIS_DEST_STG_INST_Q" 10 ns DATA |             |            |            |        |            
+  PATHONLY                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_1_S01_AXIS_SRC_PNTR_TO_DEST_ | SETUP       |     9.476ns|     0.524ns|       0|           0
+  STG = MAXDELAY FROM TIMEGRP "TG_AXIS_FIFO | HOLD        |     0.257ns|            |       0|           0
+  _1_S01_AXIS_SRC_PNTR_GC" TO TIMEGRP "TG_A |             |            |            |        |            
+  XIS_FIFO_1_S01_AXIS_DEST_STG_INST_Q" 10 n |             |            |            |        |            
+  s DATAPATHONLY                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_AXIS_FIFO_1_S00_AXIS_SRC_PNTR_TO_DEST_ | SETUP       |     9.476ns|     0.524ns|       0|           0
+  STG = MAXDELAY FROM TIMEGRP "TG_AXIS_FIFO | HOLD        |     0.257ns|            |       0|           0
+  _1_S00_AXIS_SRC_PNTR_GC" TO TIMEGRP "TG_A |             |            |            |        |            
+  XIS_FIFO_1_S00_AXIS_DEST_STG_INST_Q" 10 n |             |            |            |        |            
+  s DATAPATHONLY                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_U_S6EthTop_U_GtpS6_clkDv_0 = PERIOD TI | MINPERIOD   |    16.875ns|     3.125ns|       0|           0
+  MEGRP "U_S6EthTop_U_GtpS6_clkDv_0" TS_clk |             |            |            |        |            
+  _generate_0__clk_gen1_clkout0_0 * 2 HIGH  |             |            |            |        |            
+  50%                                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_U_S6EthTop_U_GtpS6_clkDv = PERIOD TIME | MINPERIOD   |    21.875ns|     3.125ns|       0|           0
+  GRP "U_S6EthTop_U_GtpS6_clkDv" TS_clk_gen |             |            |            |        |            
+  erate_0__clk_gen1_clkout0 / 2 HIGH 50%    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk400_PLL_0_ = PERIOD TIMEGRP "clk400 | N/A         |         N/A|         N/A|     N/A|         N/A
+  _PLL_0_" TS_microblaze_0_microblaze_0_mic |             |            |            |        |            
+  roblaze_0_i_clock_generator_0_clock_gener |             |            |            |        |            
+  ator_0_SIG_PLL0_CLKOUT0 * 5.33333333 HIGH |             |            |            |        |            
+   50%                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk400_PLL_1_ = PERIOD TIMEGRP "clk400 | N/A         |         N/A|         N/A|     N/A|         N/A
+  _PLL_1_" TS_microblaze_0_microblaze_0_mic |             |            |            |        |            
+  roblaze_0_i_clock_generator_0_clock_gener |             |            |            |        |            
+  ator_0_SIG_PLL0_CLKOUT0 * 5.33333333 HIGH |             |            |            |        |            
+   50%                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk400_PLL_2_ = PERIOD TIMEGRP "clk400 | N/A         |         N/A|         N/A|     N/A|         N/A
+  _PLL_2_" TS_microblaze_0_microblaze_0_mic |             |            |            |        |            
+  roblaze_0_i_clock_generator_0_clock_gener |             |            |            |        |            
+  ator_0_SIG_PLL0_CLKOUT0 * 5.33333333 HIGH |             |            |            |        |            
+   50%                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_Reset_path" TIG | SETUP       |         N/A|     0.718ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_ilmb_POR_FF_I_p | SETUP       |         N/A|     0.916ns|     N/A|           0
+  ath" TIG                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk400_PLL_2__0 = PERIOD TIMEGRP "clk4 | N/A         |         N/A|         N/A|     N/A|         N/A
+  00_PLL_2__0" TS_microblaze_0_microblaze_0 |             |            |            |        |            
+  _microblaze_0_i_clock_generator_0_clock_g |             |            |            |        |            
+  enerator_0_SIG_PLL0_CLKOUT0_0 / 5.3333333 |             |            |            |        |            
+  3 HIGH 50%                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk400_PLL_1__0 = PERIOD TIMEGRP "clk4 | N/A         |         N/A|         N/A|     N/A|         N/A
+  00_PLL_1__0" TS_microblaze_0_microblaze_0 |             |            |            |        |            
+  _microblaze_0_i_clock_generator_0_clock_g |             |            |            |        |            
+  enerator_0_SIG_PLL0_CLKOUT0_0 / 5.3333333 |             |            |            |        |            
+  3 HIGH 50%                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clk400_PLL_0__0 = PERIOD TIMEGRP "clk4 | N/A         |         N/A|         N/A|     N/A|         N/A
+  00_PLL_0__0" TS_microblaze_0_microblaze_0 |             |            |            |        |            
+  _microblaze_0_i_clock_generator_0_clock_g |             |            |            |        |            
+  enerator_0_SIG_PLL0_CLKOUT0_0 / 5.3333333 |             |            |            |        |            
+  3 HIGH 50%                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_microblaze_0_dlmb_POR_FF_I_p | SETUP       |         N/A|     0.916ns|     N/A|           0
+  ath" TIG                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi4lite_0_reset_resync_path" TI | SETUP       |         N/A|     1.063ns|     N/A|           0
+  G                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths
+Analyzed       |
+|           Constraint          | Requirement
+|-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    |
+Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+|TS_sys_clk_pin                 |     10.000ns|      3.334ns|      6.400ns|            0|            0|            0|   
+        0|
+| TS_microblaze_0_microblaze_0_m|     16.667ns|      5.000ns|     10.667ns|            0|            0|            0|   
+        0|
+| icroblaze_0_i_clock_generator_|             |             |             |             |             |             |   
+         |
+| 0_clock_generator_0_SIG_PLL0_C|             |             |             |             |             |             |   
+         |
+| LKOUT0                        |             |             |             |             |             |             |   
+         |
+|  TS_clk400_PLL_2_             |      3.125ns|          N/A|          N/A|            0|            0|            0|   
+        0|
+|  TS_clk400_PLL_1_             |      3.125ns|          N/A|          N/A|            0|            0|            0|   
+        0|
+|  TS_clk400_PLL_0_             |      3.125ns|          N/A|          N/A|            0|            0|            0|   
+        0|
+|  TS_clk_generate_0__clk_gen1_c|     12.500ns|      8.000ns|      1.562ns|            0|            0|            0|   
+        0|
+|  lkout0                       |             |             |             |             |             |             |   
+         |
+|   TS_U_S6EthTop_U_GtpS6_clkDv |     25.000ns|      3.125ns|          N/A|            0|            0|            0|   
+        0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+
+Derived Constraints for TS_usrClkSource
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths
+Analyzed       |
+|           Constraint          | Requirement
+|-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    |
+Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+|TS_usrClkSource                |      8.000ns|      5.340ns|      6.528ns|            0|          470|            0|   
+  8376276|
+| TS_U_S6EthTop_U_GtpS6_txRxUsrC|      8.000ns|      3.334ns|      6.528ns|           32|          244|        16230|   
+  8356004|
+| lkRaw                         |             |             |             |             |             |             |   
+         |
+|  TS_microblaze_0_microblaze_0_|     13.333ns|      6.962ns|     10.880ns|          196|           48|      8329977|   
+    26027|
+|  microblaze_0_i_clock_generato|             |             |             |             |             |             |   
+         |
+|  r_0_clock_generator_0_SIG_PLL|             |             |             |             |             |             |   
+         |
+|  0_CLKOUT0_0                  |             |             |             |             |             |             |   
+         |
+|   TS_clk400_PLL_2__0          |      2.500ns|          N/A|          N/A|            0|            0|            0|   
+        0|
+|   TS_clk400_PLL_1__0          |      2.500ns|          N/A|          N/A|            0|            0|            0|   
+        0|
+|   TS_clk400_PLL_0__0          |      2.500ns|          N/A|          N/A|            0|            0|            0|   
+        0|
+|   TS_clk_generate_0__clk_gen1_|     10.000ns|      8.160ns|      1.562ns|           48|            0|        26027|   
+        0|
+|   clkout0_0                   |             |             |             |             |             |             |   
+         |
+|    TS_U_S6EthTop_U_GtpS6_clkDv|     20.000ns|      3.125ns|          N/A|            0|            0|            0|   
+        0|
+|    _0                         |             |             |             |             |             |             |   
+         |
+| TS_U_S6EthTop_U_GtpS6_txRxUsrC|     16.000ns|      6.250ns|          N/A|          194|            0|         4042|   
+        0|
+| lk2Raw                        |             |             |             |             |             |             |   
+         |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
+----------+
+
+4 constraints not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 24 secs 
+Total CPU  time at the beginning of Placer: 24 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:b7479794) REAL time: 28 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C0_CH<7>
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C0_CH<1>
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C0_CH<0>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C1_CH<7>
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C1_CH<6>
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C1_CH<4>
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C1_CH<1>
+   	 Comp: AsicOut_TRIG_OUTPUT_R0_C1_CH<0>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C0_CH<7>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C0_CH<6>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C0_CH<1>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C0_CH<0>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C1_CH<7>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C1_CH<6>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C1_CH<5>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C1_CH<4>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C1_CH<1>
+   	 Comp: AsicOut_TRIG_OUTPUT_R1_C1_CH<0>
+
+INFO:Place:834 - Only a subset of IOs are locked. Out of 85 IOs, 33 are locked
+   and 52 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:b7479794) REAL time: 29 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:63ad561f) REAL time: 29 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+ERROR:Place:1318 - User has over-constrained component
+   clk_generate[0].phase_lock. There are no placeable sites that satisfy the
+   user constraints. Please review the user constraints on the driver component
+   and the load components of clk_generate[0].phase_lock.
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:63ad561f) REAL time: 50 secs 
+
+Total REAL time to Placer completion: 50 secs 
+Total CPU  time to Placer completion: 50 secs 
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
+
+Mapping completed.
+See MAP report file "scrodEthernetExample_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :  11

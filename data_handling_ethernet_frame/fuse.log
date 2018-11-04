@@ -1,0 +1,54 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/Documents/Projects/data_handling3/data_processing_top_isim_beh.exe -prj /home/ise/Documents/Projects/data_handling3/data_processing_top_beh.prj work.data_processing_top work.glbl 
+ISim P.20160913 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_sync_clock_converter.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_sample_cycle_ratio.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_clock_converter.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_data_fifo.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_arb_rr.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_decoder.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_transfer_mux.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_arb_responder.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_switch_arbiter.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_dynamic_priority_encoder.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_switch.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_subset_converter.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_mux_enc.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_util_aclken_converter.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_util_aclken_converter_wrapper.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_util_axis2vector.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_util_vector2axis.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_register_slice.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_register_slice.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_downsizer.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axisc_upsizer.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_dwidth_converter.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_dynamic_datapath.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_interconnect.v" into library work
+Analyzing Verilog file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo/hdl/verilog/axis_interconnect_v1_1_axis_interconnect_16x16_top.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/BRAM_storage.vhd" into library work
+Parsing VHDL file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/clk_gen.vhd" into library work
+Parsing VHDL file "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" into library work
+ERROR:HDLCompiler:104 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 178: Cannot find <axis_interconnect_v1_1_axis_interconnect_16x16_top> in library <axis_interconnect_v1_1>. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+ERROR:HDLCompiler:854 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 180: Unit <axis_fifo> ignored due to previous errors.
+ERROR:HDLCompiler:374 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 199: Entity <axis_fifo> is not yet compiled.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 203: <string> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 204: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 205: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 206: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 207: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 208: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 209: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 210: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 211: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 212: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 213: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 214: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 215: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 216: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 217: <integer> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/Documents/Projects/data_handling3/ipcore_dir/axis_fifo_sim.vhd" Line 218: <integer> is not declared.
+Sorry, too many errors..

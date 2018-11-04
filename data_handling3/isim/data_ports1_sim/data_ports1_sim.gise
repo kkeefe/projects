@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="data_ports1_sim.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ISERDES2_sim1_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ISERDES2_sim1_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ISERDES2_sim1_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ISERDES2_sim1_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ISERDES_primitive.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ISERDES_primitive.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ISERDES_primitive.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ISERDES_primitive.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ISERDES_primitive.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ISERDES_primitive.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ISERDES_primitive.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ISERDES_primitive.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="ISERDES_primitive.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="ISERDES_primitive.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ISERDES_primitive.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="ISERDES_primitive.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ISERDES_primitive.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ISERDES_primitive.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="ISERDES_primitive.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="ISERDES_primitive.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ISERDES_primitive.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="ISERDES_primitive.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ISERDES_primitive.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ISERDES_primitive_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="ISERDES_primitive_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ISERDES_primitive_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ISERDES_primitive_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ISERDES_primitive_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ISERDES_primitive_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="ISERDES_primitive_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ISERDES_primitive_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ISERDES_primitive_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ISERDES_primitive_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ISERDES_primitive_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ISERDES_primitive_par.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ISERDES_primitive_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ISERDES_primitive_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ISERDES_primitive_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="ISERDES_primitive_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ISERDES_primitive_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1540249191" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249191" xil_pn:in_ck="7958754457493542081" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ISERDES2_sim1.vhd"/>
+      <outfile xil_pn:name="ISERDES_primitive.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249191" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2120469697264513648" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249191" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-9089722650638941682" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249191" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4371790489469140581" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249191" xil_pn:in_ck="7958754457493542081" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ISERDES2_sim1.vhd"/>
+      <outfile xil_pn:name="ISERDES_primitive.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249194" xil_pn:in_ck="7958754457493542081" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2920835054955299264" xil_pn:start_ts="1540249191">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ISERDES2_sim1_beh.prj"/>
+      <outfile xil_pn:name="ISERDES2_sim1_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1540249194" xil_pn:in_ck="-7176276887453289697" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2267000726243607789" xil_pn:start_ts="1540249194">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ISERDES2_sim1_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001083" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1540001083">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001083" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="1521172658468810984" xil_pn:start_ts="1540001083">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001083" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4371790489469140581" xil_pn:start_ts="1540001083">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001083" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5628313884109602646" xil_pn:start_ts="1540001083">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001083" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-563469029221826088" xil_pn:start_ts="1540001083">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001083" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-88193126406390299" xil_pn:start_ts="1540001083">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540248738" xil_pn:in_ck="8720041520499550647" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-8551780684082641932" xil_pn:start_ts="1540248717">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ISERDES_primitive.lso"/>
+      <outfile xil_pn:name="ISERDES_primitive.ngc"/>
+      <outfile xil_pn:name="ISERDES_primitive.ngr"/>
+      <outfile xil_pn:name="ISERDES_primitive.prj"/>
+      <outfile xil_pn:name="ISERDES_primitive.stx"/>
+      <outfile xil_pn:name="ISERDES_primitive.syr"/>
+      <outfile xil_pn:name="ISERDES_primitive.xst"/>
+      <outfile xil_pn:name="ISERDES_primitive_stx_beh.prj"/>
+      <outfile xil_pn:name="ISERDES_primitive_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1540001093" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3964974864351159711" xil_pn:start_ts="1540001093">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1540248750" xil_pn:in_ck="8720041520499541901" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7597639117524750566" xil_pn:start_ts="1540248738">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ISERDES_primitive.bld"/>
+      <outfile xil_pn:name="ISERDES_primitive.ngd"/>
+      <outfile xil_pn:name="ISERDES_primitive_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1540248787" xil_pn:in_ck="8720041520499541902" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="346394261158932323" xil_pn:start_ts="1540248750">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ISERDES_primitive.pcf"/>
+      <outfile xil_pn:name="ISERDES_primitive_map.map"/>
+      <outfile xil_pn:name="ISERDES_primitive_map.mrp"/>
+      <outfile xil_pn:name="ISERDES_primitive_map.ncd"/>
+      <outfile xil_pn:name="ISERDES_primitive_map.ngm"/>
+      <outfile xil_pn:name="ISERDES_primitive_map.xrpt"/>
+      <outfile xil_pn:name="ISERDES_primitive_summary.xml"/>
+      <outfile xil_pn:name="ISERDES_primitive_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1540248838" xil_pn:in_ck="-1261175298029638233" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3717135755049403020" xil_pn:start_ts="1540248787">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ISERDES_primitive.ncd"/>
+      <outfile xil_pn:name="ISERDES_primitive.pad"/>
+      <outfile xil_pn:name="ISERDES_primitive.par"/>
+      <outfile xil_pn:name="ISERDES_primitive.ptwx"/>
+      <outfile xil_pn:name="ISERDES_primitive.unroutes"/>
+      <outfile xil_pn:name="ISERDES_primitive.xpi"/>
+      <outfile xil_pn:name="ISERDES_primitive_pad.csv"/>
+      <outfile xil_pn:name="ISERDES_primitive_pad.txt"/>
+      <outfile xil_pn:name="ISERDES_primitive_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1540248837" xil_pn:in_ck="8720041520499541770" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1540248821">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ISERDES_primitive.twr"/>
+      <outfile xil_pn:name="ISERDES_primitive.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

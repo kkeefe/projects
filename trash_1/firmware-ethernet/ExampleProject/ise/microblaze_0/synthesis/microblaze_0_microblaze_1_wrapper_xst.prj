@@ -1,0 +1,2 @@
+VHDL microblaze_1_elaborate_v1_00_a /home/ise/Xilinx/trash_1/firmware-ethernet/ExampleProject/ise/microblaze_0/hdl/elaborate/microblaze_1_elaborate_v1_00_a/hdl/vhdl/microblaze_1_elaborate.vhd
+vhdl work ../hdl/microblaze_0_microblaze_1_wrapper.vhd

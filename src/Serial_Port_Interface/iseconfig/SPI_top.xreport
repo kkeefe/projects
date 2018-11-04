@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-08-09T11:37:29</DateModified>
+  <DateModified>2018-10-19T17:03:34</DateModified>
   <ModuleName>SPI_top</ModuleName>
   <SummaryTimeStamp>2018-06-13T12:31:20</SummaryTimeStamp>
-  <SavedFilePath>/home/kevin/project/ise/Serial_Port_Interface/iseconfig/SPI_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/kevin/project/ise/Serial_Port_Interface/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/Xilinx/projects/src/Serial_Port_Interface/iseconfig/SPI_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/Xilinx/projects/src/Serial_Port_Interface/</ImplementationReportsDirectory>
   <DateInitialized>2018-05-16T14:23:00</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

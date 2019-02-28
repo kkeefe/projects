@@ -5,19 +5,19 @@ use IEEE.NUMERIC_STD.ALL;
 library UNISIM;
 use UNISIM.VComponents.all;
 
-entity 2n_Decoder is
+entity 2n_Encoder is
   generic(
     n_bits : integer := 2;
     );
   port (
     enable : in  STD_LOGIC;
-    acode  : in  std_logic_vector(n_bits - 1 downto 0);
-    bcode  : out std_logic_vector(n_bits*2 - 1 downto 0)
+    acode  : in  std_logic_vector(n_bits*2 - 1 downto 0);
+    bcode  : out std_logic_vector(n_bits - 1 downto 0)
     );
 
-end 2n_Decoder;
+end 2n_Encoder;
 
-architecture Behavioral of 2n_Decoder is
+architecture Behavioral of 2n_Encoder is
 
 begin
 

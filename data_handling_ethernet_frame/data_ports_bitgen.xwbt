@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/ise/Xilinx/projects/src/data_handling/data_ports.ncd
-OUTFILE=/home/ise/Xilinx/projects/src/data_handling/data_ports.bit
-FAMILY=Spartan6
-PART=xc6slx150t-3fgg676
-WORKINGDIR=/home/ise/Xilinx/projects/src/data_handling
-LICENSE=ISE
-USER_INFO=176018512_208276174_210685983_860

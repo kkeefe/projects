@@ -1,0 +1,57 @@
+Anderson Localization Notes:
+General Format
+* Access
+to access PRLs go to UH manoa library website,
+select research -> type in physical review letters
+select view full course catalog, the first highlight beneat the PRL title
+* title / Rank of the paper's importance.
+** Author
+*** Main Information 
+*** Questions not resolved
+*** Major sources
+
+* What is the right theory for transver Anderson localization of light? (1)
+** Walter Schirmacher
+   Behnam Abaie
+   Arash Mafi
+   Giancarlo Ruocco
+   Marco Leonetti
+
+*** Questions:
+    Difference betweeen the two competeing theories of localization:
+
+What is the scaling theory of localization?
+     
+**** Modulus-type model
+     has been shown to be successful in spatial disturbances of localizing waves.. 
+     used in vibrational anomlises in glasses. sources [20-22]
+     
+Major notes about this kind of description:
+
+1) disorder enters the coefficient of the spatial derivatives, which is the elastic modulus for sound waves..
+2) disorder enters in the dielectric modulus for electromagnetic waves.
+3) solves for the B_field in Maxwell
+4) localization distribution depends on spectral parameter.. 
+5) wavelength dependence is only through spectral parameter?
+
+**** Potential-type Description
+     started from S. John sources [12-14] (1984-1987)
+     Also sources [17-19] from P. Wolfle Check out: Mod. Phys. B 24, 1526 (2010)
+
+Major notes about this kind of description:
+
+1) This kind of theory is taken directly from the work of anderson localization done strictly on electrons. 
+2) it predicts a strong wavelength dependence 
+3) theoretical descriptions following this approach can be found at: [26,28,29]
+4) solves for the E_field in Maxwell (note the difference the the MT approach)
+5) paper presumes that the divergence of Polarization field can not be expected to be zero..
+
+**** things still to cover:
+     Fourier Transform of 1 (z) variable
+     Review Helmholtz equiation made mention to in the text..
+     Review a derivation of the Rayleigh scattering law..
+*** Major sources
+    Pinski has already done a comparison between MT and PT approaches.. 
+    Pinski and Schirmaker together.. 
+**** Supplementary material.. 
+     [37]

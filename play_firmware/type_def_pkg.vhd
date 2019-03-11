@@ -12,24 +12,7 @@ use IEEE.STD_LOGIC_1164.all;
 
 package type_def_pkg is
 
-	type SiPM_pixel_hitcount is array (63 downto 0) of std_logic_vector(31 downto 0);
-
--- type <new_type> is
---  record
---    <type_name>        : std_logic_vector( 7 downto 0);
---    <type_name>        : std_logic;
--- end record;
---
--- Declare constants
---
--- constant <constant_name>		: time := <time_unit> ns;
--- constant <constant_name>		: integer := <value;
---
--- Declare functions and procedure
---
--- function <function_name>  (signal <signal_name> : in <type_declaration>) return <type_declaration>;
--- procedure <procedure_name> (<type_declaration> <constant_name>	: in <type_declaration>);
---
+  type SiPM_pixel_hitcount is array (63 downto 0) of std_logic_vector(31 downto 0);
 
 end type_def_pkg;
 
@@ -60,5 +43,5 @@ package body type_def_pkg is
 --  begin
 --    
 --  end <procedure_name>;
- 
+  
 end type_def_pkg;

@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Xilinx/test_1/test_1/data_handling2/isim/data_ports1_sim/ISERDES2_sim1_isim_beh.exe" -prj "/home/ise/Xilinx/test_1/test_1/data_handling2/isim/data_ports1_sim/ISERDES2_sim1_beh.prj" "work.ISERDES2_sim1" 

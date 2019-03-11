@@ -1,8 +1,0 @@
-vhdl work "ipcore_dir/BRAM_storage.vhd"
-vhdl work "ipcore_dir/clk_gen.vhd"
-vhdl work "syncBit_en.vhd"
-vhdl work "process_trigger.vhd"
-vhdl work "tranLoc_TOP.vhd"
-vhdl work "ISERDES_primitive.vhd"
-vhdl work "data_handling_module.vhd"
-vhdl work "data_ports.vhd"

@@ -1,2 +1,0 @@
-vhdl isim_temp "trigger_addr_sel.vhd"
-vhdl isim_temp "trig_addr_sel_sim.vhd"

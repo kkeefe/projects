@@ -1,4 +1,0 @@
-library ieee;
-use ieee.STD_LOGIC_1164.ALL;
-
-use ieee.NUMERIC_STD.ALL;

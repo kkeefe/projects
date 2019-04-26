@@ -31,12 +31,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity process_trigger is
   Generic(
-    input_size  : integer := 8;
-    output_size : integer := 8
+    input_size  : integer := 4;
+    output_size : integer := 4
     );
   Port (
     clk                : in  STD_LOGIC;
-    rst                : in  STD_LOGIC;  --currently unused so giving warning..
+    rst                : in  STD_LOGIC;  
     data_input         : in  STD_LOGIC_VECTOR(input_size-1 downto 0);
     scaler_count       : in  STD_LOGIC_VECTOR(31 downto 0);
     scaler_count_pixel : out STD_LOGIC_VECTOR(31 downto 0);
@@ -46,71 +46,46 @@ end process_trigger;
 
 architecture Behavioral of process_trigger is
 
-  signal scaler_count_s       : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
-  signal scaler_count_pixel_s : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+  constant NULL_HIT : STD_LOGIC_VECTOR(input_size - 1 downto 0)     := (others => '0');
+
+  signal s_scaler_count_pixel       : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+  signal s_current_count  				: STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
 
 begin
 
-  --begin clock process to analyze hits
-  --count on the 125 MHz clk.. --these are the scaler counts..
-  --p_scaler_update : process(clk125(0))
 
-  process(clk)
+  process(clk) begin
 
-    variable prev_hit                 : STD_LOGIC_VECTOR(input_size-1 downto 0) := (others => '0');
-    variable scaler_count_unsgn       : unsigned(31 downto 0)                   := (others => '0');
-    variable scaler_count_pixel_unsgn : unsigned(31 downto 0)                   := (others => '0');
-
-  begin
-
-    if (rising_edge(clk)) then
-
---      --update the scaler_count_pixel after the appropriate integration period..
---      if scaler_count_s = scaler_count then
---        scaler_count_pixel_s     <= std_logic_vector(scaler_count_pixel_unsgn);
---        scaler_count_unsgn       := (others => '0');
---        scaler_count_pixel_unsgn := (others => '0');
---      else
---        scaler_count_unsgn := scaler_count_unsgn + 1;
---      end if;
-
-      --test for hit change
-      if scaler_count_s = scaler_count then
-        scaler_count_pixel_s     <= std_logic_vector(scaler_count_pixel_unsgn);
-        scaler_count_unsgn       := (others => '0');
-        scaler_count_pixel_unsgn := (others => '0');
+    if rising_edge(clk) then
+		
+		if rst = '1' then
+			new_hit 				 <= '0';
+			s_current_count    <= x"00000000";
+			scaler_count_pixel <= x"00000000";
 		else
-        scaler_count_unsgn := scaler_count_unsgn + 1;
-		end if;
-      
-		if data_input /= prev_hit then
-        new_hit                  <= '1';
-        prev_hit                 := data_input;
-        scaler_count_pixel_unsgn := scaler_count_pixel_unsgn + 1;
-		else
-		  new_hit <= '0';
-      end if;
+			--test for update count
+			if s_current_count = scaler_count then
+			  scaler_count_pixel        <= s_scaler_count_pixel;
+			  s_current_count  			 <= x"00000001"; -- setting this value to one ensures counting 'precisely'
+			  --s_scaler_count_pixel    <= x"00000000";
+			else
+				--update the signals after the process is completed..
+			  s_current_count <= std_logic_vector((unsigned(s_current_count) + 1));
+			end if;
+			
+			-- tracking for the output triggers
+			if data_input /= NULL_HIT then
+			  new_hit                   <= '1';
+			  s_scaler_count_pixel      <= std_logic_vector((unsigned(s_scaler_count_pixel) + 1));
+			--  vPrev_hit                 := data_input;
+			else
+			  new_hit <= '0';
+			end if;
 
-      --update the signals after the process is completed..
-      scaler_count_pixel <= scaler_count_pixel_s;
-      scaler_count_s     <= std_logic_vector(scaler_count_unsgn);
-      
+       end if;  
     end if;
   end process;
 
---     variable scaler_count : unsigned(31 downto 0) := (others => '0');
---   begin
---     if(rising_edge(clk125(0))) then
---       if(scaler_count = scaler_ref_unsgn) then
---         scaler_update  <= '1';        
---         scaler_count_read <= SiPM_pixel_scaler_count_unsgn;
---         scaler_count   := (others => '0');      
---       else
---         scaler_count  := scaler_count + 1;
---         scaler_update <= '0';
---       end if;
---     end if;
---   end process p_scaler_update;
   
 end Behavioral;
 

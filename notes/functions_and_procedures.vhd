@@ -82,6 +82,26 @@ procedure procedure_1 (
   signal inp1   : in  std_logic;        -- input_val_1
   signal out1 : out std_logic);       -- output_val_1
 
+  procedure full_adder (
+    signal b1   : in  std_logic;
+    signal b2   : in  std_logic;
+    signal cin  : in  std_logic;
+    signal sOut : out std_logic;
+    signal cOut : out std_logic) is
+  begin  -- procedure full_adder
+    cOut <= (b1 and b2) or (b2 and cin) or (b1 and cin);
+    sOut <= b1 xor b2 xor cin;
+  end procedure full_adder;
+
+  procedure half_adder (
+    signal b1   : in  std_logic;
+    signal b2   : in  std_logic;
+    signal sOut : out std_logic;
+    signal cOut : out std_logic) is
+  begin  -- procedure full_adder
+    sOut = b1 xor b2;
+    cOut = b1 and b2;
+  end procedure half_adder;
 
 -- Definition of the procedure..
 -- purpose: when given some inputs produce these kinds of outputs..
